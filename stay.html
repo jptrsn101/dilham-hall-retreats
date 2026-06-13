@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Where to Stay | Dilham Hall Retreats</title>
+  <meta name="description" content="Choose how to stay at Dilham Hall Retreats. Adults-only couples pods at Broad Fen, ten waterside family pods at Tonnage Bridge, and canal camping with bell tents. Browse each pod, see the photos and check dates." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,470;9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- ============================= HEADER ============================= -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="Dilham Hall Retreats home">
+        <img class="brand-logo brand-logo--light" src="assets/images/logo.svg" alt="Dilham Hall Retreats" /><img class="brand-logo brand-logo--dark" src="assets/images/logo-dark.svg" alt="" aria-hidden="true" />
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__close" aria-label="Close menu">&times;</button>
+        <a href="stay.html">Stay</a>
+        <a href="canoe-hire.html">Canoe Hire</a>
+        <a href="events.html">Events</a>
+        <a href="things-to-do.html">Things To Do</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-cta">
+        <a href="index.html" class="btn btn--ghost">Home</a>
+        <a href="#book" class="btn btn--sand">Book now</a>
+        <button class="nav-toggle" aria-label="Open menu">Menu
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== SUB-HERO + SEARCH ===================== -->
+  <section class="subhero" id="book">
+    <img src="assets/images/tonnage-1.jpg" alt="A family canoeing along the canal past the waterside glamping pods" />
+    <div class="container">
+      <p class="eyebrow" style="color:var(--sand)" data-reveal>Where to stay</p>
+      <h1 class="display" data-reveal data-delay="1" style="font-size:clamp(2.4rem,5.5vw,4rem)">Tell us your dates.<br>We will show what is free.</h1>
+      <p class="lead" data-reveal data-delay="2">Pick your dates and who is coming, and we will only show the pods and tents you can actually book. No prices to second&#8209;guess, no calendars to wrestle with.</p>
+
+      <form class="booking-bar" data-booking data-reveal data-delay="3" aria-label="Check availability">
+        <div class="bf"><label for="b-in">Arrive</label><input type="date" id="b-in" name="arrive" /></div>
+        <div class="bf"><label for="b-out">Leave</label><input type="date" id="b-out" name="leave" /></div>
+        <div class="bf"><label for="b-guests">Who is coming</label>
+          <select id="b-guests" name="guests">
+            <option>2 adults</option><option>2 adults, 1 child</option><option>2 adults, 2 children</option>
+            <option>2 adults, 3 children</option><option>2 adults + dog</option><option>Larger group</option>
+          </select>
+        </div>
+        <button class="btn btn--primary btn--lg" type="submit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+          Show availability
+        </button>
+      </form>
+      <p class="booking-note" data-booking-note hidden>Live availability and pricing are powered by our booking system, which stays in sync with Airbnb and Booking.com. In the finished site this is where your matching pods would appear, with the exact price for your dates.</p>
+    </div>
+  </section>
+
+  <!-- ===================== STEP 1: WHO'S COMING ===================== -->
+  <section class="section">
+    <div class="container">
+      <div class="center" style="max-width:60rem">
+        <p class="eyebrow center" data-reveal>First, who is coming?</p>
+        <h2 data-reveal data-delay="1">Three ways to stay.</h2>
+        <p class="lead center" data-reveal data-delay="2" style="margin-top:1rem">Start here. Pick the one that fits your trip, then browse the individual pods, look through the photos and check your dates.</p>
+      </div>
+
+      <div class="cat-cards">
+        <a class="cat-card" href="#couples" data-reveal>
+          <img src="assets/images/waterside-1.jpg" alt="A couples glamping pod at Broad Fen" />
+          <div class="cat-card__in">
+            <span class="cat-card__tag">Couples &middot; Adults only</span>
+            <h3>For couples</h3>
+            <p>Broad Fen Retreats. Three secluded pods for two, with a hot tub and total privacy.</p>
+            <div class="mini-facts"><span>Sleeps 2</span><span>Hot tub</span><span>No dogs</span></div>
+            <span class="btn btn--light">See the 3 couples pods
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+
+        <a class="cat-card" href="#tonnage" data-reveal data-delay="1">
+          <img src="assets/images/waterside-2.jpg" alt="A waterside family pod at Tonnage Bridge" />
+          <div class="cat-card__in">
+            <span class="cat-card__tag">Families &middot; Dogs welcome</span>
+            <h3>For families</h3>
+            <p>Tonnage Bridge Retreats. Ten waterside pods with hot tubs, in three sizes.</p>
+            <div class="mini-facts"><span>Sleeps 4&ndash;5</span><span>Hot tub</span><span>Dogs &amp; kids</span></div>
+            <span class="btn btn--light">See the pod styles
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+
+        <a class="cat-card" href="#camping" data-reveal data-delay="2">
+          <img src="assets/images/bell-tent-night.jpg" alt="A bell tent at Canal Camping" />
+          <div class="cat-card__in">
+            <span class="cat-card__tag">Families &middot; Dogs welcome</span>
+            <h3>Camping</h3>
+            <p>Canal Camping. Bring your own tent or hire a ready&#8209;pitched bell tent by the water.</p>
+            <div class="mini-facts"><span>Tents &amp; pitches</span><span>Dogs &amp; kids</span></div>
+            <span class="btn btn--light">See camping
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COUPLES: BROAD FEN ===================== -->
+  <section class="section detail" id="couples" style="background:var(--paper-2)">
+    <div class="container">
+      <div class="detail__head">
+        <div>
+          <span class="callout">Couples &middot; Adults only &middot; No dogs</span>
+          <h2 style="margin-top:1rem">Broad Fen Retreats</h2>
+          <p class="lead" style="margin-top:.8rem">Three pods for two, hidden in 95 acres of protected woodland and fen meadow. Each has a wood&#8209;fired hot tub, a proper kitchen and complete peace. They are finished to the same high standard, so it really comes down to which one you fall for.</p>
+        </div>
+        <ul class="facts" style="align-content:start">
+          <li class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg> Sleeps 2</li>
+          <li class="fact fact--no">No children</li>
+          <li class="fact fact--no">No dogs</li>
+          <li class="fact fact--yes">Wood&#8209;fired hot tub</li>
+          <li class="fact">2 night minimum</li>
+        </ul>
+      </div>
+
+      <div class="pod-cards">
+        <article class="retreat" data-reveal>
+          <div class="retreat__media"><span class="retreat__tag">Sleeps 2</span><img src="assets/images/waterside-1.jpg" alt="Damselfly couples pod" /></div>
+          <div class="retreat__body">
+            <h3 class="retreat__name">Damselfly</h3>
+            <p class="retreat__sub">Couples pod &middot; Broad Fen</p>
+            <p class="retreat__desc">Our sunny corner pod, tucked into the trees with the hot tub looking out over the meadow.</p>
+            <a href="pod-damselfly.html" class="btn btn--primary retreat__cta">View pod &amp; dates
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+        <article class="retreat" data-reveal data-delay="1">
+          <div class="retreat__media"><span class="retreat__tag">Sleeps 2</span><img src="assets/images/pod-interior-4.jpg" alt="Dragonfly couples pod" /></div>
+          <div class="retreat__body">
+            <h3 class="retreat__name">Dragonfly</h3>
+            <p class="retreat__sub">Couples pod &middot; Broad Fen</p>
+            <p class="retreat__desc">The most private of the three, wrapped in woodland with birdsong for a soundtrack.</p>
+            <a href="pod-dragonfly.html" class="btn btn--primary retreat__cta">View pod &amp; dates
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+        <article class="retreat" data-reveal data-delay="2">
+          <div class="retreat__media"><span class="retreat__tag">Sleeps 2</span><img src="assets/images/pod-interior-3.jpg" alt="Swallowtail couples pod" /></div>
+          <div class="retreat__body">
+            <h3 class="retreat__name">Swallowtail</h3>
+            <p class="retreat__sub">Couples pod &middot; Broad Fen</p>
+            <p class="retreat__desc">Named after Norfolk&rsquo;s famous butterfly, with the widest view across the fen.</p>
+            <a href="pod-swallowtail.html" class="btn btn--primary retreat__cta">View pod &amp; dates
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAMILIES: TONNAGE BRIDGE ===================== -->
+  <section class="section detail compare" id="tonnage">
+    <div class="container">
+      <div class="detail__head">
+        <div>
+          <span class="callout">Families &middot; Dogs welcome &middot; On the water</span>
+          <h2 style="margin-top:1rem;color:#fff">Tonnage Bridge Retreats</h2>
+          <p class="lead" style="margin-top:.8rem;color:rgba(255,255,255,.9)">Ten luxury pods along our own private canal, each with a wood&#8209;fired hot tub and a canoe launch on the doorstep. They come in three styles, so the only real question is how many of you there are. Pick a style to see the photos and check dates.</p>
+        </div>
+        <ul class="facts" style="align-content:start">
+          <li class="fact fact--yes">10 waterside pods</li>
+          <li class="fact fact--yes">Sleeps 4 to 5</li>
+          <li class="fact fact--yes">Children welcome</li>
+          <li class="fact fact--yes">One dog, &pound;20 a stay</li>
+          <li class="fact fact--yes">Hot tub in every pod</li>
+        </ul>
+      </div>
+
+      <div class="pod-cards">
+        <article class="retreat" data-reveal>
+          <div class="retreat__media"><span class="retreat__tag">Sleeps 4</span><img src="assets/images/waterside-3.jpg" alt="Tonnage Bridge pod, King and Twin layout" /></div>
+          <div class="retreat__body">
+            <h3 class="retreat__name">King + Twin</h3>
+            <p class="retreat__sub">Style 1 &middot; Sleeps 4 &middot; two rooms</p>
+            <p class="retreat__desc">A king room plus a separate twin room, so the children get their own space. Pods: Heron, Coot, Harvest Mouse.</p>
+            <a href="tonnage-king-twin.html" class="btn btn--primary retreat__cta">View style &amp; dates
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+        <article class="retreat" data-reveal data-delay="1">
+          <div class="retreat__media"><span class="retreat__tag">Sleeps 5</span><img src="assets/images/waterside-5.jpg" alt="Tonnage Bridge pod, King Single and Bunk layout" /></div>
+          <div class="retreat__body">
+            <h3 class="retreat__name">King + Single + Bunk</h3>
+            <p class="retreat__sub">Style 2 &middot; Sleeps 5</p>
+            <p class="retreat__desc">Our roomiest pods, with a king, a single and a bunk. Built for bigger families. Pods: Hedgehog, Bittern.</p>
+            <a href="tonnage-king-single-bunk.html" class="btn btn--primary retreat__cta">View style &amp; dates
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+        <article class="retreat" data-reveal data-delay="2">
+          <div class="retreat__media"><span class="retreat__tag">Sleeps 4</span><img src="assets/images/waterside-6.jpg" alt="Tonnage Bridge pod, King and Bunk layout" /></div>
+          <div class="retreat__body">
+            <h3 class="retreat__name">King + Bunk</h3>
+            <p class="retreat__sub">Style 3 &middot; Sleeps 4 &middot; open plan</p>
+            <p class="retreat__desc">A cosy open&#8209;plan pod with a king and a bunk. Perfect for a couple with a dog, or a family of four. Pods: Water Vole, Moor Hen, Shrew, Kingfisher, Otter.</p>
+            <a href="tonnage-king-bunk.html" class="btn btn--primary retreat__cta">View style &amp; dates
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+      </div>
+
+      <h3 style="color:#fff;font-family:var(--font-display);font-weight:500;margin-top:3rem">All ten pods at a glance</h3>
+      <div class="table-wrap" style="margin-top:1.2rem">
+        <table class="cmp">
+          <thead><tr><th>Pod</th><th>Style</th><th>Sleeps</th><th>Beds</th><th>Dog</th><th>Hot tub</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Heron</th><td>King + Twin</td><td>4</td><td>King + twin (2 rooms)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+            <tr><th scope="row">Coot</th><td>King + Twin</td><td>4</td><td>King + twin (2 rooms)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+            <tr><th scope="row">Harvest Mouse</th><td>King + Twin</td><td>4</td><td>King + twin (2 rooms)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+            <tr><th scope="row">Hedgehog</th><td>King + Single + Bunk</td><td>5</td><td>King + single + bunk</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+            <tr><th scope="row">Bittern</th><td>King + Single + Bunk</td><td>5</td><td>King + single + bunk</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+            <tr><th scope="row">Water Vole</th><td>King + Bunk</td><td>4</td><td>King + bunk (open plan)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+            <tr><th scope="row">Moor Hen</th><td>King + Bunk</td><td>4</td><td>King + bunk (open plan)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+            <tr><th scope="row">Shrew</th><td>King + Bunk</td><td>4</td><td>King + bunk (open plan)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+            <tr><th scope="row">Kingfisher</th><td>King + Bunk</td><td>4</td><td>King + bunk (open plan)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+            <tr><th scope="row">Otter</th><td>King + Bunk</td><td>4</td><td>King + bunk (open plan)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CAMPING ===================== -->
+  <section class="section detail" id="camping">
+    <div class="container">
+      <div class="detail__head">
+        <div>
+          <span class="callout">Families &middot; Dogs welcome &middot; On the water</span>
+          <h2 style="margin-top:1rem">Canal Camping &amp; Bell Tents</h2>
+          <p class="lead" style="margin-top:.8rem">The simple stuff done well. Bring your own tent and pick a spacious pitch, or hire a ready&#8209;pitched family bell tent with beds, a fire pit and everything you need. Hot showers, campfires and the canal right there.</p>
+        </div>
+        <ul class="facts" style="align-content:start">
+          <li class="fact">Own tent or bell tent</li>
+          <li class="fact fact--yes">Children welcome</li>
+          <li class="fact fact--yes">Dogs, &pound;5 a stay</li>
+          <li class="fact">Self&#8209;launch &pound;5 a vessel</li>
+          <li class="fact">3 night minimum</li>
+        </ul>
+      </div>
+
+      <div class="gallery" data-gallery data-reveal>
+        <button class="g-main" data-full="assets/images/bell-tent-night.jpg" data-cap="Bell tent lit up at night beside the canal"><img src="assets/images/bell-tent-night.jpg" alt="Bell tent at night" /></button>
+        <button data-full="assets/images/camping-1.jpg" data-cap="Camping by the water at Dilham"><img src="assets/images/camping-1.jpg" alt="Camping by the water" /></button>
+        <button data-full="assets/images/camping-2.jpg" data-cap="Spacious camping pitches"><img src="assets/images/camping-2.jpg" alt="Camping pitches" /></button>
+        <button data-full="assets/images/camping-3.jpg" data-cap="Campsite facilities and fire pit"><img src="assets/images/camping-3.jpg" alt="Campsite facilities" /></button>
+      </div>
+
+      <div class="pod-layout">
+        <div>
+          <h3>What to expect</h3>
+          <p class="muted" style="margin-top:.8rem;max-width:60ch">Roomy 6&#8209;metre family bell tents come fully kitted out with beds and bedding, a table and chairs, cooking kit and a fire pit. Prefer your own canvas? Pitch up on a spacious, open spot by the canal. Either way you get hot showers, drinking water, campfire braziers and a canoe launch on site.</p>
+          <ul class="amen" style="margin-top:1.4rem">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 12V7a6 6 0 0 1 12 0v5M5 12h14v7H5z"/></svg> Hot showers</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3c2 4 4 5 4 8a4 4 0 1 1-8 0c0-3 2-4 4-8z"/></svg> Campfire braziers</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M12 4v16"/></svg> Drinking water</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9 5 9-5M3 7v10l9 5 9-5V7"/></svg> Canoe launch</li>
+          </ul>
+        </div>
+        <aside class="checkpanel">
+          <form data-booking>
+            <h3>Check dates</h3>
+            <p class="muted" style="font-size:.92rem;margin-top:.3rem">See if camping is free for your nights.</p>
+            <label for="cc-in">Arrive</label><input type="date" id="cc-in" />
+            <label for="cc-out">Leave</label><input type="date" id="cc-out" />
+            <label for="cc-opt">Tent</label>
+            <select id="cc-opt"><option>Hire a bell tent</option><option>Bring my own tent</option></select>
+            <button class="btn btn--primary" type="submit">Check availability</button>
+            <p class="booking-note" data-booking-note hidden>Camping is booked through our camping system. In the live site availability and price for your dates appear here.</p>
+            <p class="pricenote">3 night minimum (2 off&#8209;peak). Dogs &pound;5 a stay.</p>
+          </form>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="brand-logo" src="assets/images/logo.svg" alt="Dilham Hall Retreats" />
+          <p style="margin-top:1rem;max-width:30ch">Luxury glamping, camping and canoe hire on a carbon&#8209;negative family farm in the Norfolk Broads.</p>
+          <div class="social">
+            <a href="https://www.facebook.com/Dilham.Hall.Retreats" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2 0-3 1-3 3v2H9v3h2v7h3v-7h2.5l.5-3H14v-1.5c0-.5.3-1 1-1z"/></svg></a>
+            <a href="https://www.instagram.com/dilhamhallretreats" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          </div>
+        </div>
+        <div><h4>Stay</h4><ul class="footer-links"><li><a href="#couples">Broad Fen Retreats</a></li><li><a href="#tonnage">Tonnage Bridge Retreats</a></li><li><a href="#camping">Canal Camping</a></li><li><a href="canoe-hire.html">Canoe Hire</a></li><li><a href="events.html">Events</a></li></ul></div>
+        <div><h4>Explore</h4><ul class="footer-links"><li><a href="things-to-do.html">Things to do</a></li><li><a href="about.html">Our story</a></li><li><a href="contact.html">Find us</a></li><li><a href="things-to-do.html#food">Food &amp; drink</a></li><li><a href="about.html#reviews">Reviews</a></li></ul></div>
+        <div><h4>Get in touch</h4><ul class="footer-contact"><li><b>Glamping &amp; events</b> 01692 513889<br><a href="mailto:hello@dilhamhall.co.uk">hello@dilhamhall.co.uk</a></li><li><b>Canoe hire</b> 07810 616920<br><a href="mailto:paddle@dilhamhall.co.uk">paddle@dilhamhall.co.uk</a></li><li><b>Find us</b> Dilham, North Walsham, Norfolk NR28 9PW</li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; 2026 Dilham Hall Retreats. All rights reserved.</span><span><a href="#">Terms</a> &middot; <a href="#">Privacy</a></span></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

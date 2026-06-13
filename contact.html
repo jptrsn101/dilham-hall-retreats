@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &amp; Find Us | Dilham Hall Retreats</title>
+  <meta name="description" content="Get in touch with Dilham Hall Retreats. Phone and email for glamping, canoe hire and camping, plus how to find us in Dilham, North Walsham, Norfolk." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,470;9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="Dilham Hall Retreats home"><img class="brand-logo brand-logo--light" src="assets/images/logo.svg" alt="Dilham Hall Retreats" /><img class="brand-logo brand-logo--dark" src="assets/images/logo-dark.svg" alt="" aria-hidden="true" /></a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__close" aria-label="Close menu">&times;</button>
+        <a href="stay.html">Stay</a>
+        <a href="canoe-hire.html">Canoe Hire</a>
+        <a href="events.html">Events</a>
+        <a href="things-to-do.html">Things To Do</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-cta">
+        <a href="stay.html" class="btn btn--ghost">Find your retreat</a>
+        <a href="stay.html#book" class="btn btn--sand">Book now</a>
+        <button class="nav-toggle" aria-label="Open menu">Menu
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="padding-bottom:clamp(2.5rem,5vw,3.5rem)">
+    <img src="assets/images/waterside-6.jpg" alt="The waterside at Dilham Hall Retreats" />
+    <div class="container">
+      <p class="crumbs"><a href="index.html">Home</a> &middot; Contact</p>
+      <h1 class="display" style="font-size:clamp(2.4rem,5.5vw,4rem)">Get in touch.</h1>
+      <p class="lead">Questions about a stay, a paddle or an event? We are happy to help. Reach the right team below, or send us a message.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section">
+    <div class="container contact-grid">
+      <div data-reveal>
+        <h2 style="font-size:1.9rem">Talk to the right team</h2>
+        <div class="contact-card" style="margin-top:1.4rem">
+          <b>Glamping &amp; events</b>
+          <a href="tel:01692513889">01692 513889</a><br>
+          <a href="mailto:hello@dilhamhall.co.uk">hello@dilhamhall.co.uk</a>
+        </div>
+        <div class="contact-card">
+          <b>Canoe hire</b>
+          <a href="tel:07810616920">07810 616920</a><br>
+          <a href="mailto:paddle@dilhamhall.co.uk">paddle@dilhamhall.co.uk</a>
+        </div>
+        <div class="contact-card">
+          <b>Canal camping</b>
+          <a href="tel:01692660274">01692 660274</a><br>
+          <a href="mailto:bookings@canalcamping.co.uk">bookings@canalcamping.co.uk</a>
+        </div>
+        <div class="contact-card">
+          <b>Find us</b>
+          <span>Dilham, North Walsham, Norfolk</span><br>
+          <span style="font-weight:700">NR28 9PW</span> <span style="font-weight:400;color:#6b7873">glamping &amp; canoe hire</span><br>
+          <span style="font-weight:700">NR28 9PL</span> <span style="font-weight:400;color:#6b7873">canal camping</span>
+        </div>
+      </div>
+
+      <div data-reveal data-delay="1">
+        <h2 style="font-size:1.9rem">Send a message</h2>
+        <form style="margin-top:1.4rem" onsubmit="return false">
+          <div class="field-row">
+            <div class="field"><label for="c-name">Name</label><input id="c-name" type="text" placeholder="Your name" required /></div>
+            <div class="field"><label for="c-email">Email</label><input id="c-email" type="email" placeholder="you@email.com" required /></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="c-phone">Phone (optional)</label><input id="c-phone" type="tel" placeholder="Phone number" /></div>
+            <div class="field"><label for="c-topic">What is it about?</label><select id="c-topic"><option>A glamping stay</option><option>Canoe hire</option><option>Canal camping</option><option>An event or exclusive hire</option><option>Something else</option></select></div>
+          </div>
+          <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" rows="5" placeholder="How can we help?"></textarea></div>
+          <button class="btn btn--primary btn--lg" type="submit">Send message
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="muted" style="font-size:.85rem;margin-top:.8rem">Prototype form. On the live site this sends to the team and confirms by email.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="section section--tight" style="padding-top:0">
+    <div class="container">
+      <div style="position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);min-height:360px;display:grid;place-items:center;background:linear-gradient(135deg,var(--mist),var(--sand))" data-reveal>
+        <div style="text-align:center;color:var(--forest);padding:2rem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="width:2.6rem;height:2.6rem;margin-bottom:.6rem"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          <p style="font-family:var(--font-display);font-size:1.4rem">Dilham, North Walsham, NR28 9PW</p>
+          <p class="muted" style="margin-top:.4rem">An interactive map will sit here on the finished site, with directions and what3words.</p>
+          <a href="https://maps.google.com/?q=Dilham+Hall+Retreats+NR28+9PW" class="btn btn--primary" style="margin-top:1.2rem">Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="brand-logo" src="assets/images/logo.svg" alt="Dilham Hall Retreats" />
+          <p style="margin-top:1rem;max-width:30ch">Luxury glamping, camping and canoe hire on a carbon&#8209;negative family farm in the Norfolk Broads.</p>
+          <div class="social">
+            <a href="https://www.facebook.com/Dilham.Hall.Retreats" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2 0-3 1-3 3v2H9v3h2v7h3v-7h2.5l.5-3H14v-1.5c0-.5.3-1 1-1z"/></svg></a>
+            <a href="https://www.instagram.com/dilhamhallretreats" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          </div>
+        </div>
+        <div><h4>Stay</h4><ul class="footer-links"><li><a href="stay.html#broad-fen">Broad Fen Retreats</a></li><li><a href="stay.html#tonnage-bridge">Tonnage Bridge Retreats</a></li><li><a href="stay.html#canal-camping">Canal Camping</a></li><li><a href="canoe-hire.html">Canoe Hire</a></li><li><a href="events.html">Events</a></li></ul></div>
+        <div><h4>Explore</h4><ul class="footer-links"><li><a href="things-to-do.html">Things to do</a></li><li><a href="about.html">Our story</a></li><li><a href="contact.html">Find us</a></li><li><a href="things-to-do.html#food">Food &amp; drink</a></li><li><a href="about.html#reviews">Reviews</a></li></ul></div>
+        <div><h4>Get in touch</h4><ul class="footer-contact"><li><b>Glamping &amp; events</b> 01692 513889<br><a href="mailto:hello@dilhamhall.co.uk">hello@dilhamhall.co.uk</a></li><li><b>Canoe hire</b> 07810 616920<br><a href="mailto:paddle@dilhamhall.co.uk">paddle@dilhamhall.co.uk</a></li><li><b>Find us</b> Dilham, North Walsham, Norfolk NR28 9PW</li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; 2026 Dilham Hall Retreats. All rights reserved.</span><span><a href="#">Terms</a> &middot; <a href="#">Privacy</a></span></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
