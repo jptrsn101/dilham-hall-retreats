@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dilhamhallretreats.co.uk/sitemap.xml

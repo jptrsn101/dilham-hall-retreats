@@ -9,6 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,470;9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="canonical" href="https://dilhamhallretreats.co.uk/events.html" />
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#4D5C56" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Dilham Hall Retreats" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:title" content="Weddings, Corporate Retreats &amp; Exclusive Hire | Dilham Hall Retreats" />
+  <meta property="og:description" content="Hire Dilham Hall Retreats exclusively for weddings, corporate retreats, team building and private events. A carbon-negative Norfolk estate with on-site accommodation and waterside activities for up to 100." />
+  <meta property="og:url" content="https://dilhamhallretreats.co.uk/events.html" />
+  <meta property="og:image" content="https://dilhamhallretreats.co.uk/assets/images/event-3.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Weddings, Corporate Retreats &amp; Exclusive Hire | Dilham Hall Retreats" />
+  <meta name="twitter:description" content="Hire Dilham Hall Retreats exclusively for weddings, corporate retreats, team building and private events. A carbon-negative Norfolk estate with on-site accommodation and waterside activities for up to 100." />
+  <meta name="twitter:image" content="https://dilhamhallretreats.co.uk/assets/images/event-3.jpg" />
+  <link rel="preload" as="image" href="assets/images/event-3.jpg" fetchpriority="high" />
 </head>
 <body>
 
@@ -36,7 +51,7 @@
 
   <!-- PAGE HERO -->
   <section class="page-hero">
-    <img src="assets/images/event-3.jpg" alt="An event set up on the estate at Dilham Hall" />
+    <img fetchpriority="high" decoding="async" src="assets/images/event-3.jpg" alt="An event set up on the estate at Dilham Hall" />
     <div class="container">
       <p class="crumbs"><a href="index.html">Home</a> &middot; Events</p>
       <h1 class="display" style="font-size:clamp(2.4rem,5.5vw,4.2rem)">The whole place, just for you.</h1>
@@ -56,7 +71,7 @@
       </div>
       <div class="cards-3">
         <article class="ecard" data-reveal>
-          <img src="assets/images/event-1.jpg" alt="Wedding celebration in the Norfolk countryside" />
+          <img loading="lazy" decoding="async" src="assets/images/event-1.jpg" alt="Wedding celebration in the Norfolk countryside" />
           <div class="ecard__body">
             <h3>Weddings</h3>
             <p>Marry surrounded by nature, with your favourite people staying over in the pods and tents. Relaxed, rural and yours alone.</p>
@@ -64,7 +79,7 @@
           </div>
         </article>
         <article class="ecard" data-reveal data-delay="1">
-          <img src="assets/images/event-2.jpg" alt="Corporate retreat group activity" />
+          <img loading="lazy" decoding="async" src="assets/images/event-2.jpg" alt="Corporate retreat group activity" />
           <div class="ecard__body">
             <h3>Corporate retreats &amp; team days</h3>
             <p>Get the team out of the office and onto the water. Waterside team building for up to 100, with space to think, meet and reconnect.</p>
@@ -72,7 +87,7 @@
           </div>
         </article>
         <article class="ecard" data-reveal data-delay="2">
-          <img src="assets/images/event-5.jpg" alt="Private celebration on the estate" />
+          <img loading="lazy" decoding="async" src="assets/images/event-5.jpg" alt="Private celebration on the estate" />
           <div class="ecard__body">
             <h3>Private &amp; exclusive hire</h3>
             <p>Big birthdays, family reunions, milestone celebrations. Hire the estate exclusively and make a weekend of it.</p>
@@ -99,7 +114,7 @@
         </ul>
       </div>
       <div class="media-frame" data-reveal data-delay="1" style="aspect-ratio:4/3">
-        <img src="assets/images/aerial-3.jpg" alt="Aerial view of the estate, ready for an event" />
+        <img loading="lazy" decoding="async" src="assets/images/aerial-3.jpg" alt="Aerial view of the estate, ready for an event" />
       </div>
     </div>
   </section>
@@ -117,24 +132,27 @@
           <a href="mailto:hello@dilhamhall.co.uk">hello@dilhamhall.co.uk</a>
         </div>
       </div>
-      <form data-reveal data-delay="1" onsubmit="return false">
+      <form data-reveal data-delay="1" action="https://formsubmit.co/hello@dilhamhall.co.uk" method="POST">
+        <input type="hidden" name="_subject" value="New events enquiry &mdash; Dilham Hall Retreats" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <div class="field-row">
-          <div class="field"><label for="e-name">Your name</label><input id="e-name" type="text" placeholder="Jane Smith" required /></div>
-          <div class="field"><label for="e-email">Email</label><input id="e-email" type="email" placeholder="jane@email.com" required /></div>
+          <div class="field"><label for="e-name">Your name</label><input id="e-name" name="Name" type="text" placeholder="Jane Smith" required /></div>
+          <div class="field"><label for="e-email">Email</label><input id="e-email" name="Email" type="email" placeholder="jane@email.com" required /></div>
         </div>
         <div class="field-row">
-          <div class="field"><label for="e-type">Type of event</label><select id="e-type"><option>Wedding</option><option>Corporate retreat or team day</option><option>Private or exclusive hire</option><option>Not sure yet</option></select></div>
-          <div class="field"><label for="e-size">Approximate group size</label><select id="e-size"><option>Up to 20</option><option>20 to 50</option><option>50 to 100</option><option>100+</option></select></div>
+          <div class="field"><label for="e-type">Type of event</label><select id="e-type" name="Event type"><option>Wedding</option><option>Corporate retreat or team day</option><option>Private or exclusive hire</option><option>Not sure yet</option></select></div>
+          <div class="field"><label for="e-size">Approximate group size</label><select id="e-size" name="Group size"><option>Up to 20</option><option>20 to 50</option><option>50 to 100</option><option>100+</option></select></div>
         </div>
         <div class="field-row">
-          <div class="field"><label for="e-date">Preferred date</label><input id="e-date" type="date" /></div>
-          <div class="field"><label for="e-stay">Overnight stays needed?</label><select id="e-stay"><option>Yes, for the whole party</option><option>Yes, for some guests</option><option>No, day event only</option></select></div>
+          <div class="field"><label for="e-date">Preferred date</label><input id="e-date" name="Preferred date" type="date" /></div>
+          <div class="field"><label for="e-stay">Overnight stays needed?</label><select id="e-stay" name="Overnight stays"><option>Yes, for the whole party</option><option>Yes, for some guests</option><option>No, day event only</option></select></div>
         </div>
-        <div class="field"><label for="e-msg">Tell us more</label><textarea id="e-msg" rows="4" placeholder="What are you planning?"></textarea></div>
+        <div class="field"><label for="e-msg">Tell us more</label><textarea id="e-msg" name="Message" rows="4" placeholder="What are you planning?"></textarea></div>
         <button class="btn btn--primary btn--lg" type="submit">Send enquiry
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
-        <p class="muted" style="font-size:.85rem;margin-top:.8rem">Prototype form. In the live site this sends straight to the events team.</p>
       </form>
     </div>
   </section>

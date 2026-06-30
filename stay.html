@@ -9,6 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,470;9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="canonical" href="https://dilhamhallretreats.co.uk/stay.html" />
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#4D5C56" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Dilham Hall Retreats" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:title" content="Where to Stay | Dilham Hall Retreats" />
+  <meta property="og:description" content="Choose how to stay at Dilham Hall Retreats. Adults-only couples pods at Broad Fen, ten waterside family pods at Tonnage Bridge, and canal camping with bell tents. Browse each pod, see the photos and check dates." />
+  <meta property="og:url" content="https://dilhamhallretreats.co.uk/stay.html" />
+  <meta property="og:image" content="https://dilhamhallretreats.co.uk/assets/images/tonnage-1.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Where to Stay | Dilham Hall Retreats" />
+  <meta name="twitter:description" content="Choose how to stay at Dilham Hall Retreats. Adults-only couples pods at Broad Fen, ten waterside family pods at Tonnage Bridge, and canal camping with bell tents. Browse each pod, see the photos and check dates." />
+  <meta name="twitter:image" content="https://dilhamhallretreats.co.uk/assets/images/tonnage-1.jpg" />
+  <link rel="preload" as="image" href="assets/images/tonnage-1.jpg" fetchpriority="high" />
 </head>
 <body>
 
@@ -39,27 +54,20 @@
 
   <!-- ===================== SUB-HERO + SEARCH ===================== -->
   <section class="subhero" id="book">
-    <img src="assets/images/tonnage-1.jpg" alt="A family canoeing along the canal past the waterside glamping pods" />
+    <img fetchpriority="high" decoding="async" src="assets/images/tonnage-1.jpg" alt="A family canoeing along the canal past the waterside glamping pods" />
     <div class="container">
       <p class="eyebrow" style="color:var(--sand)" data-reveal>Where to stay</p>
       <h1 class="display" data-reveal data-delay="1" style="font-size:clamp(2.4rem,5.5vw,4rem)">Tell us your dates.<br>We will show what is free.</h1>
-      <p class="lead" data-reveal data-delay="2">Pick your dates and who is coming, and we will only show the pods and tents you can actually book. No prices to second&#8209;guess, no calendars to wrestle with.</p>
+      <p class="lead" data-reveal data-delay="2">Pick your dates below to see what is free across all our pods and tents, then book and pay securely in a few taps.</p>
 
-      <form class="booking-bar" data-booking data-reveal data-delay="3" aria-label="Check availability">
-        <div class="bf"><label for="b-in">Arrive</label><input type="date" id="b-in" name="arrive" /></div>
-        <div class="bf"><label for="b-out">Leave</label><input type="date" id="b-out" name="leave" /></div>
-        <div class="bf"><label for="b-guests">Who is coming</label>
-          <select id="b-guests" name="guests">
-            <option>2 adults</option><option>2 adults, 1 child</option><option>2 adults, 2 children</option>
-            <option>2 adults, 3 children</option><option>2 adults + dog</option><option>Larger group</option>
-          </select>
+      <!-- Live booking: SuperControl "All Properties" calendar (account 22912, site ID 46670) -->
+      <div class="booking-widget" style="background:#fff;border-radius:18px;padding:clamp(1rem,3vw,2rem);max-width:64rem;margin:1.6rem auto 0;box-shadow:0 18px 50px rgba(6,46,40,.25)">
+        <div
+          data-calendar-key="90C22083FA8947B6BDBE764CD901F4E98018FBA57CDE3D5C194100A887820A345815B5CC9BF1FD21F4BB55539F0B21E97D390E91399ADB7D"
+          data-calendar-widescreen-months="2">
+          Loading the live availability calendar&#8230;
         </div>
-        <button class="btn btn--primary btn--lg" type="submit">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
-          Show availability
-        </button>
-      </form>
-      <p class="booking-note" data-booking-note hidden>Live availability and pricing are powered by our booking system, which stays in sync with Airbnb and Booking.com. In the finished site this is where your matching pods would appear, with the exact price for your dates.</p>
+      </div>
     </div>
   </section>
 
@@ -74,7 +82,7 @@
 
       <div class="cat-cards">
         <a class="cat-card" href="#couples" data-reveal>
-          <img src="assets/images/waterside-1.jpg" alt="A couples glamping pod at Broad Fen" />
+          <img loading="lazy" decoding="async" src="assets/images/waterside-1.jpg" alt="A couples glamping pod at Broad Fen" />
           <div class="cat-card__in">
             <span class="cat-card__tag">Couples &middot; Adults only</span>
             <h3>For couples</h3>
@@ -86,7 +94,7 @@
         </a>
 
         <a class="cat-card" href="#tonnage" data-reveal data-delay="1">
-          <img src="assets/images/waterside-2.jpg" alt="A waterside family pod at Tonnage Bridge" />
+          <img loading="lazy" decoding="async" src="assets/images/waterside-2.jpg" alt="A waterside family pod at Tonnage Bridge" />
           <div class="cat-card__in">
             <span class="cat-card__tag">Families &middot; Dogs welcome</span>
             <h3>For families</h3>
@@ -98,7 +106,7 @@
         </a>
 
         <a class="cat-card" href="#camping" data-reveal data-delay="2">
-          <img src="assets/images/bell-tent-night.jpg" alt="A bell tent at Canal Camping" />
+          <img loading="lazy" decoding="async" src="assets/images/bell-tent-night.jpg" alt="A bell tent at Canal Camping" />
           <div class="cat-card__in">
             <span class="cat-card__tag">Families &middot; Dogs welcome</span>
             <h3>Camping</h3>
@@ -132,7 +140,7 @@
 
       <div class="pod-cards">
         <article class="retreat" data-reveal>
-          <div class="retreat__media"><span class="retreat__tag">Sleeps 2</span><img src="assets/images/waterside-1.jpg" alt="Damselfly couples pod" /></div>
+          <div class="retreat__media"><span class="retreat__tag">Sleeps 2</span><img loading="lazy" decoding="async" src="assets/images/waterside-1.jpg" alt="Damselfly couples pod" /></div>
           <div class="retreat__body">
             <h3 class="retreat__name">Damselfly</h3>
             <p class="retreat__sub">Couples pod &middot; Broad Fen</p>
@@ -142,7 +150,7 @@
           </div>
         </article>
         <article class="retreat" data-reveal data-delay="1">
-          <div class="retreat__media"><span class="retreat__tag">Sleeps 2</span><img src="assets/images/pod-interior-4.jpg" alt="Dragonfly couples pod" /></div>
+          <div class="retreat__media"><span class="retreat__tag">Sleeps 2</span><img loading="lazy" decoding="async" src="assets/images/pod-interior-4.jpg" alt="Dragonfly couples pod" /></div>
           <div class="retreat__body">
             <h3 class="retreat__name">Dragonfly</h3>
             <p class="retreat__sub">Couples pod &middot; Broad Fen</p>
@@ -152,7 +160,7 @@
           </div>
         </article>
         <article class="retreat" data-reveal data-delay="2">
-          <div class="retreat__media"><span class="retreat__tag">Sleeps 2</span><img src="assets/images/pod-interior-3.jpg" alt="Swallowtail couples pod" /></div>
+          <div class="retreat__media"><span class="retreat__tag">Sleeps 2</span><img loading="lazy" decoding="async" src="assets/images/pod-interior-3.jpg" alt="Swallowtail couples pod" /></div>
           <div class="retreat__body">
             <h3 class="retreat__name">Swallowtail</h3>
             <p class="retreat__sub">Couples pod &middot; Broad Fen</p>
@@ -185,7 +193,7 @@
 
       <div class="pod-cards">
         <article class="retreat" data-reveal>
-          <div class="retreat__media"><span class="retreat__tag">Sleeps 4</span><img src="assets/images/waterside-3.jpg" alt="Tonnage Bridge pod, King and Twin layout" /></div>
+          <div class="retreat__media"><span class="retreat__tag">Sleeps 4</span><img loading="lazy" decoding="async" src="assets/images/waterside-3.jpg" alt="Tonnage Bridge pod, King and Twin layout" /></div>
           <div class="retreat__body">
             <h3 class="retreat__name">King + Twin</h3>
             <p class="retreat__sub">Style 1 &middot; Sleeps 4 &middot; two rooms</p>
@@ -195,7 +203,7 @@
           </div>
         </article>
         <article class="retreat" data-reveal data-delay="1">
-          <div class="retreat__media"><span class="retreat__tag">Sleeps 5</span><img src="assets/images/waterside-5.jpg" alt="Tonnage Bridge pod, King Single and Bunk layout" /></div>
+          <div class="retreat__media"><span class="retreat__tag">Sleeps 5</span><img loading="lazy" decoding="async" src="assets/images/waterside-5.jpg" alt="Tonnage Bridge pod, King Single and Bunk layout" /></div>
           <div class="retreat__body">
             <h3 class="retreat__name">King + Single + Bunk</h3>
             <p class="retreat__sub">Style 2 &middot; Sleeps 5</p>
@@ -205,7 +213,7 @@
           </div>
         </article>
         <article class="retreat" data-reveal data-delay="2">
-          <div class="retreat__media"><span class="retreat__tag">Sleeps 4</span><img src="assets/images/waterside-6.jpg" alt="Tonnage Bridge pod, King and Bunk layout" /></div>
+          <div class="retreat__media"><span class="retreat__tag">Sleeps 4</span><img loading="lazy" decoding="async" src="assets/images/waterside-6.jpg" alt="Tonnage Bridge pod, King and Bunk layout" /></div>
           <div class="retreat__body">
             <h3 class="retreat__name">King + Bunk</h3>
             <p class="retreat__sub">Style 3 &middot; Sleeps 4 &middot; open plan</p>
@@ -256,10 +264,10 @@
       </div>
 
       <div class="gallery" data-gallery data-reveal>
-        <button class="g-main" data-full="assets/images/bell-tent-night.jpg" data-cap="Bell tent lit up at night beside the canal"><img src="assets/images/bell-tent-night.jpg" alt="Bell tent at night" /></button>
-        <button data-full="assets/images/camping-1.jpg" data-cap="Camping by the water at Dilham"><img src="assets/images/camping-1.jpg" alt="Camping by the water" /></button>
-        <button data-full="assets/images/camping-2.jpg" data-cap="Spacious camping pitches"><img src="assets/images/camping-2.jpg" alt="Camping pitches" /></button>
-        <button data-full="assets/images/camping-3.jpg" data-cap="Campsite facilities and fire pit"><img src="assets/images/camping-3.jpg" alt="Campsite facilities" /></button>
+        <button class="g-main" data-full="assets/images/bell-tent-night.jpg" data-cap="Bell tent lit up at night beside the canal"><img loading="lazy" decoding="async" src="assets/images/bell-tent-night.jpg" alt="Bell tent at night" /></button>
+        <button data-full="assets/images/camping-1.jpg" data-cap="Camping by the water at Dilham"><img loading="lazy" decoding="async" src="assets/images/camping-1.jpg" alt="Camping by the water" /></button>
+        <button data-full="assets/images/camping-2.jpg" data-cap="Spacious camping pitches"><img loading="lazy" decoding="async" src="assets/images/camping-2.jpg" alt="Camping pitches" /></button>
+        <button data-full="assets/images/camping-3.jpg" data-cap="Campsite facilities and fire pit"><img loading="lazy" decoding="async" src="assets/images/camping-3.jpg" alt="Campsite facilities" /></button>
       </div>
 
       <div class="pod-layout">
@@ -282,7 +290,7 @@
             <label for="cc-opt">Tent</label>
             <select id="cc-opt"><option>Hire a bell tent</option><option>Bring my own tent</option></select>
             <button class="btn btn--primary" type="submit">Check availability</button>
-            <p class="booking-note" data-booking-note hidden>Camping is booked through our camping system. In the live site availability and price for your dates appear here.</p>
+            <p class="booking-note" data-booking-note hidden>To check availability and book your camping pitch or bell tent, call 01692 660274 or email bookings@canalcamping.co.uk and we will sort your stay.</p>
             <p class="pricenote">3 night minimum (2 off&#8209;peak). Dogs &pound;5 a stay.</p>
           </form>
         </aside>
@@ -310,6 +318,8 @@
     </div>
   </footer>
 
+  <!-- SuperControl booking widget loader -->
+  <script src="https://secure.supercontrol.co.uk/components/embed.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

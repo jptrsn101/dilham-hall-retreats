@@ -9,6 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,470;9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="canonical" href="https://dilhamhallretreats.co.uk/canoe-hire.html" />
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#4D5C56" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Dilham Hall Retreats" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:title" content="Canoe, Kayak &amp; Paddleboard Hire | Dilham Hall Retreats" />
+  <meta property="og:description" content="Hire canoes, kayaks and paddleboards on our own quiet stretch of canal in the Norfolk Broads. Buoyancy aids, paddles and a safety briefing included. Book online or add a session to your stay." />
+  <meta property="og:url" content="https://dilhamhallretreats.co.uk/canoe-hire.html" />
+  <meta property="og:image" content="https://dilhamhallretreats.co.uk/assets/images/canoe-1.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Canoe, Kayak &amp; Paddleboard Hire | Dilham Hall Retreats" />
+  <meta name="twitter:description" content="Hire canoes, kayaks and paddleboards on our own quiet stretch of canal in the Norfolk Broads. Buoyancy aids, paddles and a safety briefing included. Book online or add a session to your stay." />
+  <meta name="twitter:image" content="https://dilhamhallretreats.co.uk/assets/images/canoe-1.jpg" />
+  <link rel="preload" as="image" href="assets/images/canoe-1.jpg" fetchpriority="high" />
 </head>
 <body>
 
@@ -36,7 +51,7 @@
 
   <!-- PAGE HERO -->
   <section class="page-hero">
-    <img src="assets/images/canoe-1.jpg" alt="Canoeing along the calm canal at Dilham" />
+    <img fetchpriority="high" decoding="async" src="assets/images/canoe-1.jpg" alt="Canoeing along the calm canal at Dilham" />
     <div class="container">
       <p class="crumbs"><a href="index.html">Home</a> &middot; Canoe Hire</p>
       <h1 class="display" style="font-size:clamp(2.4rem,5.5vw,4.2rem)">Paddle from the bank.</h1>
@@ -68,7 +83,7 @@
         </ul>
       </div>
       <div class="media-frame" data-reveal data-delay="1" style="aspect-ratio:4/5">
-        <img src="assets/images/canoe-4.jpg" alt="A family paddling together at Dilham" />
+        <img loading="lazy" decoding="async" src="assets/images/canoe-4.jpg" alt="A family paddling together at Dilham" />
       </div>
     </div>
   </section>
@@ -132,20 +147,90 @@
   <!-- HOW IT WORKS / BOOK -->
   <section class="section compare" id="book">
     <div class="container">
-      <p class="eyebrow" data-reveal>How it works</p>
+      <p class="eyebrow" data-reveal>Book online</p>
       <h2 data-reveal data-delay="1" style="color:#fff">On the water in three steps.</h2>
       <div class="steps">
         <div class="step" data-reveal><h3>Pick your session</h3><p>Choose your date, an early bird or afternoon slot, and how many boats you need.</p></div>
-        <div class="step" data-reveal data-delay="1"><h3>Book online</h3><p>Reserve and pay in a minute. Staying with us? Add canoe hire to your booking instead.</p></div>
+        <div class="step" data-reveal data-delay="1"><h3>Book and pay</h3><p>Reserve in a minute right here. Staying with us? Add canoe hire to your booking instead.</p></div>
         <div class="step" data-reveal data-delay="2"><h3>Turn up and paddle</h3><p>Arrive, get your briefing and buoyancy aids, and push off. Free parking on site.</p></div>
       </div>
-      <div style="margin-top:2.4rem;display:flex;gap:.9rem;flex-wrap:wrap" data-reveal>
-        <a href="stay.html#book" class="btn btn--sand btn--lg">Book canoe hire
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a href="tel:07810616920" class="btn btn--glass btn--lg">Same day? Call 07810 616920</a>
+
+      <!-- Custom booking front-end. Availability + payment are handled by Checkfront behind it. -->
+      <div class="cbook" data-canoe-booking data-checkfront-host="REPLACE-ME.checkfront.com" data-reveal>
+        <div class="cbook__head">
+          <h3>Book your paddle</h3>
+          <p>Pick a day, choose your session and how many boats. We will confirm availability and take payment securely.</p>
+        </div>
+
+        <div class="cbook__grid">
+          <div class="cbook__field">
+            <label for="cb-date">Date</label>
+            <input type="date" id="cb-date" data-cb-date />
+          </div>
+          <div class="cbook__field">
+            <span class="cbook__flabel" id="cb-session-label">Session</span>
+            <div class="cbook__sessions" role="radiogroup" aria-labelledby="cb-session-label">
+              <button type="button" class="cbook__session is-active" data-cb-session="early" role="radio" aria-checked="true"><b>Early bird</b><span>9:30 &ndash; 11:30</span></button>
+              <button type="button" class="cbook__session" data-cb-session="afternoon" role="radio" aria-checked="false"><b>Afternoon</b><span>12:00 &ndash; 18:00</span></button>
+            </div>
+          </div>
+        </div>
+
+        <p class="cbook__vlabel">Choose your boats</p>
+        <ul class="cbook__vessels">
+          <li class="cbook__vessel" data-cb-vessel data-name="Three-person canoe" data-price-early="26.00" data-price-afternoon="42.50" data-cf-item-early="" data-cf-item-afternoon="">
+            <div class="cbook__vinfo"><b>Three-person canoe</b><span data-cb-vprice>&pound;26.00</span></div>
+            <div class="cbook__stepper">
+              <button type="button" class="cbook__step" data-cb-dec aria-label="Remove one three-person canoe">&minus;</button>
+              <span data-cb-qty aria-live="polite">0</span>
+              <button type="button" class="cbook__step" data-cb-inc aria-label="Add one three-person canoe">+</button>
+            </div>
+          </li>
+          <li class="cbook__vessel" data-cb-vessel data-name="Double kayak" data-price-early="26.00" data-price-afternoon="42.50" data-cf-item-early="" data-cf-item-afternoon="">
+            <div class="cbook__vinfo"><b>Double kayak</b><span data-cb-vprice>&pound;26.00</span></div>
+            <div class="cbook__stepper">
+              <button type="button" class="cbook__step" data-cb-dec aria-label="Remove one double kayak">&minus;</button>
+              <span data-cb-qty aria-live="polite">0</span>
+              <button type="button" class="cbook__step" data-cb-inc aria-label="Add one double kayak">+</button>
+            </div>
+          </li>
+          <li class="cbook__vessel" data-cb-vessel data-name="Single kayak" data-price-early="21.50" data-price-afternoon="32.00" data-cf-item-early="" data-cf-item-afternoon="">
+            <div class="cbook__vinfo"><b>Single kayak</b><span data-cb-vprice>&pound;21.50</span></div>
+            <div class="cbook__stepper">
+              <button type="button" class="cbook__step" data-cb-dec aria-label="Remove one single kayak">&minus;</button>
+              <span data-cb-qty aria-live="polite">0</span>
+              <button type="button" class="cbook__step" data-cb-inc aria-label="Add one single kayak">+</button>
+            </div>
+          </li>
+          <li class="cbook__vessel" data-cb-vessel data-name="Paddleboard (SUP)" data-price-early="21.50" data-price-afternoon="32.00" data-cf-item-early="" data-cf-item-afternoon="">
+            <div class="cbook__vinfo"><b>Paddleboard (SUP)</b><span data-cb-vprice>&pound;21.50</span></div>
+            <div class="cbook__stepper">
+              <button type="button" class="cbook__step" data-cb-dec aria-label="Remove one paddleboard">&minus;</button>
+              <span data-cb-qty aria-live="polite">0</span>
+              <button type="button" class="cbook__step" data-cb-inc aria-label="Add one paddleboard">+</button>
+            </div>
+          </li>
+          <li class="cbook__vessel" data-cb-vessel data-name="Self-launch (your own boat)" data-price-early="10.00" data-price-afternoon="10.00" data-cf-item-early="" data-cf-item-afternoon="">
+            <div class="cbook__vinfo"><b>Self-launch</b><span data-cb-vprice>&pound;10.00 <em>per vessel, per day</em></span></div>
+            <div class="cbook__stepper">
+              <button type="button" class="cbook__step" data-cb-dec aria-label="Remove one self-launch vessel">&minus;</button>
+              <span data-cb-qty aria-live="polite">0</span>
+              <button type="button" class="cbook__step" data-cb-inc aria-label="Add one self-launch vessel">+</button>
+            </div>
+          </li>
+        </ul>
+
+        <div class="cbook__foot">
+          <div class="cbook__total"><span>Total</span><b data-cb-total>&pound;0.00</b></div>
+          <button type="button" class="btn btn--sand btn--lg" data-cb-checkout disabled>
+            Continue to secure checkout
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+        <p class="cbook__note" data-cb-note hidden></p>
       </div>
-      <p style="color:rgba(255,255,255,.7);margin-top:1.2rem;font-size:.9rem;max-width:60ch">Online booking is powered by our canoe booking system. Camping with us at Canal Camping? You can launch your own boat for a small donation.</p>
+
+      <p class="cbook__legal" data-reveal>Availability is confirmed and payment is taken securely by our booking system. Prefer to talk, or paddling today? Call <a href="tel:07810616920">07810 616920</a>. Camping at Canal Camping? You can launch your own boat for a small donation.</p>
     </div>
   </section>
 
@@ -162,7 +247,7 @@
         </div>
       </div>
       <div class="media-frame" data-reveal data-delay="1" style="aspect-ratio:1/1">
-        <img src="assets/images/canoe-3.jpg" alt="Paddling past the waterside pods" />
+        <img loading="lazy" decoding="async" src="assets/images/canoe-3.jpg" alt="Paddling past the waterside pods" />
       </div>
     </div>
   </section>

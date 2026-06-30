@@ -1,4 +1,4 @@
-/* Dilham Hall Retreats — prototype interactions */
+/* Dilham Hall Retreats — site interactions */
 (function () {
   "use strict";
 
@@ -44,7 +44,7 @@
     reveals.forEach((el) => el.classList.add("is-in"));
   }
 
-  // Booking widget demo (prototype only — real availability comes from SuperControl)
+  // Booking search — on submit, shows how to book (live availability to be wired via SuperControl)
   document.querySelectorAll("[data-booking]").forEach((form) => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -55,6 +55,129 @@
       }
     });
   });
+
+  // Canoe booking — custom front-end. Availability + payment run through Checkfront behind it.
+  // Go-live: set data-checkfront-host on [data-canoe-booking] to the real account
+  // (e.g. "dilhamhall.checkfront.com") and fill each vessel's data-cf-item-early /
+  // data-cf-item-afternoon with its Checkfront item id. For a fully in-page flow with no
+  // redirect, wire these to the Checkfront API server-side instead of the reserve link below.
+  const cbook = document.querySelector("[data-canoe-booking]");
+  if (cbook) {
+    const host = (cbook.getAttribute("data-checkfront-host") || "").trim();
+    const hostReady = host && !/replace-me/i.test(host);
+    const dateEl = cbook.querySelector("[data-cb-date]");
+    const sessionBtns = Array.prototype.slice.call(cbook.querySelectorAll("[data-cb-session]"));
+    const vessels = Array.prototype.slice.call(cbook.querySelectorAll("[data-cb-vessel]"));
+    const totalEl = cbook.querySelector("[data-cb-total]");
+    const checkoutBtn = cbook.querySelector("[data-cb-checkout]");
+    const noteEl = cbook.querySelector("[data-cb-note]");
+    let session = "early";
+
+    const pad = (n) => String(n).padStart(2, "0");
+    const money = (n) => "£" + n.toFixed(2);
+    const qtyOf = (v) => parseInt(v.querySelector("[data-cb-qty]").textContent, 10) || 0;
+    const priceOf = (v) => parseFloat(v.getAttribute("data-price-" + session)) || 0;
+
+    // Block past dates
+    if (dateEl) {
+      const t = new Date();
+      dateEl.min = t.getFullYear() + "-" + pad(t.getMonth() + 1) + "-" + pad(t.getDate());
+    }
+
+    // Capture any price qualifier (e.g. "per vessel, per day") once so re-renders keep it
+    vessels.forEach((v) => {
+      const em = v.querySelector("[data-cb-vprice] em");
+      v._suffix = em ? em.textContent : "";
+    });
+
+    const showNote = (msg) => {
+      if (!noteEl) return;
+      noteEl.textContent = msg;
+      noteEl.hidden = false;
+      noteEl.scrollIntoView({ behavior: "smooth", block: "center" });
+    };
+    const longDate = (v) => {
+      const d = new Date(v + "T00:00:00");
+      return isNaN(d) ? v : d.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+    };
+
+    const render = () => {
+      let total = 0;
+      let count = 0;
+      vessels.forEach((v) => {
+        const price = priceOf(v);
+        const qty = qtyOf(v);
+        total += price * qty;
+        count += qty;
+        v.querySelector("[data-cb-vprice]").innerHTML =
+          money(price) + (v._suffix ? " <em>" + v._suffix + "</em>" : "");
+        v.querySelector("[data-cb-dec]").disabled = qty === 0;
+      });
+      totalEl.textContent = money(total);
+      checkoutBtn.disabled = count === 0;
+      if (noteEl) noteEl.hidden = true;
+    };
+
+    sessionBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        session = btn.getAttribute("data-cb-session");
+        sessionBtns.forEach((b) => {
+          const active = b === btn;
+          b.classList.toggle("is-active", active);
+          b.setAttribute("aria-checked", active ? "true" : "false");
+        });
+        render();
+      });
+    });
+
+    vessels.forEach((v) => {
+      const qtyEl = v.querySelector("[data-cb-qty]");
+      v.querySelector("[data-cb-inc]").addEventListener("click", () => {
+        qtyEl.textContent = Math.min(qtyOf(v) + 1, 20);
+        render();
+      });
+      v.querySelector("[data-cb-dec]").addEventListener("click", () => {
+        qtyEl.textContent = Math.max(qtyOf(v) - 1, 0);
+        render();
+      });
+    });
+
+    checkoutBtn.addEventListener("click", () => {
+      const chosen = vessels
+        .filter((v) => qtyOf(v) > 0)
+        .map((v) => ({
+          name: v.getAttribute("data-name"),
+          qty: qtyOf(v),
+          item: v.getAttribute("data-cf-item-" + session),
+        }));
+      if (!chosen.length) return;
+      if (dateEl && !dateEl.value) {
+        dateEl.focus();
+        showNote("Please choose a date for your paddle.");
+        return;
+      }
+
+      if (hostReady) {
+        // Hand off to Checkfront to confirm availability and take payment.
+        const ymd = dateEl.value.replace(/-/g, "");
+        const params = new URLSearchParams({ start_date: ymd, end_date: ymd });
+        const firstItem = chosen.find((c) => c.item);
+        if (firstItem) params.set("item_id", firstItem.item);
+        window.location.href = "https://" + host + "/reserve/?" + params.toString();
+        return;
+      }
+
+      // No live Checkfront account wired yet — show how to confirm and pay.
+      const summary = chosen.map((c) => c.qty + " × " + c.name).join(", ");
+      const slot = session === "early" ? "Early bird (9:30–11:30)" : "Afternoon (12:00–18:00)";
+      showNote(
+        summary + " — " + slot + " on " + longDate(dateEl.value) + ", total " +
+        totalEl.textContent + ". To confirm and pay, call or text 07810 616920 or email paddle@dilhamhall.co.uk and we will get you on the water."
+      );
+    });
+
+    render();
+  }
 
   // Photo gallery lightbox
   const triggers = Array.prototype.slice.call(document.querySelectorAll("[data-full]"));
@@ -116,4 +239,15 @@
       if (e.key === "ArrowRight") show(idx + 1);
     });
   }
+
+  // Highlight the current section in the primary nav
+  (function () {
+    let page = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+    if (/^(pod-|tonnage-)/.test(page)) page = "stay.html";
+    document.querySelectorAll(".nav a").forEach((a) => {
+      if ((a.getAttribute("href") || "").toLowerCase() === page) {
+        a.setAttribute("aria-current", "page");
+      }
+    });
+  })();
 })();

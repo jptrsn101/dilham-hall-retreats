@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Dilham Hall Retreats">
+  <rect width="64" height="64" rx="14" fill="#4D5C56"/>
+  <path d="M32 13c-10 7-15 14-15 23a15 15 0 0 0 30 0c0-9-5-16-15-23z" fill="#D6C2B7"/>
+  <path d="M32 22v22M32 33l7-6M32 38l-7-6" fill="none" stroke="#4D5C56" stroke-width="2.4" stroke-linecap="round"/>
+</svg>

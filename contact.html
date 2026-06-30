@@ -9,6 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,470;9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="canonical" href="https://dilhamhallretreats.co.uk/contact.html" />
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#4D5C56" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Dilham Hall Retreats" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:title" content="Contact &amp; Find Us | Dilham Hall Retreats" />
+  <meta property="og:description" content="Get in touch with Dilham Hall Retreats. Phone and email for glamping, canoe hire and camping, plus how to find us in Dilham, North Walsham, Norfolk." />
+  <meta property="og:url" content="https://dilhamhallretreats.co.uk/contact.html" />
+  <meta property="og:image" content="https://dilhamhallretreats.co.uk/assets/images/waterside-6.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact &amp; Find Us | Dilham Hall Retreats" />
+  <meta name="twitter:description" content="Get in touch with Dilham Hall Retreats. Phone and email for glamping, canoe hire and camping, plus how to find us in Dilham, North Walsham, Norfolk." />
+  <meta name="twitter:image" content="https://dilhamhallretreats.co.uk/assets/images/waterside-6.jpg" />
+  <link rel="preload" as="image" href="assets/images/waterside-6.jpg" fetchpriority="high" />
 </head>
 <body>
 
@@ -36,7 +51,7 @@
 
   <!-- PAGE HERO -->
   <section class="page-hero" style="padding-bottom:clamp(2.5rem,5vw,3.5rem)">
-    <img src="assets/images/waterside-6.jpg" alt="The waterside at Dilham Hall Retreats" />
+    <img fetchpriority="high" decoding="async" src="assets/images/waterside-6.jpg" alt="The waterside at Dilham Hall Retreats" />
     <div class="container">
       <p class="crumbs"><a href="index.html">Home</a> &middot; Contact</p>
       <h1 class="display" style="font-size:clamp(2.4rem,5.5vw,4rem)">Get in touch.</h1>
@@ -74,20 +89,23 @@
 
       <div data-reveal data-delay="1">
         <h2 style="font-size:1.9rem">Send a message</h2>
-        <form style="margin-top:1.4rem" onsubmit="return false">
+        <form style="margin-top:1.4rem" action="https://formsubmit.co/hello@dilhamhall.co.uk" method="POST">
+          <input type="hidden" name="_subject" value="New website enquiry &mdash; Dilham Hall Retreats" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div class="field-row">
-            <div class="field"><label for="c-name">Name</label><input id="c-name" type="text" placeholder="Your name" required /></div>
-            <div class="field"><label for="c-email">Email</label><input id="c-email" type="email" placeholder="you@email.com" required /></div>
+            <div class="field"><label for="c-name">Name</label><input id="c-name" name="Name" type="text" placeholder="Your name" required /></div>
+            <div class="field"><label for="c-email">Email</label><input id="c-email" name="Email" type="email" placeholder="you@email.com" required /></div>
           </div>
           <div class="field-row">
-            <div class="field"><label for="c-phone">Phone (optional)</label><input id="c-phone" type="tel" placeholder="Phone number" /></div>
-            <div class="field"><label for="c-topic">What is it about?</label><select id="c-topic"><option>A glamping stay</option><option>Canoe hire</option><option>Canal camping</option><option>An event or exclusive hire</option><option>Something else</option></select></div>
+            <div class="field"><label for="c-phone">Phone (optional)</label><input id="c-phone" name="Phone" type="tel" placeholder="Phone number" /></div>
+            <div class="field"><label for="c-topic">What is it about?</label><select id="c-topic" name="Topic"><option>A glamping stay</option><option>Canoe hire</option><option>Canal camping</option><option>An event or exclusive hire</option><option>Something else</option></select></div>
           </div>
-          <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" rows="5" placeholder="How can we help?"></textarea></div>
+          <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" name="Message" rows="5" placeholder="How can we help?"></textarea></div>
           <button class="btn btn--primary btn--lg" type="submit">Send message
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
-          <p class="muted" style="font-size:.85rem;margin-top:.8rem">Prototype form. On the live site this sends to the team and confirms by email.</p>
         </form>
       </div>
     </div>
@@ -96,14 +114,10 @@
   <!-- MAP -->
   <section class="section section--tight" style="padding-top:0">
     <div class="container">
-      <div style="position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);min-height:360px;display:grid;place-items:center;background:linear-gradient(135deg,var(--mist),var(--sand))" data-reveal>
-        <div style="text-align:center;color:var(--forest);padding:2rem">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="width:2.6rem;height:2.6rem;margin-bottom:.6rem"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
-          <p style="font-family:var(--font-display);font-size:1.4rem">Dilham, North Walsham, NR28 9PW</p>
-          <p class="muted" style="margin-top:.4rem">An interactive map will sit here on the finished site, with directions and what3words.</p>
-          <a href="https://maps.google.com/?q=Dilham+Hall+Retreats+NR28+9PW" class="btn btn--primary" style="margin-top:1.2rem">Open in Google Maps</a>
-        </div>
+      <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);line-height:0" data-reveal>
+        <iframe title="Map showing Dilham Hall Retreats, Dilham, North Walsham, NR28 9PW" src="https://www.openstreetmap.org/export/embed.html?bbox=1.4547%2C52.7692%2C1.4947%2C52.7932&amp;layer=mapnik&amp;marker=52.781168%2C1.474715" width="100%" height="440" style="border:0;display:block" loading="lazy"></iframe>
       </div>
+      <p class="muted" style="margin-top:1rem;text-align:center">Dilham, North Walsham, NR28 9PW &middot; <a href="https://www.google.com/maps/dir/?api=1&amp;destination=52.781168,1.474715" target="_blank" rel="noopener">Get directions</a> &middot; <a href="https://www.openstreetmap.org/?mlat=52.781168&amp;mlon=1.474715#map=15/52.7812/1.4747" target="_blank" rel="noopener">View larger map</a></p>
     </div>
   </section>
 

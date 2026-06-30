@@ -9,6 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,470;9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="canonical" href="https://dilhamhallretreats.co.uk/tonnage-king-bunk.html" />
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#4D5C56" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Dilham Hall Retreats" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:title" content="King + Bunk pods | Dilham Hall Retreats" />
+  <meta property="og:description" content="King + Bunk waterside pods at Tonnage Bridge, Dilham. Open-plan, sleeps 4, with a hot tub. Dog and family friendly. See photos and check dates." />
+  <meta property="og:url" content="https://dilhamhallretreats.co.uk/tonnage-king-bunk.html" />
+  <meta property="og:image" content="https://dilhamhallretreats.co.uk/assets/images/waterside-6.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="King + Bunk pods | Dilham Hall Retreats" />
+  <meta name="twitter:description" content="King + Bunk waterside pods at Tonnage Bridge, Dilham. Open-plan, sleeps 4, with a hot tub. Dog and family friendly. See photos and check dates." />
+  <meta name="twitter:image" content="https://dilhamhallretreats.co.uk/assets/images/waterside-6.jpg" />
+  <link rel="preload" as="image" href="assets/images/waterside-6.jpg" fetchpriority="high" />
 </head>
 <body>
 
@@ -29,7 +44,7 @@
 
   <!-- PAGE HERO -->
   <section class="page-hero">
-    <img src="assets/images/waterside-6.jpg" alt="King and Bunk open-plan waterside pod at Tonnage Bridge" />
+    <img fetchpriority="high" decoding="async" src="assets/images/waterside-6.jpg" alt="King and Bunk open-plan waterside pod at Tonnage Bridge" />
     <div class="container">
       <p class="crumbs"><a href="index.html">Home</a> &middot; <a href="stay.html">Stay</a> &middot; <a href="stay.html#tonnage">Tonnage Bridge</a> &middot; King + Bunk pods</p>
       <span class="callout" style="margin-bottom:1rem">Families &middot; Dogs welcome &middot; Sleeps 4</span>
@@ -43,11 +58,11 @@
   <section class="section">
     <div class="container">
       <div class="gallery" data-gallery data-reveal>
-        <button class="g-main" data-full="assets/images/waterside-6.jpg" data-cap="Waterside pod exterior"><img src="assets/images/waterside-6.jpg" alt="Waterside pod exterior" /></button>
-        <button class="" data-full="assets/images/waterside-1.jpg" data-cap="Pod and private hot tub"><img src="assets/images/waterside-1.jpg" alt="Pod and private hot tub" /></button>
-        <button class="" data-full="assets/images/pod-interior-2.jpg" data-cap="Open-plan living"><img src="assets/images/pod-interior-2.jpg" alt="Open-plan living" /></button>
-        <button class="" data-full="assets/images/tonnage-1.jpg" data-cap="Paddling from the doorstep"><img src="assets/images/tonnage-1.jpg" alt="Paddling from the doorstep" /></button>
-        <button class="" data-full="assets/images/tonnage-2.jpg" data-cap="Beside the canal"><img src="assets/images/tonnage-2.jpg" alt="Beside the canal" /></button>
+        <button class="g-main" data-full="assets/images/waterside-6.jpg" data-cap="Waterside pod exterior"><img loading="lazy" decoding="async" src="assets/images/waterside-6.jpg" alt="Waterside pod exterior" /></button>
+        <button class="" data-full="assets/images/waterside-1.jpg" data-cap="Pod and private hot tub"><img loading="lazy" decoding="async" src="assets/images/waterside-1.jpg" alt="Pod and private hot tub" /></button>
+        <button class="" data-full="assets/images/pod-interior-2.jpg" data-cap="Open-plan living"><img loading="lazy" decoding="async" src="assets/images/pod-interior-2.jpg" alt="Open-plan living" /></button>
+        <button class="" data-full="assets/images/tonnage-1.jpg" data-cap="Paddling from the doorstep"><img loading="lazy" decoding="async" src="assets/images/tonnage-1.jpg" alt="Paddling from the doorstep" /></button>
+        <button class="" data-full="assets/images/tonnage-2.jpg" data-cap="Beside the canal"><img loading="lazy" decoding="async" src="assets/images/tonnage-2.jpg" alt="Beside the canal" /></button>
       </div>
 
       <div class="pod-layout">
@@ -70,17 +85,15 @@
         </div>
 
         <aside class="checkpanel" id="check">
-          <form data-booking>
-            <h3>Check dates</h3>
-            <p class="muted" style="font-size:.92rem;margin-top:.3rem">See if King + Bunk pods is free for your nights.</p>
-            <label for="d-in">Arrive</label><input type="date" id="d-in" />
-            <label for="d-out">Leave</label><input type="date" id="d-out" />
-            <label for="d-guests">Guests</label>
-            <select id="d-guests"><option>2 adults</option><option>2 adults + dog</option><option>2 adults, 1 child</option><option>2 adults, 2 children</option></select>
-            <button class="btn btn--primary" type="submit">Check availability</button>
-            <p class="booking-note" data-booking-note hidden>Live availability and the price for your dates appear here in the finished site, powered by our booking system (synced with Airbnb and Booking.com).</p>
-            <p class="pricenote">2 night minimum (3 nights in peak season). Dogs £20 a stay.</p>
-          </form>
+          <!-- Live booking: SuperControl Tonnage Bridge calendar (account 22912, site ID 49029) -->
+          <h3>Check dates &amp; book</h3>
+          <p class="muted" style="font-size:.92rem;margin-top:.3rem">See if King + Bunk pods is free for your nights, then book and pay securely.</p>
+          <div class="booking-widget" style="margin-top:1rem">
+            <div data-calendar-key="5FA3A7438D708EB6E166655D55C6E115E255E7EACA7F5BFCC51B695038783AE360C1DEA357AA775498003FD8F3C8E3E10B2B4196D7707914" data-calendar-widescreen-months="1">
+              Loading the live availability calendar&#8230;
+            </div>
+          </div>
+          <p class="pricenote">2 night minimum (3 nights in peak season). Dogs £20 a stay.</p>
         </aside>
       </div>
     </div>
@@ -92,7 +105,7 @@
       <h2 data-reveal>The other pod styles</h2>
       <div class="pod-cards" style="margin-top:1.6rem">
         <article class="retreat">
-          <div class="retreat__media"><span class="retreat__tag">Sleeps 4</span><img src="assets/images/waterside-3.jpg" alt="King + Twin" /></div>
+          <div class="retreat__media"><span class="retreat__tag">Sleeps 4</span><img loading="lazy" decoding="async" src="assets/images/waterside-3.jpg" alt="King + Twin" /></div>
           <div class="retreat__body">
             <h3 class="retreat__name">King + Twin</h3>
             <p class="retreat__sub">Style 1 &middot; Sleeps 4</p>
@@ -100,7 +113,7 @@
           </div>
         </article>
         <article class="retreat">
-          <div class="retreat__media"><span class="retreat__tag">Sleeps 5</span><img src="assets/images/waterside-5.jpg" alt="King + Single + Bunk" /></div>
+          <div class="retreat__media"><span class="retreat__tag">Sleeps 5</span><img loading="lazy" decoding="async" src="assets/images/waterside-5.jpg" alt="King + Single + Bunk" /></div>
           <div class="retreat__body">
             <h3 class="retreat__name">King + Single + Bunk</h3>
             <p class="retreat__sub">Style 2 &middot; Sleeps 5</p>
@@ -130,6 +143,8 @@
     </div>
   </footer>
 
+  <!-- SuperControl booking widget loader -->
+  <script src="https://secure.supercontrol.co.uk/components/embed.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
