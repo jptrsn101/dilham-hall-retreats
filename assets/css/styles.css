@@ -376,6 +376,14 @@ h3 { font-size: clamp(1.35rem, 2.4vw, 1.9rem); }
 /* prose + content helpers */
 .prose p { margin-bottom: 1.1rem; max-width: 68ch; }
 .prose h3 { margin: 2rem 0 .8rem; }
+.prose h2 { margin: 2.6rem 0 1rem; font-size: 1.5rem; }
+.prose h2:first-of-type { margin-top: .5rem; }
+.prose ul { list-style: disc; padding-left: 1.4rem; margin: 0 0 1.2rem; max-width: 68ch; }
+.prose ul li { margin-bottom: .5rem; }
+.prose ul ul { list-style: circle; margin: .5rem 0; }
+.prose a { color: var(--sage-deep); text-decoration: underline; text-underline-offset: 2px; }
+.prose a:hover { color: var(--forest); }
+.legal-meta { color: var(--slate); font-weight: 600; font-size: .92rem; }
 .split { display:grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem,5vw,4.5rem); align-items:center; }
 .split--narrow { grid-template-columns: 1.2fr .8fr; }
 @media (max-width: 820px){ .split, .split--narrow { grid-template-columns:1fr; } }
