@@ -15,15 +15,16 @@
   const nav = document.querySelector(".nav");
   const toggle = document.querySelector(".nav-toggle");
   const close = document.querySelector(".nav__close");
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => nav.classList.add("is-open"));
-  }
-  if (close && nav) {
-    close.addEventListener("click", () => nav.classList.remove("is-open"));
-  }
+  const openNav = () => { nav.classList.add("is-open"); document.body.classList.add("nav-open"); };
+  const closeNav = () => { nav.classList.remove("is-open"); document.body.classList.remove("nav-open"); };
+  if (toggle && nav) toggle.addEventListener("click", openNav);
+  if (close && nav) close.addEventListener("click", closeNav);
   nav && nav.querySelectorAll("a").forEach((a) =>
-    a.addEventListener("click", () => nav.classList.remove("is-open"))
+    a.addEventListener("click", closeNav)
   );
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && nav && nav.classList.contains("is-open")) closeNav();
+  });
 
   // Scroll reveal
   const reveals = document.querySelectorAll("[data-reveal]");

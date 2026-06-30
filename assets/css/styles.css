@@ -182,11 +182,17 @@ h3 { font-size: clamp(1.35rem, 2.4vw, 1.9rem); }
 
 /* scrolled state: frosted glass */
 .site-header.is-scrolled {
+  box-shadow: 0 1px 0 rgba(6,46,40,.06), 0 18px 44px -34px rgba(6,46,40,.7);
+  padding: 0.65rem 0;
+}
+/* Frosted glass on a pseudo-element so the header itself is NOT a containing
+   block for the fixed mobile menu. (backdrop-filter on the header element traps
+   position:fixed children inside the thin bar.) */
+.site-header.is-scrolled::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
   background: rgba(251, 250, 247, 0.82);
   -webkit-backdrop-filter: blur(16px) saturate(140%);
           backdrop-filter: blur(16px) saturate(140%);
-  box-shadow: 0 1px 0 rgba(6,46,40,.06), 0 18px 44px -34px rgba(6,46,40,.7);
-  padding: 0.65rem 0;
 }
 .site-header.is-scrolled .brand__mark { color: var(--forest); }
 .site-header.is-scrolled .nav a { color: var(--sage-deep); }
@@ -652,11 +658,53 @@ h3 { font-size: clamp(1.35rem, 2.4vw, 1.9rem); }
   .nav-toggle { display: inline-flex; align-items:center; gap:.5rem; color: var(--white); font-weight:700; text-shadow: 0 1px 10px rgba(6,46,40,.6); }
   .site-header:not(.is-scrolled) .brand-logo--light { filter: drop-shadow(0 1px 7px rgba(6,46,40,.45)); }
   .site-header.is-scrolled .nav-toggle { color: var(--forest); }
+  /* Fullscreen animated mobile menu */
   .nav.is-open {
-    display: flex; flex-direction: column; gap: 1.4rem;
-    position: fixed; inset: 0; background: var(--forest); z-index: 200;
-    align-items: center; justify-content: center; font-size: 1.4rem;
+    display: flex; flex-direction: column; gap: 1.6rem;
+    position: fixed; inset: 0; z-index: 200;
+    align-items: center; justify-content: center;
+    padding: 2rem; font-size: clamp(1.7rem, 7vw, 2.3rem);
+    background:
+      radial-gradient(125% 75% at 50% 0%, rgba(103,123,115,.5), transparent 58%),
+      rgba(6,46,40,.94);
+    -webkit-backdrop-filter: blur(14px) saturate(120%);
+            backdrop-filter: blur(14px) saturate(120%);
+    animation: navOverlayIn .4s var(--ease) both;
   }
-  .nav.is-open a { color: var(--white); font-family: var(--font-display); }
-  .nav.is-open .nav__close { display: block; position: absolute; top: 1.5rem; right: var(--gutter); color: var(--white); font-size: 2rem; }
+  .nav.is-open a,
+  .site-header.is-scrolled .nav.is-open a {
+    color: var(--white); font-family: var(--font-display); font-weight: 500;
+    opacity: 0; transform: translateY(16px);
+    animation: navLinkIn .55s var(--ease) forwards;
+  }
+  .nav.is-open a::after { display: none; }
+  .nav.is-open a:nth-child(2){ animation-delay:.07s }
+  .nav.is-open a:nth-child(3){ animation-delay:.13s }
+  .nav.is-open a:nth-child(4){ animation-delay:.19s }
+  .nav.is-open a:nth-child(5){ animation-delay:.25s }
+  .nav.is-open a:nth-child(6){ animation-delay:.31s }
+  .nav.is-open a:nth-child(7){ animation-delay:.37s }
+  .nav.is-open .nav__close {
+    display: flex; align-items: center; justify-content: center;
+    position: absolute; top: 1.1rem; right: var(--gutter);
+    width: 2.8rem; height: 2.8rem; border-radius: 999px;
+    color: var(--white); font-size: 1.7rem; line-height: 1;
+    background: rgba(255,255,255,.12);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.4);
+    animation: navOverlayIn .5s var(--ease) both;
+    transition: background .25s var(--ease), transform .3s var(--ease);
+  }
+  .nav.is-open .nav__close:hover { background: rgba(255,255,255,.24); transform: rotate(90deg); }
+}
+
+/* Lock background scroll while the mobile menu is open */
+body.nav-open { overflow: hidden; }
+
+@keyframes navOverlayIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes navLinkIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce){
+  .nav.is-open, .nav.is-open a, .nav.is-open .nav__close { animation: none; opacity: 1; transform: none; }
 }
