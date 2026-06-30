@@ -461,6 +461,14 @@ h3 { font-size: clamp(1.35rem, 2.4vw, 1.9rem); }
 .place b { color:var(--forest); display:block; }
 .place span { font-size:.86rem; color:#6b7873; }
 .place em { font-style:normal; font-weight:700; color:var(--sage); font-size:.8rem; }
+.place--feature { box-shadow: 0 0 0 2px var(--sand); }
+.place--feature b { font-size: 1.05rem; }
+.place--feature .place__tag {
+  display:inline-block; margin-bottom:.45rem;
+  background:var(--sand); color:var(--forest);
+  font-size:.66rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase;
+  padding:.22rem .55rem; border-radius:999px;
+}
 
 /* award strip */
 .award-strip { background: var(--sand); }
