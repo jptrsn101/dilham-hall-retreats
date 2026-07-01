@@ -678,6 +678,26 @@ h3 { font-size: clamp(1.35rem, 2.4vw, 1.9rem); }
 .pod-chip { font-size:.8rem; font-weight:700; color:var(--sage-deep); background:var(--mist); padding:.32rem .7rem; border-radius:999px; }
 .layout__best { font-size:.9rem; color:#51605a; margin-top:1rem; }
 
+/* --------------------------------------------------------- sticky mobile "Book" button */
+.book-fab {
+  position: fixed; right: 1rem; bottom: 1rem; z-index: 90;
+  display: none; align-items: center; gap: .5rem;
+  padding: .9rem 1.35rem; border-radius: 999px;
+  background: var(--sand); color: var(--forest);
+  font-family: var(--font-body); font-weight: 800; font-size: 1.02rem;
+  line-height: 1; text-decoration: none;
+  box-shadow: 0 14px 30px -8px rgba(6,46,40,.6), 0 3px 10px rgba(6,46,40,.28);
+  -webkit-tap-highlight-color: transparent;
+  transition: transform .18s var(--ease), box-shadow .18s var(--ease);
+}
+.book-fab svg { width: 1.15rem; height: 1.15rem; }
+.book-fab:active { transform: translateY(1px); box-shadow: 0 8px 20px -8px rgba(6,46,40,.55); }
+.book-fab:focus-visible { outline: 3px solid var(--forest); outline-offset: 3px; }
+@media (max-width: 900px){
+  .book-fab { display: inline-flex; bottom: max(1rem, env(safe-area-inset-bottom)); }
+}
+body.nav-open .book-fab { display: none; }   /* out of the way when the menu overlay is open */
+
 /* --------------------------------------------------------- mobile nav */
 @media (max-width: 900px){
   .nav, .header-cta .btn { display: none; }

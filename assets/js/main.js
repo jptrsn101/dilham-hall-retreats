@@ -159,11 +159,23 @@
       }
 
       if (hostReady) {
-        // Hand off to Checkfront to confirm availability and take payment.
+        // Hand off to Checkfront with the date preset, skipping its month calendar.
+        // Checkfront's booking URL can only preselect one item or one category, not a
+        // whole basket, so we drop the guest onto the right session list (all boats +
+        // dry bags + phone holders, live availability) to set quantities and pay in one
+        // booking. Session boats live in Early Bird (category 1) / Afternoon (category 2);
+        // self-launch is its own category, so send that item id directly.
+        // PHASE 2 (Option B): carry the exact multi-item basket straight to a ready-to-pay
+        // cart via the Checkfront API (server-side on Vercel), reusing the data-cf-item-*
+        // ids already on each vessel. Until then quantities are confirmed on Checkfront.
         const ymd = dateEl.value.replace(/-/g, "");
         const params = new URLSearchParams({ start_date: ymd, end_date: ymd });
-        const firstItem = chosen.find((c) => c.item);
-        if (firstItem) params.set("item_id", firstItem.item);
+        const onlySelfLaunch = chosen.every((c) => /self-launch/i.test(c.name));
+        if (onlySelfLaunch) {
+          params.set("item_id", "41");
+        } else {
+          params.set("category_id", session === "early" ? "1" : "2");
+        }
         window.location.href = "https://" + host + "/reserve/?" + params.toString();
         return;
       }
@@ -250,5 +262,27 @@
         a.setAttribute("aria-current", "page");
       }
     });
+  })();
+
+  // Sticky mobile "Book" button. On phones the header CTA is hidden behind the menu,
+  // so this floating button lets guests book from any page. Injected once here so every
+  // page gets it without editing each file. Target + label adapt to the page.
+  (function () {
+    if (document.querySelector(".book-fab")) return;
+    const page = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+    let href = "stay.html";
+    let label = "Book now";
+    if (page === "canoe-hire.html") { href = "#book"; label = "Book a paddle"; }
+    else if (page === "stay.html") { href = "#book"; label = "Book now"; }
+    else if (/^(pod-|tonnage-)/.test(page)) { href = "#check"; label = "Check dates"; }
+    const fab = document.createElement("a");
+    fab.className = "book-fab";
+    fab.href = href;
+    fab.setAttribute("aria-label", label + ", book your visit");
+    fab.innerHTML =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">' +
+      '<rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg>' +
+      '<span>' + label + '</span>';
+    document.body.appendChild(fab);
   })();
 })();
