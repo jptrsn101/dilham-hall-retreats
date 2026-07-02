@@ -264,6 +264,44 @@
     });
   })();
 
+  // Reviews page: the pull-quote strip loops by scrolling a duplicated set. The clone
+  // is decorative, so it is hidden from screen readers and skipped by the keyboard.
+  const marquee = document.querySelector("[data-marquee]");
+  if (marquee) {
+    const set = marquee.querySelector(".quote-set");
+    if (set) {
+      const clone = set.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      clone.querySelectorAll("button").forEach((b) => (b.tabIndex = -1));
+      marquee.appendChild(clone);
+      marquee.classList.add("is-ready");
+    }
+  }
+
+  // Tap a pull quote to land on its full review
+  document.querySelectorAll("[data-quote-jump]").forEach((q) => {
+    q.addEventListener("click", () => {
+      const card = document.getElementById(q.getAttribute("data-quote-jump"));
+      if (!card) return;
+      card.classList.remove("is-pulsed");
+      void card.offsetWidth; // restart the pulse animation on repeat clicks
+      card.scrollIntoView({ behavior: "smooth", block: "center" });
+      card.classList.add("is-pulsed");
+    });
+  });
+
+  // Long reviews fold behind a "read more". The fold is applied here rather than in
+  // the markup so the full text stays visible when JavaScript is unavailable.
+  document.querySelectorAll("[data-more]").forEach((btn) => {
+    btn.closest(".review").classList.add("review--long");
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".review");
+      const open = card.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.textContent = open ? "Show less" : "Read the full review";
+    });
+  });
+
   // Sticky mobile "Book" button. On phones the header CTA is hidden behind the menu,
   // so this floating button lets guests book from any page. Injected once here so every
   // page gets it without editing each file. Target + label adapt to the page.
