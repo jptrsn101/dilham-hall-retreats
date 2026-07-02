@@ -37,6 +37,8 @@ Target feel: **premium, modern, simple, easy to navigate**, showcasing the natur
 - **Platform:** Rebuild on **WordPress** (not headless). The owner (Luke) edits all copy, headings, and images himself in the familiar block editor, so editability for a non-technical owner is a hard requirement. Replace the current Elementor build with a clean, fast custom/block theme that keeps the existing structure and earthy design DNA but fixes clarity, cards, and booking.
 - **Booking:** Keep a proven channel-syncing engine (SuperControl) behind a custom Airbnb-style front-end; unify all overnight stays into one engine; surface canoe hire in the same site. See Section 12.
 - **Copy:** Reuse and tighten the existing website copy rather than rewriting from scratch; keep the warm, personal voice. **No em dashes in any guest-facing copy** (owner wants it to read human). Use commas, full stops, or brackets instead.
+- **Tonnage Bridge positioning (owner, July 2026):** advertise Tonnage Bridge as **waterside**, not "for families" (family-led copy puts some guests off). Children/dog facts stay visible as badges and facts, but headlines, tags and meta lead with the water. Weave **pod spacing** (each pod set well apart along the canal) into the Tonnage narrative. Canal Camping keeps its family positioning.
+- **Deposit (owner, July 2026):** a **50% deposit** is taken at booking (not 30%). Reflected in the Terms page; keep SuperControl in line with this.
 
 ---
 
