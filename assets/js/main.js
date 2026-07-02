@@ -322,5 +322,20 @@
       '<rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg>' +
       '<span>' + label + '</span>';
     document.body.appendChild(fab);
+
+    // Step aside while a booking panel is on screen so the button never sits on
+    // top of the calendar or checkout it points at.
+    const panels = document.querySelectorAll(".checkpanel, [data-canoe-booking]");
+    if (panels.length && "IntersectionObserver" in window) {
+      const inView = new Set();
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) inView.add(e.target);
+          else inView.delete(e.target);
+        });
+        fab.classList.toggle("is-hidden", inView.size > 0);
+      }, { threshold: 0.05 });
+      panels.forEach((p) => io.observe(p));
+    }
   })();
 })();
