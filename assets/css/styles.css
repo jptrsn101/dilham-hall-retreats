@@ -492,6 +492,9 @@ h3 { font-size: clamp(1.35rem, 2.4vw, 1.9rem); }
 .place b { color:var(--forest); display:block; }
 .place span { font-size:.86rem; color:#6b7873; }
 .place em { font-style:normal; font-weight:700; color:var(--sage-deep); font-size:.8rem; display:block; margin-top:.35rem; }
+.place__links { display:block; margin-top:.5rem; font-size:.8rem; font-weight:700; color:#8a938f; }
+.place__links a { color:var(--sage-deep); text-decoration:underline; text-underline-offset:2px; text-decoration-thickness:1px; }
+.place__links a:hover { color:var(--forest); }
 .place--feature { box-shadow: 0 0 0 2px var(--sand); }
 .place--feature b { font-size: 1.05rem; }
 .place--feature .place__tag {
