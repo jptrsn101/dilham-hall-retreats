@@ -15,6 +15,8 @@ It will then appear in the right place on the site automatically. You do **not**
 
 ## Broad Fen — couples pods (adults only, hot tub)
 
+**Update (July 2026):** the photo of a mum and child on the jetty was showing on all three couples pod pages; it has been removed (Broad Fen is adults only). The bedroom and living slots now show real pod interiors, but all three pods currently share the same few photos, so per-pod photos are still the priority here.
+
 ### Damselfly
 - ⭐ `damselfly-exterior.jpg` — the pod from outside with its private hot tub (this is also the big banner at the top of the page)
 - ⭐ `damselfly-bedroom.jpg` — the king-size bed
@@ -42,28 +44,27 @@ It will then appear in the right place on the site automatically. You do **not**
 
 The three styles differ mainly by how they sleep, so a clear photo of each one matters.
 
+**Update (July 2026):** your labelled photos are in. Exterior, twin bedroom, en suites, the open-plan interior and the tea-and-coffee detail are now real photos on the pod pages. The list below shows what is DONE and what is still worth sending.
+
 ### King + Twin (sleeps 4, separate kids' room)
-- ⭐ `tonnage-twin-exterior.jpg` — waterside pod from outside (page banner)
-- ⭐ `tonnage-twin-living.jpg` — living and kitchen space
-- ⭐ `tonnage-twin-hottub.jpg` — the private hot tub
-- `tonnage-twin-canal.jpg` — the pod beside the canal
-- `tonnage-twin-paddle.jpg` — paddling from the doorstep
+- ✅ `tonnage-twin-exterior.jpg` — DONE (your photo of the pod, hot tub and fire pit by the water; also the page banner)
+- ✅ `tonnage-twin-bedroom.jpg` — DONE (your twin bedroom photo)
+- ✅ `tonnage-twin-ensuite.jpg` — DONE (your en suite photo, shared with the King + Single + Bunk page)
+- ⭐ `tonnage-twin-living.jpg` — still wanted: the living and kitchen space in this style (not currently shown on the page until a real one arrives)
+- `tonnage-twin-hottub.jpg` — usable photo in place; a closer shot of a tub actually steaming would be even better
 
 ### King + Single + Bunk (sleeps 5)
-- ⭐ `tonnage-singlebunk-exterior.jpg` — waterside pod from outside (page banner)
-- ⭐ `tonnage-singlebunk-living.jpg` — living and kitchen space
-- ⭐ `tonnage-singlebunk-hottub.jpg` — the private hot tub
-- `tonnage-singlebunk-canal.jpg` — on the canal
-- `tonnage-singlebunk-setting.jpg` — the waterside setting
+- ✅ `tonnage-singlebunk-exterior.jpg` — DONE (shares your exterior photo with King + Twin, as labelled)
+- ✅ `tonnage-singlebunk-ensuite.jpg` — DONE (shares your en suite photo, as labelled)
+- ⭐ `tonnage-singlebunk-bedroom.jpg` — still wanted: the single + bunk sleeping space (the main thing guests ask about on this style)
+- ⭐ `tonnage-singlebunk-living.jpg` — still wanted: living and kitchen space (not currently shown on the page)
 
 ### King + Bunk (sleeps 4, open-plan)
-- ⭐ `tonnage-bunk-exterior.jpg` — waterside pod from outside (page banner)
-- ⭐ `tonnage-bunk-living.jpg` — open-plan living space
-- ⭐ `tonnage-bunk-hottub.jpg` — the private hot tub
-- `tonnage-bunk-paddle.jpg` — paddling from the doorstep
-- `tonnage-bunk-canal.jpg` — beside the canal
-
-> **Worth doing:** a photo of the actual **bedroom / sleeping layout** for each Tonnage style (the twin room, the single + bunk, the bunk). Send those and I will add a dedicated bedroom photo to each gallery, since that is the main difference between the styles.
+- ✅ `tonnage-bunk-living.jpg` — DONE (your open-plan interior photo)
+- ✅ `tonnage-bunk-ensuite.jpg` — DONE (your en suite photo)
+- ✅ `tonnage-bunk-detail.jpg` — DONE (your tea and coffee photo)
+- ⭐ `tonnage-bunk-bedroom.jpg` — still wanted: the bunk beds themselves (the photo that proves the open-plan sleeping)
+- `tonnage-bunk-exterior.jpg` — usable photo in place (pod, barrel hot tub and meadow)
 
 ---
 
@@ -75,9 +76,9 @@ The three styles differ mainly by how they sleep, so a clear photo of each one m
 - *Nice to add:* a daytime bell-tent shot and one of the inside (the made-up bedding). Send them and I will add slots.
 
 ## Canoe hire (replace these in place)
-- `canoe-1.jpg` — the banner: canoes and kayaks on the canal
-- `canoe-3.jpg` and `canoe-4.jpg` — paddling, the launch point, a group on the water
-- *Nice to add:* a paddleboard (SUP) shot and a family/kids paddling photo.
+- `canoe-1.jpg` — the banner: the family paddling on the canal (real photo, in place)
+- `canoe-3.jpg` and `canoe-4.jpg` — now both show people paddling (the winter swan and geese photos were swapped out, July 2026)
+- *Nice to add:* a paddleboard (SUP) shot, the launch point, and a bigger group on the water.
 
 ## Events (replace these in place)
 - `event-1.jpg`, `event-2.jpg`, `event-3.jpg`, `event-6.jpg` — exclusive hire, gatherings, the setting
