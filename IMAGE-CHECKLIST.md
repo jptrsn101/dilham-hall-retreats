@@ -86,8 +86,9 @@ The three styles differ mainly by how they sleep, so a clear photo of each one m
 - `aerial-3.jpg` — an aerial of the whole estate
 
 ## Things To Do
-- `aerial-3.jpg` (banner) and `canoe-3.jpg` are the only photos here right now.
-- The attraction lists (the Broads, wildlife, walks, the beach, food and drink, including **The Cross Keys**) are currently text only. If you want photos against them, send what you have (including a pub photo) and I will add image slots.
+- **Update (July 2026):** the attraction lists now have photo cards, using openly licensed photos of the real places (the Cross Keys, Tonnage Bridge canal, Blickling, Felbrigg, Bure Valley steam railway, Happisburgh Lighthouse, the Broads, and more). Credits are shown at the bottom of the page as the licences require.
+- Any of these can be swapped for your own shots at the same filenames (`attraction-*.jpg` in `assets/images/`); your own photo of **The Cross Keys** (`attraction-cross-keys.jpg`) would be the nicest upgrade.
+- Still photo-less (nothing suitable openly licensed): BeWILDerwood, Fairhaven Water Garden, Hoveton Hall, Alderfen Broad, The Swan Inn, and the four wildlife/family rows furthest down. Send photos and I will slot them in.
 
 ## Home page & About (scenery, shared across a few spots)
 These are general scenery shots reused in several places, so a strong all-rounder works:
