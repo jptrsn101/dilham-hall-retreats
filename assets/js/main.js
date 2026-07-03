@@ -338,4 +338,23 @@
       panels.forEach((p) => io.observe(p));
     }
   })();
+
+  // Jump nav (things to do): highlight the section currently in view
+  (() => {
+    const links = Array.prototype.slice.call(document.querySelectorAll(".jumpnav a"));
+    if (!links.length) return;
+    const sections = links
+      .map((a) => document.getElementById((a.getAttribute("href") || "").slice(1)))
+      .filter(Boolean);
+    if (!sections.length) return;
+    const update = () => {
+      const y = window.scrollY + 170;
+      let current = sections[0];
+      sections.forEach((s) => { if (s.offsetTop <= y) current = s; });
+      links.forEach((a) => a.classList.toggle("is-active", a.getAttribute("href") === "#" + current.id));
+    };
+    document.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  })();
 })();
