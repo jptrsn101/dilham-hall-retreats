@@ -4,26 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dilham Hall Retreats | Luxury Glamping &amp; Canoe Hire on the Norfolk Broads</title>
-  <meta name="description" content="Family-run, carbon-negative glamping in the Norfolk Broads. Adults-only couples pods, luxury waterside pods with hot tubs, canal camping and on-site canoe hire. Find the retreat that is right for you." />
+  <meta name="description" content="Family-run, carbon-negative glamping in the Norfolk Broads. Adults-only couples pods, waterside hot tub pods, canal camping and on-site canoe hire." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,470;9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="canonical" href="https://dilhamhallretreats.co.uk/" />
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
   <meta name="theme-color" content="#4D5C56" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Dilham Hall Retreats" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:title" content="Dilham Hall Retreats | Luxury Glamping &amp; Canoe Hire on the Norfolk Broads" />
-  <meta property="og:description" content="Family-run, carbon-negative glamping in the Norfolk Broads. Adults-only couples pods, luxury waterside pods with hot tubs, canal camping and on-site canoe hire. Find the retreat that is right for you." />
+  <meta property="og:description" content="Family-run, carbon-negative glamping in the Norfolk Broads. Adults-only couples pods, waterside hot tub pods, canal camping and on-site canoe hire." />
   <meta property="og:url" content="https://dilhamhallretreats.co.uk/" />
   <meta property="og:image" content="https://dilhamhallretreats.co.uk/assets/images/waterside-2.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Dilham Hall Retreats | Luxury Glamping &amp; Canoe Hire on the Norfolk Broads" />
-  <meta name="twitter:description" content="Family-run, carbon-negative glamping in the Norfolk Broads. Adults-only couples pods, luxury waterside pods with hot tubs, canal camping and on-site canoe hire. Find the retreat that is right for you." />
+  <meta name="twitter:description" content="Family-run, carbon-negative glamping in the Norfolk Broads. Adults-only couples pods, waterside hot tub pods, canal camping and on-site canoe hire." />
   <meta name="twitter:image" content="https://dilhamhallretreats.co.uk/assets/images/waterside-2.jpg" />
-  <link rel="preload" as="image" href="assets/images/waterside-2.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/images/waterside-2.jpg" imagesrcset="assets/images/waterside-2-800.jpg 800w, assets/images/waterside-2.jpg 1920w" imagesizes="100vw" fetchpriority="high" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "@id": "https://dilhamhallretreats.co.uk/#business",
+    "name": "Dilham Hall Retreats",
+    "url": "https://dilhamhallretreats.co.uk/",
+    "image": "https://dilhamhallretreats.co.uk/assets/images/waterside-2.jpg",
+    "description": "Family-run, carbon-negative glamping, camping and canoe hire on a fifth-generation farm in the Norfolk Broads.",
+    "telephone": "+441692513889",
+    "email": "hello@dilhamhall.co.uk",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dilham, North Walsham",
+      "addressRegion": "Norfolk",
+      "postalCode": "NR28 9PW",
+      "addressCountry": "GB"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 52.781168,
+      "longitude": 1.474715
+    },
+    "sameAs": [
+      "https://www.facebook.com/Dilham.Hall.Retreats",
+      "https://www.instagram.com/dilhamhallretreats"
+    ],
+    "award": "Winner of Channel 4's Four in a Bed",
+    "petsAllowed": true,
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "bestRating": "5",
+      "reviewCount": "69"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -34,7 +73,7 @@
         <img class="brand-logo brand-logo--light" src="assets/images/logo.svg" alt="Dilham Hall Retreats" /><img class="brand-logo brand-logo--dark" src="assets/images/logo-dark.svg" alt="" aria-hidden="true" />
       </a>
 
-      <nav class="nav" aria-label="Primary">
+      <nav class="nav" id="site-nav" aria-label="Primary">
         <button class="nav__close" aria-label="Close menu">&times;</button>
         <a href="stay.html">Stay</a>
         <a href="canoe-hire.html">Canoe Hire</a>
@@ -48,7 +87,7 @@
       <div class="header-cta">
         <a href="stay.html" class="btn btn--ghost">Find your retreat</a>
         <a href="stay.html#book" class="btn btn--sand">Book now</a>
-        <button class="nav-toggle" aria-label="Open menu">
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
           Menu
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
         </button>
@@ -59,7 +98,7 @@
   <!-- ============================== HERO ============================== -->
   <section class="hero">
     <div class="hero__media">
-      <img fetchpriority="high" decoding="async" src="assets/images/waterside-2.jpg" alt="A luxury waterside glamping pod with its own hot tub, looking out over open Norfolk countryside" />
+      <img width="1920" height="1276" fetchpriority="high" decoding="async" src="assets/images/waterside-2.jpg" srcset="assets/images/waterside-2-800.jpg 800w, assets/images/waterside-2.jpg 1920w" sizes="100vw" alt="A luxury waterside glamping pod with its own hot tub, looking out over open Norfolk countryside" />
     </div>
     <div class="container hero__inner">
       <p class="award-pill" data-reveal>
@@ -103,7 +142,7 @@
         <article class="retreat" data-reveal>
           <div class="retreat__media">
             <span class="retreat__tag">Couples &middot; Adults only</span>
-            <img loading="lazy" decoding="async" src="assets/images/pod-interior-2.jpg" alt="Interior of a luxury couples glamping pod at Broad Fen Retreats" />
+            <img width="1400" height="934" loading="lazy" decoding="async" src="assets/images/pod-interior-2.jpg" alt="Interior of a luxury couples glamping pod at Broad Fen Retreats" />
           </div>
           <div class="retreat__body">
             <h3 class="retreat__name">Broad Fen Retreats</h3>
@@ -115,7 +154,7 @@
               <li class="fact fact--no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l2-5 4 1h4l3 3 3 1v6h-3l-1 3h-3l-1-4H8l-1 4H4z"/><path d="M16 5l5 5M21 5l-5 5"/></svg> No dogs</li>
               <li class="fact fact--yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 13h16v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM7 13V7a2 2 0 0 1 4 0M9 7V5"/></svg> Hot tub</li>
             </ul>
-            <a href="stay.html#broad-fen" class="btn btn--primary retreat__cta">Explore Broad Fen
+            <a href="stay.html#couples" class="btn btn--primary retreat__cta">Explore Broad Fen
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
           </div>
@@ -125,7 +164,7 @@
         <article class="retreat" data-reveal data-delay="1">
           <div class="retreat__media">
             <span class="retreat__tag">Waterside &middot; Dogs welcome</span>
-            <img loading="lazy" decoding="async" src="assets/images/tonnage-1.jpg" alt="Waterside glamping pod beside the canal at Tonnage Bridge Retreats" />
+            <img width="1920" height="1280" loading="lazy" decoding="async" src="assets/images/tonnage-1.jpg" alt="Waterside glamping pod beside the canal at Tonnage Bridge Retreats" />
           </div>
           <div class="retreat__body">
             <h3 class="retreat__name">Tonnage Bridge Retreats</h3>
@@ -137,7 +176,7 @@
               <li class="fact fact--yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l2-5 4 1h4l3 3 3 1v6h-3l-1 3h-3l-1-4H8l-1 4H4z"/></svg> Dogs &pound;20</li>
               <li class="fact fact--yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 13h16v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM7 13V7a2 2 0 0 1 4 0M9 7V5"/></svg> Hot tub</li>
             </ul>
-            <a href="stay.html#tonnage-bridge" class="btn btn--primary retreat__cta">Compare the pods
+            <a href="stay.html#tonnage" class="btn btn--primary retreat__cta">Explore Tonnage Bridge
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
           </div>
@@ -147,7 +186,7 @@
         <article class="retreat" data-reveal data-delay="2">
           <div class="retreat__media">
             <span class="retreat__tag">Families &middot; Dogs welcome</span>
-            <img loading="lazy" decoding="async" src="assets/images/camping-1.jpg" alt="Bell tents and camping pitches beside the canal at Dilham" />
+            <img width="1400" height="1050" loading="lazy" decoding="async" src="assets/images/camping-1.jpg" alt="Bell tents and camping pitches beside the canal at Dilham" />
           </div>
           <div class="retreat__body">
             <h3 class="retreat__name">Canal Camping &amp; Bell Tents</h3>
@@ -159,7 +198,7 @@
               <li class="fact fact--yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l2-5 4 1h4l3 3 3 1v6h-3l-1 3h-3l-1-4H8l-1 4H4z"/></svg> Dogs &pound;5</li>
               <li class="fact fact--no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 13h16v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM7 13V7a2 2 0 0 1 4 0"/><path d="M16 4l5 5M21 4l-5 5"/></svg> No hot tub</li>
             </ul>
-            <a href="stay.html#canal-camping" class="btn btn--primary retreat__cta">Explore camping
+            <a href="stay.html#camping" class="btn btn--primary retreat__cta">Explore Canal Camping
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
           </div>
@@ -213,7 +252,7 @@
     <div class="container">
       <div class="feature">
         <div class="feature__media" data-reveal>
-          <img loading="lazy" decoding="async" src="assets/images/canoe-3.jpg" alt="Paddling a canoe along the quiet canal at Dilham" />
+          <img width="1400" height="1050" loading="lazy" decoding="async" src="assets/images/canoe-3.jpg" alt="Paddling a canoe along the quiet canal at Dilham" />
         </div>
         <div data-reveal data-delay="1">
           <p class="eyebrow">On the water</p>
@@ -226,7 +265,7 @@
             <div class="pricerow"><span>Bring your own &middot; self&#8209;launch</span><b>&pound;10 per vessel, per day</b></div>
           </div>
           <div style="margin-top:1.6rem;display:flex;gap:.9rem;flex-wrap:wrap">
-            <a href="#book" class="btn btn--primary btn--lg">Book canoe hire
+            <a href="canoe-hire.html#book" class="btn btn--primary btn--lg">Book canoe hire
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
             <a href="canoe-hire.html#prices" class="btn btn--ghost btn--lg">See all prices</a>
@@ -243,12 +282,12 @@
       <h2 data-reveal data-delay="1">Things to do and see.</h2>
       <p class="lead" data-reveal data-delay="2" style="margin-top:.8rem">Start on the water with our own canoe hire, then explore the Norfolk Broads, big sandy beaches, wildlife reserves, grand estates and family days out, all close by.</p>
       <div class="todo-grid">
-        <a class="todo todo--wide todo--feature" href="canoe-hire.html" data-reveal><img loading="lazy" decoding="async" src="assets/images/canoe-3.jpg" alt="Canoeing on the quiet canal at Dilham"><span class="todo__flag">On site</span><span class="todo__label"><b>Canoe &amp; paddleboard hire</b><span>Push off from our own quiet canal. Canoes, kayaks and SUPs for all.</span></span></a>
-        <a class="todo" href="things-to-do.html" data-reveal data-delay="1"><img loading="lazy" decoding="async" src="assets/images/attraction-swallowtail.jpg" alt="A swallowtail butterfly, the Norfolk Broads speciality"><span class="todo__label"><b>Wildlife &amp; the Broads</b><span>Reserves and rare butterflies</span></span></a>
-        <a class="todo" href="things-to-do.html" data-reveal data-delay="2"><img loading="lazy" decoding="async" src="assets/images/attraction-beach.jpg" alt="Norfolk sandy beach"><span class="todo__label"><b>Beaches</b><span>Sand just 5 miles away</span></span></a>
-        <a class="todo" href="things-to-do.html" data-reveal><img loading="lazy" decoding="async" src="assets/images/attraction-canal-walk.jpg" alt="Swans on the canal seen from Tonnage Bridge"><span class="todo__label"><b>Walks</b><span>3.5km circular canal route</span></span></a>
-        <a class="todo todo--wide" href="things-to-do.html" data-reveal data-delay="1"><img loading="lazy" decoding="async" src="assets/images/attraction-blickling.jpg" alt="The front of Blickling Hall"><span class="todo__label"><b>Estates &amp; gardens</b><span>Blickling, Felbrigg and East Ruston</span></span></a>
-        <a class="todo" href="things-to-do.html" data-reveal data-delay="2"><img loading="lazy" decoding="async" src="assets/images/attraction-steam-railway.jpg" alt="A steam train on the Bure Valley Railway"><span class="todo__label"><b>Family days out</b><span>BeWILDerwood &amp; steam railways</span></span></a>
+        <a class="todo todo--wide todo--feature" href="canoe-hire.html" data-reveal><img width="1400" height="1050" loading="lazy" decoding="async" src="assets/images/canoe-3.jpg" alt="Canoeing on the quiet canal at Dilham"><span class="todo__flag">On site</span><span class="todo__label"><b>Canoe &amp; paddleboard hire</b><span>Push off from our own quiet canal. Canoes, kayaks and SUPs for all.</span></span></a>
+        <a class="todo" href="things-to-do.html" data-reveal data-delay="1"><img width="1400" height="1118" loading="lazy" decoding="async" src="assets/images/attraction-swallowtail.jpg" alt="A swallowtail butterfly, the Norfolk Broads speciality"><span class="todo__label"><b>Wildlife &amp; the Broads</b><span>Reserves and rare butterflies</span></span></a>
+        <a class="todo" href="things-to-do.html" data-reveal data-delay="2"><img width="1400" height="934" loading="lazy" decoding="async" src="assets/images/attraction-beach.jpg" alt="Norfolk sandy beach"><span class="todo__label"><b>Beaches</b><span>Sand just 5 miles away</span></span></a>
+        <a class="todo" href="things-to-do.html" data-reveal><img width="1024" height="768" loading="lazy" decoding="async" src="assets/images/attraction-canal-walk.jpg" alt="Swans on the canal seen from Tonnage Bridge"><span class="todo__label"><b>Walks</b><span>3.5km circular canal route</span></span></a>
+        <a class="todo todo--wide" href="things-to-do.html" data-reveal data-delay="1"><img width="1400" height="836" loading="lazy" decoding="async" src="assets/images/attraction-blickling.jpg" alt="The front of Blickling Hall"><span class="todo__label"><b>Estates &amp; gardens</b><span>Blickling, Felbrigg and East Ruston</span></span></a>
+        <a class="todo" href="things-to-do.html" data-reveal data-delay="2"><img width="1400" height="1050" loading="lazy" decoding="async" src="assets/images/attraction-steam-railway.jpg" alt="A steam train on the Bure Valley Railway"><span class="todo__label"><b>Family days out</b><span>BeWILDerwood &amp; steam railways</span></span></a>
       </div>
       <div class="center" style="margin-top:2.4rem" data-reveal>
         <a href="things-to-do.html" class="btn btn--primary btn--lg">See everything to do
@@ -263,7 +302,7 @@
     <div class="container">
       <div class="story__grid">
         <div class="feature__media" data-reveal>
-          <img loading="lazy" decoding="async" src="assets/images/aerial-2.jpg" alt="Aerial view of Dilham Hall Farm and the surrounding Norfolk countryside" />
+          <img width="1920" height="1440" loading="lazy" decoding="async" src="assets/images/aerial-2.jpg" alt="Aerial view of Dilham Hall Farm and the surrounding Norfolk countryside" />
         </div>
         <div data-reveal data-delay="1">
           <p class="eyebrow">Our story</p>
@@ -282,13 +321,13 @@
 
   <!-- ============================ EVENTS ============================ -->
   <section class="events" id="events">
-    <img loading="lazy" decoding="async" src="assets/images/event-3.jpg" alt="Exclusive event set up at Dilham Hall Retreats" />
+    <img width="1400" height="1050" loading="lazy" decoding="async" src="assets/images/event-3.jpg" alt="Exclusive event set up at Dilham Hall Retreats" />
     <div class="container">
       <div class="events__inner">
         <p class="eyebrow" data-reveal>Exclusive hire</p>
         <h2 data-reveal data-delay="1">Weddings, retreats and team days.</h2>
         <p class="lead" data-reveal data-delay="2" style="color:rgba(255,255,255,.9);margin-top:1rem">Take over the whole estate. A carbon&#8209;negative farm with the Broads on the doorstep, room to sleep your party on site, and waterside team&#8209;building for up to 100 people. Tell us what you have in mind and we will build it around you.</p>
-        <a href="#footer" class="btn btn--sand btn--lg" data-reveal data-delay="3" style="margin-top:1.8rem">Enquire about events
+        <a href="events.html#enquire" class="btn btn--sand btn--lg" data-reveal data-delay="3" style="margin-top:1.8rem">Enquire about events
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
@@ -312,9 +351,9 @@
         <div>
           <h4>Stay</h4>
           <ul class="footer-links">
-            <li><a href="stay.html#broad-fen">Broad Fen Retreats</a></li>
-            <li><a href="stay.html#tonnage-bridge">Tonnage Bridge Retreats</a></li>
-            <li><a href="stay.html#canal-camping">Canal Camping</a></li>
+            <li><a href="stay.html#couples">Broad Fen Retreats</a></li>
+            <li><a href="stay.html#tonnage">Tonnage Bridge Retreats</a></li>
+            <li><a href="stay.html#camping">Canal Camping</a></li>
             <li><a href="canoe-hire.html">Canoe Hire</a></li>
             <li><a href="events.html">Events</a></li>
           </ul>
@@ -334,8 +373,8 @@
         <div>
           <h4>Get in touch</h4>
           <ul class="footer-contact">
-            <li><b>Glamping &amp; events</b> 01692 513889<br><a href="mailto:hello@dilhamhall.co.uk">hello@dilhamhall.co.uk</a></li>
-            <li><b>Canoe hire</b> 07810 616920<br><a href="mailto:paddle@dilhamhall.co.uk">paddle@dilhamhall.co.uk</a></li>
+            <li><b>Glamping &amp; events</b> <a href="tel:01692513889">01692 513889</a><br><a href="mailto:hello@dilhamhall.co.uk">hello@dilhamhall.co.uk</a></li>
+            <li><b>Canoe hire</b> <a href="tel:07810616920">07810 616920</a><br><a href="mailto:paddle@dilhamhall.co.uk">paddle@dilhamhall.co.uk</a></li><li><b>Canal Camping</b> <a href="tel:01692660274">01692 660274</a><br><a href="mailto:bookings@canalcamping.co.uk">bookings@canalcamping.co.uk</a></li>
             <li><b>Find us</b> Dilham, North Walsham, Norfolk NR28 9PW</li>
           </ul>
         </div>

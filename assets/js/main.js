@@ -15,8 +15,21 @@
   const nav = document.querySelector(".nav");
   const toggle = document.querySelector(".nav-toggle");
   const close = document.querySelector(".nav__close");
-  const openNav = () => { nav.classList.add("is-open"); document.body.classList.add("nav-open"); };
-  const closeNav = () => { nav.classList.remove("is-open"); document.body.classList.remove("nav-open"); };
+  const openNav = () => {
+    nav.classList.add("is-open");
+    document.body.classList.add("nav-open");
+    if (toggle) toggle.setAttribute("aria-expanded", "true");
+    if (close) close.focus();
+  };
+  const closeNav = () => {
+    const wasOpen = nav.classList.contains("is-open");
+    nav.classList.remove("is-open");
+    document.body.classList.remove("nav-open");
+    if (toggle) {
+      toggle.setAttribute("aria-expanded", "false");
+      if (wasOpen) toggle.focus();
+    }
+  };
   if (toggle && nav) toggle.addEventListener("click", openNav);
   if (close && nav) close.addEventListener("click", closeNav);
   nav && nav.querySelectorAll("a").forEach((a) =>

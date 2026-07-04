@@ -493,7 +493,7 @@ h3 { font-size: clamp(1.35rem, 2.4vw, 1.9rem); }
 .place span { font-size:.86rem; color:#6b7873; }
 .place em { font-style:normal; font-weight:700; color:var(--sage-deep); font-size:.8rem; display:block; margin-top:.35rem; }
 .place__links { display:block; margin-top:.5rem; font-size:.8rem; font-weight:700; color:#8a938f; }
-.place__links a { color:var(--sage-deep); text-decoration:underline; text-underline-offset:2px; text-decoration-thickness:1px; }
+.place__links a { display:inline-block; padding:.3rem 0; color:var(--sage-deep); text-decoration:underline; text-underline-offset:2px; text-decoration-thickness:1px; }
 .place__links a:hover { color:var(--forest); }
 .place--feature { box-shadow: 0 0 0 2px var(--sand); }
 .place--feature b { font-size: 1.05rem; }
@@ -509,7 +509,7 @@ h3 { font-size: clamp(1.35rem, 2.4vw, 1.9rem); }
 /* sticky jump nav (things to do) */
 .jumpnav { position:sticky; top:84px; z-index:50; display:flex; gap:.35rem; overflow-x:auto; padding:.5rem; background:rgba(251,250,247,.92); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); border:1px solid var(--border); border-radius:999px; scrollbar-width:none; }
 .jumpnav::-webkit-scrollbar { display:none; }
-.jumpnav a { flex:0 0 auto; padding:.45rem 1rem; border-radius:999px; font-size:.85rem; font-weight:700; color:var(--sage-deep); white-space:nowrap; transition:background .25s var(--ease), color .25s var(--ease); }
+.jumpnav a { flex:0 0 auto; padding:.62rem 1.05rem; border-radius:999px; font-size:.85rem; font-weight:700; color:var(--sage-deep); white-space:nowrap; transition:background .25s var(--ease), color .25s var(--ease); }
 .jumpnav a:hover { background:var(--mist); }
 .jumpnav a.is-active { background:var(--sage-deep); color:#fff; }
 .cat[id] { scroll-margin-top:160px; }
@@ -626,6 +626,7 @@ h3 { font-size: clamp(1.35rem, 2.4vw, 1.9rem); }
 .site-footer h4 { color: var(--white); font-family: var(--font-body); font-weight:800; font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; margin-bottom: 1.1rem; }
 .site-footer a:hover { color: var(--sand); }
 .footer-links li { margin-bottom: .55rem; }
+.footer-links a { display:inline-block; padding:.2rem 0; }
 .footer-brand .brand__mark { color: var(--white); font-size: 1.5rem; }
 .footer-contact li { margin-bottom: .7rem; font-size: .95rem; }
 .footer-contact b { color: var(--white); display:block; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; }
@@ -953,3 +954,11 @@ body.nav-open { overflow: hidden; }
 .rbar__fill { display: block; height: 100%; border-radius: inherit; background: var(--sage); }
 .rbar__val { text-align: right; color: #5d6b66; }
 .score-card__note { margin-top: 1.3rem; font-size: .8rem; font-weight: 600; color: #5d6b66; }
+
+/* Trust strip beside booking calendars and checkouts */
+.trustline { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:.3rem .45rem; margin-top:.9rem; font-size:.85rem; font-weight:700; color:var(--sage-deep); text-align:center; }
+.trustline svg { width:.9rem; height:.9rem; color:var(--sage); flex:none; }
+.trustline a { color:var(--sage-deep); text-decoration:underline; text-underline-offset:2px; }
+.trustline--light { color:rgba(255,255,255,.92); }
+.trustline--light svg { color:var(--sand); }
+.trustline--light a { color:var(--sand); }
