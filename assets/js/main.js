@@ -305,7 +305,7 @@
 
   // Long reviews fold behind a "read more". The fold is applied here rather than in
   // the markup so the full text stays visible when JavaScript is unavailable.
-  document.querySelectorAll("[data-more]").forEach((btn) => {
+  document.querySelectorAll(".review [data-more]").forEach((btn) => {
     btn.closest(".review").classList.add("review--long");
     btn.addEventListener("click", () => {
       const card = btn.closest(".review");
