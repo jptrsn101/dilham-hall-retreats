@@ -269,7 +269,7 @@
   // Highlight the current section in the primary nav
   (function () {
     let page = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-    if (/^(pod-|tonnage-)/.test(page)) page = "stay.html";
+    if (/^(pod-|tonnage-|group-)/.test(page)) page = "stay.html";
     document.querySelectorAll(".nav a").forEach((a) => {
       if ((a.getAttribute("href") || "").toLowerCase() === page) {
         a.setAttribute("aria-current", "page");
@@ -325,7 +325,7 @@
     let label = "Book now";
     if (page === "canoe-hire.html") { href = "#book"; label = "Book a paddle"; }
     else if (page === "stay.html") { href = "#book"; label = "Book now"; }
-    else if (/^(pod-|tonnage-)/.test(page)) { href = "#check"; label = "Check dates"; }
+    else if (/^(pod-|tonnage-|group-)/.test(page)) { href = "#check"; label = "Check dates"; }
     const fab = document.createElement("a");
     fab.className = "book-fab";
     fab.href = href;
@@ -338,7 +338,7 @@
 
     // Step aside while a booking panel is on screen so the button never sits on
     // top of the calendar or checkout it points at.
-    const panels = document.querySelectorAll(".checkpanel, [data-canoe-booking]");
+    const panels = document.querySelectorAll(".checkpanel, [data-canoe-booking], .booking-widget");
     if (panels.length && "IntersectionObserver" in window) {
       const inView = new Set();
       const io = new IntersectionObserver((entries) => {
