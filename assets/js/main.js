@@ -197,7 +197,7 @@
       const summary = chosen.map((c) => c.qty + " × " + c.name).join(", ");
       const slot = session === "early" ? "Early bird (9:30–11:30)" : "Afternoon (12:00–18:00)";
       showNote(
-        summary + " — " + slot + " on " + longDate(dateEl.value) + ", total " +
+        summary + ". " + slot + " on " + longDate(dateEl.value) + ", total " +
         totalEl.textContent + ". To confirm and pay, call or text 07810 616920 or email paddle@dilhamhall.co.uk and we will get you on the water."
       );
     });

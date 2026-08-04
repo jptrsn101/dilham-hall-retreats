@@ -82,8 +82,8 @@ Target feel: **premium, modern, simple, easy to navigate**, showcasing the natur
 | Heron | 1 | 4 | King + twin (2 singles) | 2 separate rooms |
 | Coot | 1 | 4 | King + twin | 2 rooms |
 | Harvest Mouse | 1 | 4 | King + twin | 2 rooms |
-| Hedgehog | 2 | 5 | King + single + bunk | 1 bedroom + 3 sleep spaces |
-| Bittern | 2 | 5 | King + single + bunk | 1 bedroom |
+| Hedgehog | 2 | 5 | King + single + bunk | 2 rooms |
+| Bittern | 2 | 5 | King + single + bunk | 2 rooms |
 | Water Vole | 3 | 4 | King + bunk | Open-plan |
 | Moor Hen | 3 | 4 | King + bunk | Open-plan |
 | Shrew | 3 | 4 | King + bunk | Open-plan |
@@ -91,7 +91,7 @@ Target feel: **premium, modern, simple, easy to navigate**, showcasing the natur
 | Otter | 3 | 4 | King + bunk | Open-plan |
 
 - **Layout 1 (King + Twin, sleeps 4):** two separate rooms — best for families wanting a separate kids' room.
-- **Layout 2 (King + Single + Bunk, sleeps 5):** for larger families of 5.
+- **Layout 2 (King + Single + Bunk, sleeps 5):** two rooms; for larger families of 5 (owner, Aug 2026: advertise as 2 rooms, same as Layout 1).
 - **Layout 3 (King + Bunk, sleeps 4):** open-plan; couple + dog, or family of 4.
 - Amenities: full kitchen, shower room/WC, central heating, Smart TV, Wi-Fi, picnic bench, fire pit with grill. On-canal with private canoe/SUP launch + 3.5 km circular walk. Pod ≈ 4.2 × 7.8 × 3.3 m.
 

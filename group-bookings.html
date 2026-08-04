@@ -86,21 +86,81 @@
   <section class="section" id="check" style="background:var(--paper-2)">
     <div class="container">
       <div class="center" style="max-width:60rem">
-        <p class="eyebrow center" data-reveal>All ten pods, one calendar</p>
+        <p class="eyebrow center" data-reveal>Every pod, one calendar</p>
         <h2 data-reveal data-delay="1">Pick your dates, see every pod.</h2>
-        <p class="lead center" data-reveal data-delay="2" style="margin-top:1rem">The live calendar below covers all ten Tonnage Bridge pods in one view, so you can see exactly which pods are free for your dates and the price for each.</p>
+        <p class="lead center" data-reveal data-delay="2" style="margin-top:1rem">The whole calendar below shows every pod side by side, live from our booking system. Green days are free. Book any pod straight away with its Book button, or tick the pods you want and send us one request. We will set the whole lot up as a single booking with one payment link.</p>
       </div>
 
-      <!-- Live booking: SuperControl Tonnage Bridge calendar (account 22912, site ID 49029) -->
-      <div class="booking-widget" style="background:#fff;border-radius:18px;padding:clamp(1rem,3vw,2rem);max-width:64rem;margin:2rem auto 0;box-shadow:0 18px 50px rgba(6,46,40,.12)">
-        <div
-          data-calendar-key="5FA3A7438D708EB6E166655D55C6E115E255E7EACA7F5BFCC51B695038783AE360C1DEA357AA775498003FD8F3C8E3E10B2B4196D7707914"
+      <!-- Whole-calendar availability grid (live data, rendered by group-calendar.js) -->
+      <div class="avail-card" id="avail-card" data-reveal>
+        <div class="avail-top">
+          <div class="avail-nav">
+            <button type="button" data-avail-prev aria-label="Previous month">&#8249;</button>
+            <span class="avail-month" aria-live="polite">Loading&#8230;</span>
+            <button type="button" data-avail-next aria-label="Next month">&#8250;</button>
+          </div>
+          <div class="avail-legend" aria-hidden="true">
+            <span><i class="free"></i> Free</span>
+            <span><i class="cho"></i> Changeover, arrive this day</span>
+            <span><i class="booked"></i> Booked</span>
+          </div>
+        </div>
+        <div class="avail-scroll" aria-busy="true"></div>
+        <div class="avail-bar" id="avail-bar" hidden>
+          <p id="avail-bar-label"></p>
+          <button type="button" class="btn btn--primary" id="avail-bar-go">Request these pods as one booking
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M6 13l6 6 6-6"/></svg></button>
+        </div>
+      </div>
+      <noscript><p class="avail-note">Turn on JavaScript to see the whole availability grid. The booking calendar below covers every pod too.</p></noscript>
+
+      <!-- Live booking: SuperControl All Properties calendar (account 22912, site ID 46670) -->
+      <div class="booking-widget" id="book" style="background:#fff;border-radius:18px;padding:clamp(1rem,3vw,2rem);max-width:64rem;margin:2rem auto 0;box-shadow:0 18px 50px rgba(6,46,40,.12)">
+        <p id="sc-widget-note" hidden></p>
+        <div id="sc-widget"
+          data-calendar-key="90C22083FA8947B6BDBE764CD901F4E98018FBA57CDE3D5C194100A887820A345815B5CC9BF1FD21F4BB55539F0B21E97D390E91399ADB7D"
           data-calendar-widescreen-months="2">
           Loading the live availability calendar&#8230;
         </div>
       </div>
       <p class="widget-fallback">Calendar not loading? Call <a href="tel:01692513889">01692 513889</a> or email <a href="mailto:hello@dilhamhall.co.uk">hello@dilhamhall.co.uk</a> and we will book you in.</p>
-      <p style="margin:1.1rem auto 0;max-width:48rem;color:#51605a;font-size:.92rem;text-align:center">Each pod goes through its own quick checkout, so book them one after another. Booking four or more pods, or after the whole site to yourselves? Call <a href="tel:01692513889" style="font-weight:700;color:var(--sage-deep)">01692 513889</a> and we will arrange the lot with you in one go.</p>
+      <p style="margin:1.1rem auto 0;max-width:48rem;color:#51605a;font-size:.92rem;text-align:center">Each pod here goes through its own quick checkout. Rather sort the whole lot in one go? <a href="#group-request" style="font-weight:700;color:var(--sage-deep);text-decoration:underline;text-underline-offset:2px">Send us one request</a> and we will set it up as a single booking, or call <a href="tel:01692513889" style="font-weight:700;color:var(--sage-deep)">01692 513889</a>.</p>
+    </div>
+  </section>
+
+  <!-- GROUP REQUEST: one booking, one payment -->
+  <section class="section section--tight" id="group-request" style="background:var(--paper)">
+    <div class="container">
+      <div class="center" style="max-width:60rem">
+        <p class="eyebrow center" data-reveal>One booking, one payment</p>
+        <h2 data-reveal data-delay="1">Want the whole lot sorted in one go?</h2>
+        <p class="lead center" data-reveal data-delay="2" style="margin-top:1rem">Tick the pods you want in the calendar above, tell us your dates and send it over. We set it up as a single booking in our system and email you one secure payment link, usually the same day. Nothing to pay until you get the link, and your pods are not gone in the meantime without us telling you.</p>
+      </div>
+      <form data-reveal data-delay="2" style="max-width:44rem;margin:2.2rem auto 0" action="https://formsubmit.co/hello@dilhamhall.co.uk" method="POST">
+        <input type="hidden" name="_subject" value="New group booking request, Dilham Hall Retreats" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://dilhamhallretreats.co.uk/thanks.html" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <div class="field"><label for="g-pods">Pods you want</label><input id="g-pods" name="Pods" type="text" placeholder="Tick pods in the calendar above, or type them here" required /></div>
+        <div class="field-row">
+          <div class="field"><label for="g-arrive">Arrival</label><input id="g-arrive" name="Arrival" type="date" required /></div>
+          <div class="field"><label for="g-depart">Departure</label><input id="g-depart" name="Departure" type="date" required /></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="g-name">Your name</label><input id="g-name" name="Name" type="text" placeholder="Jane Smith" autocomplete="name" required /></div>
+          <div class="field"><label for="g-email">Email</label><input id="g-email" name="Email" type="email" placeholder="jane@email.com" autocomplete="email" required /></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="g-phone">Phone</label><input id="g-phone" name="Phone" type="tel" placeholder="07000 000000" autocomplete="tel" /></div>
+          <div class="field"><label for="g-dogs">Dogs coming? (one per pod, &pound;20 each)</label><select id="g-dogs" name="Dogs"><option>None</option><option>1</option><option>2</option><option>3</option><option>4 or more</option></select></div>
+        </div>
+        <div class="field"><label for="g-msg">Anything else</label><textarea id="g-msg" name="Message" rows="3" maxlength="2000" placeholder="Ages of the kids, who wants to be next to who, anything at all"></textarea></div>
+        <button class="btn btn--primary btn--lg" type="submit">Send the request
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <p style="margin-top:1rem;font-size:.88rem;color:#51605a">2 night minimum, 3 in peak season. We check availability, set the pods up as one booking and send a single payment link from our secure booking system.</p>
+      </form>
     </div>
   </section>
 
@@ -114,15 +174,15 @@
       <div class="steps">
         <div class="step" data-reveal>
           <h3>1. Pick your dates</h3>
-          <p>Use the calendar above to see all ten pods side by side for your dates. No price appears until you choose your nights, then you see the exact total for each pod.</p>
+          <p>Use the whole calendar above to see every pod side by side for your dates, including our three couples&rsquo; pods at Broad Fen. No price appears until you choose your nights, then you see the exact total for each pod.</p>
         </div>
         <div class="step" data-reveal data-delay="1">
           <h3>2. Match pods to people</h3>
           <p>Three pod styles sleep 4 or 5 each. Mix and match until everyone has a bed. Every pod has its own hot tub, kitchen and fire pit, so nobody draws the short straw.</p>
         </div>
         <div class="step" data-reveal data-delay="2">
-          <h3>3. Book each pod</h3>
-          <p>Book the pods you want one after another, each in a quick secure checkout. Rather sort it in one call? Phone us and we will hold the pods while we talk it through.</p>
+          <h3>3. Book them your way</h3>
+          <p>Book pods one after another in quick secure checkouts, or tick the pods you want and send one request. We set it up as a single booking with one payment link, usually the same day.</p>
         </div>
       </div>
     </div>
@@ -139,19 +199,23 @@
         <table class="cmp">
           <thead><tr><th>Pod</th><th>Style</th><th>Sleeps</th><th>Beds</th><th>Dog</th><th>Hot tub</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Heron</th><td>King + Twin</td><td>4</td><td>King + twin (2 rooms)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
-            <tr><th scope="row">Coot</th><td>King + Twin</td><td>4</td><td>King + twin (2 rooms)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
-            <tr><th scope="row">Harvest Mouse</th><td>King + Twin</td><td>4</td><td>King + twin (2 rooms)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
-            <tr><th scope="row">Hedgehog</th><td>King + Single + Bunk</td><td>5</td><td>King + single + bunk</td><td class="y">Yes</td><td class="y">Yes</td></tr>
-            <tr><th scope="row">Bittern</th><td>King + Single + Bunk</td><td>5</td><td>King + single + bunk</td><td class="y">Yes</td><td class="y">Yes</td></tr>
             <tr><th scope="row">Water Vole</th><td>King + Bunk</td><td>4</td><td>King + bunk (open plan)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
             <tr><th scope="row">Moor Hen</th><td>King + Bunk</td><td>4</td><td>King + bunk (open plan)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
             <tr><th scope="row">Shrew</th><td>King + Bunk</td><td>4</td><td>King + bunk (open plan)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
             <tr><th scope="row">Kingfisher</th><td>King + Bunk</td><td>4</td><td>King + bunk (open plan)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
             <tr><th scope="row">Otter</th><td>King + Bunk</td><td>4</td><td>King + bunk (open plan)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+            <tr><th scope="row">Heron</th><td>King + Twin</td><td>4</td><td>King + twin (2 rooms)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+            <tr><th scope="row">Hedgehog</th><td>King + Single + Bunk</td><td>5</td><td>King + single + bunk (2 rooms)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+            <tr><th scope="row">Coot</th><td>King + Twin</td><td>4</td><td>King + twin (2 rooms)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+            <tr><th scope="row">Harvest Mouse</th><td>King + Twin</td><td>4</td><td>King + twin (2 rooms)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+            <tr><th scope="row">Bittern</th><td>King + Single + Bunk</td><td>5</td><td>King + single + bunk (2 rooms)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
           </tbody>
         </table>
       </div>
+      <figure class="pod-map" data-reveal>
+        <img width="1254" height="1254" loading="lazy" decoding="async" src="assets/images/tonnage-pod-map.jpg" srcset="assets/images/tonnage-pod-map-800.jpg 800w, assets/images/tonnage-pod-map.jpg 1254w" sizes="(min-width: 700px) 620px, 100vw" alt="Illustrated map of the ten Tonnage Bridge pods spaced out along the North Walsham and Dilham Canal, from Water Vole at the top to Bittern beside Tonnage Bridge" />
+        <figcaption>Picking pods next to each other? This is how the ten sit along the canal, from Water Vole at the top down to Bittern by the bridge.</figcaption>
+      </figure>
       <p style="margin-top:1.6rem;color:rgba(255,255,255,.85);font-size:.92rem">2 night minimum (3 nights in peak season). One well&#8209;behaved dog per pod, &pound;20 a stay. <a href="stay.html#tonnage" style="color:var(--sand);text-decoration:underline;text-underline-offset:2px">Read more about the three pod styles</a>.</p>
     </div>
   </section>
@@ -195,5 +259,6 @@
   <!-- SuperControl booking widget loader -->
   <script src="https://secure.supercontrol.co.uk/components/embed.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/group-calendar.js"></script>
 </body>
 </html>
