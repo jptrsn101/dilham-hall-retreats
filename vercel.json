@@ -1,5 +1,43 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "redirects": [
+    {
+      "source": "/:path(stay|canoe-hire|events|things-to-do|about|reviews|contact|group-bookings|terms|privacy-policy|cctv-policy|thanks|pod-damselfly|pod-dragonfly|pod-swallowtail|tonnage-king-twin|tonnage-king-single-bunk|tonnage-king-bunk)",
+      "has": [{ "type": "host", "value": "(www\\.)?dilhamhall\\.com" }],
+      "destination": "https://dilhamhallretreats.co.uk/:path",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path((?:stay|canoe-hire|events|things-to-do|about|reviews|contact|group-bookings|terms|privacy-policy|cctv-policy|thanks|pod-damselfly|pod-dragonfly|pod-swallowtail|tonnage-king-twin|tonnage-king-single-bunk|tonnage-king-bunk)\\.html)",
+      "has": [{ "type": "host", "value": "(www\\.)?dilhamhall\\.com" }],
+      "destination": "https://dilhamhallretreats.co.uk/:path",
+      "statusCode": 301
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "(www\\.)?dilhamhall\\.com" }],
+      "destination": "https://dilhamhallretreats.co.uk/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path(stay|canoe-hire|events|things-to-do|about|reviews|contact|group-bookings|terms|privacy-policy|cctv-policy|thanks|pod-damselfly|pod-dragonfly|pod-swallowtail|tonnage-king-twin|tonnage-king-single-bunk|tonnage-king-bunk)",
+      "has": [{ "type": "host", "value": "(www\\.)?tonnagebridge\\.co\\.uk" }],
+      "destination": "https://dilhamhallretreats.co.uk/:path",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path((?:stay|canoe-hire|events|things-to-do|about|reviews|contact|group-bookings|terms|privacy-policy|cctv-policy|thanks|pod-damselfly|pod-dragonfly|pod-swallowtail|tonnage-king-twin|tonnage-king-single-bunk|tonnage-king-bunk)\\.html)",
+      "has": [{ "type": "host", "value": "(www\\.)?tonnagebridge\\.co\\.uk" }],
+      "destination": "https://dilhamhallretreats.co.uk/:path",
+      "statusCode": 301
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "(www\\.)?tonnagebridge\\.co\\.uk" }],
+      "destination": "https://dilhamhallretreats.co.uk/",
+      "statusCode": 301
+    },
     {
       "source": "/(.*)",
       "has": [{ "type": "host", "value": "www.dilhamhallretreats.co.uk" }],

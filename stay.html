@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,470;9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="canonical" href="https://dilhamhallretreats.co.uk/stay.html" />
+  <link rel="canonical" href="https://dilhamhallretreats.co.uk/stay" />
   <link rel="icon" href="assets/images/favicon.svg?v=2" type="image/svg+xml" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png?v=2" />
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png?v=2" />
@@ -19,13 +19,13 @@
   <meta property="og:locale" content="en_GB" />
   <meta property="og:title" content="Where to Stay | Luxury Glamping, Cabins &amp; Lodges in Norfolk | Dilham Hall Retreats" />
   <meta property="og:description" content="Choose how to stay at Dilham Hall Retreats in Norfolk. Adults-only couples cabins at Broad Fen, waterside hot tub lodges at Tonnage Bridge, and canal camping with bell tents." />
-  <meta property="og:url" content="https://dilhamhallretreats.co.uk/stay.html" />
+  <meta property="og:url" content="https://dilhamhallretreats.co.uk/stay" />
   <meta property="og:image" content="https://dilhamhallretreats.co.uk/assets/images/tonnage-1.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Where to Stay | Luxury Glamping, Cabins &amp; Lodges in Norfolk | Dilham Hall Retreats" />
   <meta name="twitter:description" content="Choose how to stay at Dilham Hall Retreats in Norfolk. Adults-only couples cabins at Broad Fen, waterside hot tub lodges at Tonnage Bridge, and canal camping with bell tents." />
   <meta name="twitter:image" content="https://dilhamhallretreats.co.uk/assets/images/tonnage-1.jpg" />
-  <link rel="preload" as="image" href="assets/images/tonnage-1.jpg" imagesrcset="assets/images/tonnage-1-800.jpg 800w, assets/images/tonnage-1.jpg 1920w" imagesizes="100vw" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/images/tonnage-1.webp" imagesrcset="assets/images/tonnage-1-800.webp 800w, assets/images/tonnage-1.webp 1920w" imagesizes="100vw" fetchpriority="high" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -41,9 +41,68 @@
         "@type": "ListItem",
         "position": 2,
         "name": "Stay",
-        "item": "https://dilhamhallretreats.co.uk/stay.html"
+        "item": "https://dilhamhallretreats.co.uk/stay"
       }
     ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Accommodation",
+    "name": "Broad Fen Retreats",
+    "url": "https://dilhamhallretreats.co.uk/stay#couples",
+    "image": "https://dilhamhallretreats.co.uk/assets/images/damselfly-exterior.jpg",
+    "description": "Adults-only couples glamping at Dilham, Norfolk. Three pods for two, each with a private wood-fired hot tub, set in a 95-acre SSSI nature reserve. No children, no dogs. Minimum 2 nights.",
+    "occupancy": { "@type": "QuantitativeValue", "maxValue": 2 },
+    "petsAllowed": false,
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Private wood-fired hot tub", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Full kitchen", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "En-suite shower and WC", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Central heating", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true }
+    ],
+    "containedInPlace": { "@id": "https://dilhamhallretreats.co.uk/#business" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Accommodation",
+    "name": "Tonnage Bridge Retreats",
+    "url": "https://dilhamhallretreats.co.uk/stay#tonnage",
+    "image": "https://dilhamhallretreats.co.uk/assets/images/tonnage-twin-exterior.jpg",
+    "description": "Luxury waterside glamping pods on a private canal at Dilham, Norfolk. Ten pods sleeping 4 to 5 in three layouts, each with a private wood-fired hot tub and its own canoe launch. Families and dogs welcome. Minimum 2 nights, 3 in peak season.",
+    "occupancy": { "@type": "QuantitativeValue", "minValue": 4, "maxValue": 5 },
+    "petsAllowed": true,
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Private wood-fired hot tub", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Private canoe and paddleboard launch", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Full kitchen", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Shower room and WC", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Central heating", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true }
+    ],
+    "containedInPlace": { "@id": "https://dilhamhallretreats.co.uk/#business" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Accommodation",
+    "name": "Canal Camping and Bell Tents",
+    "url": "https://dilhamhallretreats.co.uk/stay#camping",
+    "image": "https://dilhamhallretreats.co.uk/assets/images/camping-1.jpg",
+    "description": "Waterside camping and bell tent hire beside the private canal at Dilham, Norfolk. Bring your own tent or hire a furnished 6 metre bell tent. Families and dogs welcome. Minimum 3 nights, 2 off peak.",
+    "petsAllowed": true,
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Hot showers and toilets", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Drinking water", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Campfires and firewood for sale", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Canoe hire and self-launch", "value": true }
+    ],
+    "containedInPlace": { "@id": "https://dilhamhallretreats.co.uk/#business" }
   }
   </script>
 </head>
@@ -52,21 +111,21 @@
   <!-- ============================= HEADER ============================= -->
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="index.html" aria-label="Dilham Hall Retreats home">
+      <a class="brand" href="/" aria-label="Dilham Hall Retreats home">
         <img class="brand-logo brand-logo--light" src="assets/images/logo.svg" alt="Dilham Hall Retreats" /><img class="brand-logo brand-logo--dark" src="assets/images/logo-dark.svg" alt="" aria-hidden="true" />
       </a>
       <nav class="nav" id="site-nav" aria-label="Primary">
         <button class="nav__close" aria-label="Close menu">&times;</button>
-        <a href="stay.html">Stay</a>
-        <a href="canoe-hire.html">Canoe Hire</a>
-        <a href="events.html">Events</a>
-        <a href="things-to-do.html">Things To Do</a>
-        <a href="about.html">About</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="contact.html">Contact</a>
+        <a href="/stay">Stay</a>
+        <a href="/canoe-hire">Canoe Hire</a>
+        <a href="/events">Events</a>
+        <a href="/things-to-do">Things To Do</a>
+        <a href="/about">About</a>
+        <a href="/reviews">Reviews</a>
+        <a href="/contact">Contact</a>
       </nav>
       <div class="header-cta">
-        <a href="index.html" class="btn btn--ghost">Home</a>
+        <a href="/" class="btn btn--ghost">Home</a>
         <a href="#book" class="btn btn--sand">Book now</a>
         <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">Menu
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -77,12 +136,12 @@
 
   <!-- ===================== SUB-HERO ===================== -->
   <section class="subhero">
-    <img width="1920" height="1280" fetchpriority="high" decoding="async" src="assets/images/tonnage-1.jpg" srcset="assets/images/tonnage-1-800.jpg 800w, assets/images/tonnage-1.jpg 1920w" sizes="100vw" alt="Canoeing along the canal past the waterside glamping pods" />
+    <img width="1920" height="1280" fetchpriority="high" decoding="async" src="assets/images/tonnage-1.webp" srcset="assets/images/tonnage-1-800.webp 800w, assets/images/tonnage-1.webp 1920w" sizes="100vw" alt="Canoeing along the canal past the waterside glamping pods" />
     <div class="container">
       <p class="eyebrow" data-reveal>Where to stay</p>
       <h1 class="display" data-reveal data-delay="1" style="font-size:clamp(2.4rem,5.5vw,4rem)">Three ways to stay<br>by the water.</h1>
       <p class="lead" data-reveal data-delay="2">Couples pods at Broad Fen, waterside hot tub pods at Tonnage Bridge and easy camping by the canal. Pick the one that fits your trip, then check your dates on the live calendar below.</p>
-      <p class="trustline trustline--light" data-reveal data-delay="3"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 6 20.4l1.4-6.8L2.3 9l6.9-.7z"/></svg> 5.0 from 69 Google reviews &middot; Channel 4 Four in a Bed winners &middot; <a href="reviews.html">Read our reviews</a></p>
+      <p class="trustline trustline--light" data-reveal data-delay="3"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 6 20.4l1.4-6.8L2.3 9l6.9-.7z"/></svg> 5.0 from 69 Google reviews &middot; Channel 4 Four in a Bed winners &middot; <a href="/reviews">Read our reviews</a></p>
     </div>
   </section>
 
@@ -97,7 +156,7 @@
 
       <div class="cat-cards">
         <a class="cat-card" href="#couples" data-reveal>
-          <img width="1400" height="932" loading="lazy" decoding="async" src="assets/images/waterside-1.jpg" alt="A couples glamping pod at Broad Fen" />
+          <img width="1400" height="932" loading="lazy" decoding="async" src="assets/images/waterside-1.webp" alt="A couples glamping pod at Broad Fen" />
           <div class="cat-card__in">
             <span class="cat-card__tag">Couples &middot; Adults only</span>
             <h3>For couples</h3>
@@ -109,7 +168,7 @@
         </a>
 
         <a class="cat-card" href="#tonnage" data-reveal data-delay="1">
-          <img width="1920" height="1276" loading="lazy" decoding="async" src="assets/images/waterside-2.jpg" alt="A waterside pod at Tonnage Bridge" />
+          <img width="1920" height="1276" loading="lazy" decoding="async" src="assets/images/waterside-2.webp" alt="A waterside pod at Tonnage Bridge" />
           <div class="cat-card__in">
             <span class="cat-card__tag">Waterside &middot; Dogs welcome</span>
             <h3>On the water</h3>
@@ -121,7 +180,7 @@
         </a>
 
         <a class="cat-card" href="#camping" data-reveal data-delay="2">
-          <img width="1400" height="934" loading="lazy" decoding="async" src="assets/images/bell-tent-night.jpg" alt="A bell tent at Canal Camping" />
+          <img width="1400" height="934" loading="lazy" decoding="async" src="assets/images/bell-tent-night.webp" alt="A bell tent at Canal Camping" />
           <div class="cat-card__in">
             <span class="cat-card__tag">Families &middot; Dogs welcome</span>
             <h3>Camping</h3>
@@ -153,7 +212,7 @@
         </div>
       </div>
       <p class="widget-fallback">Calendar not loading? Call <a href="tel:01692513889">01692 513889</a> or email <a href="mailto:hello@dilhamhall.co.uk">hello@dilhamhall.co.uk</a> and we will book you in.</p>
-      <p class="widget-fallback">Coming as a group? <a href="group-bookings.html">See all ten Tonnage Bridge pods side by side</a> and book more than one.</p>
+      <p class="widget-fallback">Coming as a group? <a href="/group-bookings">See all ten Tonnage Bridge pods side by side</a> and book more than one.</p>
       <p style="margin:1.1rem auto 0;max-width:46rem;color:#51605a;font-size:.92rem;text-align:center">Midweek nights (Sunday to Thursday) are the quietest and usually the best value. If your dates are flexible, start there. Weekends book up fast.</p>
     </div>
   </section>
@@ -177,7 +236,7 @@
       </div>
 
       <div class="video-tour" data-reveal>
-        <video controls playsinline preload="none" poster="assets/images/broad-fen-tour-poster.jpg" width="1080" height="1920" aria-label="Video walkthrough of a Broad Fen couples pod">
+        <video controls playsinline preload="none" poster="assets/images/broad-fen-tour-poster.webp" width="1080" height="1920" aria-label="Video walkthrough of a Broad Fen couples pod">
           <source src="assets/videos/broad-fen-tour.mp4" type="video/mp4" />
         </video>
         <p class="video-tour__cap">Press play for a walk through Broad Fen, then meet the three pods below.</p>
@@ -185,32 +244,32 @@
 
       <div class="pod-cards">
         <article class="retreat" data-reveal>
-          <div class="retreat__media"><span class="retreat__tag">Sleeps 2</span><img width="1400" height="932" loading="lazy" decoding="async" src="assets/images/waterside-1.jpg" alt="Damselfly couples pod" /></div>
+          <div class="retreat__media"><span class="retreat__tag">Sleeps 2</span><img width="1400" height="932" loading="lazy" decoding="async" src="assets/images/waterside-1.webp" alt="Damselfly couples pod" /></div>
           <div class="retreat__body">
             <h3 class="retreat__name">Damselfly</h3>
             <p class="retreat__sub">Couples pod &middot; Broad Fen</p>
             <p class="retreat__desc">Our sunny corner pod, tucked into the trees with the hot tub looking out over the meadow.</p>
-            <a href="pod-damselfly.html" class="btn btn--primary retreat__cta">View pod &amp; dates
+            <a href="/pod-damselfly" class="btn btn--primary retreat__cta">View pod &amp; dates
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </article>
         <article class="retreat" data-reveal data-delay="1">
-          <div class="retreat__media"><span class="retreat__tag">Sleeps 2</span><img width="1400" height="1050" loading="lazy" decoding="async" src="assets/images/pod-interior-4.jpg" alt="Dragonfly couples pod" /></div>
+          <div class="retreat__media"><span class="retreat__tag">Sleeps 2</span><img width="1400" height="1050" loading="lazy" decoding="async" src="assets/images/pod-interior-4.webp" alt="Dragonfly couples pod" /></div>
           <div class="retreat__body">
             <h3 class="retreat__name">Dragonfly</h3>
             <p class="retreat__sub">Couples pod &middot; Broad Fen</p>
             <p class="retreat__desc">The most private of the three, wrapped in woodland with birdsong for a soundtrack.</p>
-            <a href="pod-dragonfly.html" class="btn btn--primary retreat__cta">View pod &amp; dates
+            <a href="/pod-dragonfly" class="btn btn--primary retreat__cta">View pod &amp; dates
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </article>
         <article class="retreat" data-reveal data-delay="2">
-          <div class="retreat__media"><span class="retreat__tag">Sleeps 2</span><img width="1400" height="934" loading="lazy" decoding="async" src="assets/images/pod-interior-3.jpg" alt="Swallowtail couples pod" /></div>
+          <div class="retreat__media"><span class="retreat__tag">Sleeps 2</span><img width="1400" height="934" loading="lazy" decoding="async" src="assets/images/pod-interior-3.webp" alt="Swallowtail couples pod" /></div>
           <div class="retreat__body">
             <h3 class="retreat__name">Swallowtail</h3>
             <p class="retreat__sub">Couples pod &middot; Broad Fen</p>
             <p class="retreat__desc">Named after Norfolk&rsquo;s famous butterfly, with the widest view across the fen.</p>
-            <a href="pod-swallowtail.html" class="btn btn--primary retreat__cta">View pod &amp; dates
+            <a href="/pod-swallowtail" class="btn btn--primary retreat__cta">View pod &amp; dates
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </article>
@@ -237,7 +296,7 @@
       </div>
 
       <div class="video-tour" data-reveal>
-        <video controls playsinline preload="none" poster="assets/images/tonnage-tour-poster.jpg" width="1080" height="1920" aria-label="Video walkthrough of the three Tonnage Bridge pod styles">
+        <video controls playsinline preload="none" poster="assets/images/tonnage-tour-poster.webp" width="1080" height="1920" aria-label="Video walkthrough of the three Tonnage Bridge pod styles">
           <source src="assets/videos/tonnage-bridge-tour.mp4" type="video/mp4" />
         </video>
         <p class="video-tour__cap">Press play for a walk through all three pod styles, then compare them below.</p>
@@ -245,39 +304,39 @@
 
       <div class="pod-cards">
         <article class="retreat" data-reveal>
-          <div class="retreat__media"><span class="retreat__tag">Sleeps 4</span><img width="1400" height="1866" loading="lazy" decoding="async" src="assets/images/tonnage-twin-bedroom.jpg" alt="Tonnage Bridge pod, King and Twin layout, the twin bedroom" /></div>
+          <div class="retreat__media"><span class="retreat__tag">Sleeps 4</span><img width="1400" height="1866" loading="lazy" decoding="async" src="assets/images/tonnage-twin-bedroom.webp" alt="Tonnage Bridge pod, King and Twin layout, the twin bedroom" /></div>
           <div class="retreat__body">
             <h3 class="retreat__name">King + Twin</h3>
             <p class="retreat__sub">Style 1 &middot; Sleeps 4 &middot; two rooms</p>
             <p class="retreat__desc">A king room plus a separate twin room, so the children get their own space. Pods: Heron, Coot, Harvest Mouse.</p>
-            <a href="tonnage-king-twin.html" class="btn btn--primary retreat__cta">View style &amp; dates
+            <a href="/tonnage-king-twin" class="btn btn--primary retreat__cta">View style &amp; dates
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </article>
         <article class="retreat" data-reveal data-delay="1">
-          <div class="retreat__media"><span class="retreat__tag">Sleeps 5</span><img width="1920" height="1440" loading="lazy" decoding="async" src="assets/images/tonnage-singlebunk-exterior.jpg" alt="Tonnage Bridge pod, King Single and Bunk layout" /></div>
+          <div class="retreat__media"><span class="retreat__tag">Sleeps 5</span><img width="1920" height="1440" loading="lazy" decoding="async" src="assets/images/tonnage-singlebunk-exterior.webp" alt="Tonnage Bridge pod, King Single and Bunk layout" /></div>
           <div class="retreat__body">
             <h3 class="retreat__name">King + Single + Bunk</h3>
             <p class="retreat__sub">Style 2 &middot; Sleeps 5</p>
             <p class="retreat__desc">Our roomiest pods, with a king, a single and a bunk, for when you need a fifth bed. Pods: Hedgehog, Bittern.</p>
-            <a href="tonnage-king-single-bunk.html" class="btn btn--primary retreat__cta">View style &amp; dates
+            <a href="/tonnage-king-single-bunk" class="btn btn--primary retreat__cta">View style &amp; dates
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </article>
         <article class="retreat" data-reveal data-delay="2">
-          <div class="retreat__media"><span class="retreat__tag">Sleeps 4</span><img width="1400" height="1050" loading="lazy" decoding="async" src="assets/images/tonnage-bunk-living.jpg" alt="Tonnage Bridge pod, King and Bunk open-plan layout" /></div>
+          <div class="retreat__media"><span class="retreat__tag">Sleeps 4</span><img width="1400" height="1050" loading="lazy" decoding="async" src="assets/images/tonnage-bunk-living.webp" alt="Tonnage Bridge pod, King and Bunk open-plan layout" /></div>
           <div class="retreat__body">
             <h3 class="retreat__name">King + Bunk</h3>
             <p class="retreat__sub">Style 3 &middot; Sleeps 4 &middot; open plan</p>
             <p class="retreat__desc">A cosy open&#8209;plan pod with a king and a bunk. Perfect for a couple with a dog, or four of you. Pods: Water Vole, Moor Hen, Shrew, Kingfisher, Otter.</p>
-            <a href="tonnage-king-bunk.html" class="btn btn--primary retreat__cta">View style &amp; dates
+            <a href="/tonnage-king-bunk" class="btn btn--primary retreat__cta">View style &amp; dates
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </article>
       </div>
 
       <figure class="pod-map" data-reveal>
-        <img width="1254" height="1254" loading="lazy" decoding="async" src="assets/images/tonnage-pod-map.jpg" srcset="assets/images/tonnage-pod-map-800.jpg 800w, assets/images/tonnage-pod-map.jpg 1254w" sizes="(min-width: 700px) 620px, 100vw" alt="Illustrated map of the ten Tonnage Bridge pods spaced out along the North Walsham and Dilham Canal, from Water Vole at the top to Bittern beside Tonnage Bridge" />
+        <img width="1254" height="1254" loading="lazy" decoding="async" src="assets/images/tonnage-pod-map.webp" srcset="assets/images/tonnage-pod-map-800.webp 800w, assets/images/tonnage-pod-map.webp 1254w" sizes="(min-width: 700px) 620px, 100vw" alt="Illustrated map of the ten Tonnage Bridge pods spaced out along the North Walsham and Dilham Canal, from Water Vole at the top to Bittern beside Tonnage Bridge" />
         <figcaption>The ten pods, each set well apart along our own stretch of the canal. The table below shows which style each pod is.</figcaption>
       </figure>
 
@@ -303,7 +362,7 @@
 
       <div style="text-align:center;margin-top:2.2rem" data-reveal>
         <p style="color:rgba(255,255,255,.9);max-width:52ch;margin:0 auto 1rem">Celebrating with friends or booking for a big family? See availability for all ten pods side by side and book as many as you need.</p>
-        <a class="btn btn--sand" href="group-bookings.html">Group bookings: all ten pods in one calendar
+        <a class="btn btn--sand" href="/group-bookings">Group bookings: all ten pods in one calendar
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
     </div>
@@ -329,10 +388,10 @@
       </div>
 
       <div class="gallery" data-gallery data-reveal>
-        <button class="g-main" data-full="assets/images/bell-tent-night.jpg" data-cap="Bell tent lit up at night beside the canal"><img width="1400" height="934" loading="lazy" decoding="async" src="assets/images/bell-tent-night.jpg" alt="Bell tent at night" /></button>
-        <button data-full="assets/images/camping-1.jpg" data-cap="Camping by the water at Dilham"><img width="1400" height="1050" loading="lazy" decoding="async" src="assets/images/camping-1.jpg" alt="Tents pitched by the water at Canal Camping" /></button>
-        <button data-full="assets/images/camping-2.jpg" data-cap="Spacious camping pitches"><img width="1400" height="1050" loading="lazy" decoding="async" src="assets/images/camping-2.jpg" alt="Spacious camping pitches beside the canal" /></button>
-        <button data-full="assets/images/camping-3.jpg" data-cap="Campsite facilities and fire pit"><img width="1400" height="1050" loading="lazy" decoding="async" src="assets/images/camping-3.jpg" alt="Campsite fire pit and facilities at Canal Camping" /></button>
+        <button class="g-main" data-full="assets/images/bell-tent-night.webp" data-cap="Bell tent lit up at night beside the canal"><img width="1400" height="934" loading="lazy" decoding="async" src="assets/images/bell-tent-night.webp" alt="Bell tent at night" /></button>
+        <button data-full="assets/images/camping-1.webp" data-cap="Camping by the water at Dilham"><img width="1400" height="1050" loading="lazy" decoding="async" src="assets/images/camping-1.webp" alt="Tents pitched by the water at Canal Camping" /></button>
+        <button data-full="assets/images/camping-2.webp" data-cap="Spacious camping pitches"><img width="1400" height="1050" loading="lazy" decoding="async" src="assets/images/camping-2.webp" alt="Spacious camping pitches beside the canal" /></button>
+        <button data-full="assets/images/camping-3.webp" data-cap="Campsite facilities and fire pit"><img width="1400" height="1050" loading="lazy" decoding="async" src="assets/images/camping-3.webp" alt="Campsite fire pit and facilities at Canal Camping" /></button>
       </div>
 
       <div class="pod-layout">
@@ -371,11 +430,11 @@
           </div>
           <p class="follow-note">Join 32,000 followers across our socials.</p>
         </div>
-        <div><h4>Stay</h4><ul class="footer-links"><li><a href="#couples">Broad Fen Retreats</a></li><li><a href="#tonnage">Tonnage Bridge Retreats</a></li><li><a href="#camping">Canal Camping</a></li><li><a href="canoe-hire.html">Canoe Hire</a></li><li><a href="events.html">Events</a></li></ul></div>
-        <div><h4>Explore</h4><ul class="footer-links"><li><a href="things-to-do.html">Things to do</a></li><li><a href="about.html">Our story</a></li><li><a href="contact.html">Find us</a></li><li><a href="things-to-do.html#food">Food &amp; drink</a></li><li><a href="reviews.html">Reviews</a></li></ul></div>
+        <div><h4>Stay</h4><ul class="footer-links"><li><a href="#couples">Broad Fen Retreats</a></li><li><a href="#tonnage">Tonnage Bridge Retreats</a></li><li><a href="#camping">Canal Camping</a></li><li><a href="/canoe-hire">Canoe Hire</a></li><li><a href="/events">Events</a></li></ul></div>
+        <div><h4>Explore</h4><ul class="footer-links"><li><a href="/things-to-do">Things to do</a></li><li><a href="/about">Our story</a></li><li><a href="/contact">Find us</a></li><li><a href="/things-to-do#food">Food &amp; drink</a></li><li><a href="/reviews">Reviews</a></li></ul></div>
         <div><h4>Get in touch</h4><ul class="footer-contact"><li><b>Glamping &amp; events</b> <a href="tel:01692513889">01692 513889</a><br><a href="mailto:hello@dilhamhall.co.uk">hello@dilhamhall.co.uk</a></li><li><b>Canoe hire</b> <a href="tel:07810616920">07810 616920</a><br><a href="mailto:paddle@dilhamhall.co.uk">paddle@dilhamhall.co.uk</a></li><li><b>Canal Camping</b> <a href="tel:01692660274">01692 660274</a><br><a href="mailto:bookings@canalcamping.co.uk">bookings@canalcamping.co.uk</a></li><li><b>Find us</b> Dilham, North Walsham, Norfolk NR28 9PW</li></ul></div>
       </div>
-      <div class="footer-bottom"><span>&copy; 2026 Dilham Hall Retreats. All rights reserved.</span><span><a href="terms.html">Terms</a> &middot; <a href="privacy-policy.html">Privacy</a> &middot; <a href="cctv-policy.html">CCTV</a></span></div>
+      <div class="footer-bottom"><span>&copy; 2026 Dilham Hall Retreats. All rights reserved.</span><span><a href="/terms">Terms</a> &middot; <a href="/privacy-policy">Privacy</a> &middot; <a href="/cctv-policy">CCTV</a></span></div>
     </div>
   </footer>
 

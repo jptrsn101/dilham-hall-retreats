@@ -268,10 +268,11 @@
 
   // Highlight the current section in the primary nav
   (function () {
-    let page = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-    if (/^(pod-|tonnage-|group-)/.test(page)) page = "stay.html";
+    const slug = (s) => ((s || "").toLowerCase().split("#")[0].replace(/^\//, "").replace(/\.html$/, "")) || "index";
+    let page = slug(location.pathname.split("/").pop());
+    if (/^(pod-|tonnage-|group-)/.test(page)) page = "stay";
     document.querySelectorAll(".nav a").forEach((a) => {
-      if ((a.getAttribute("href") || "").toLowerCase() === page) {
+      if (slug(a.getAttribute("href")) === page) {
         a.setAttribute("aria-current", "page");
       }
     });
@@ -320,11 +321,11 @@
   // page gets it without editing each file. Target + label adapt to the page.
   (function () {
     if (document.querySelector(".book-fab")) return;
-    const page = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-    let href = "stay.html";
+    const page = ((location.pathname.split("/").pop() || "").toLowerCase().replace(/\.html$/, "")) || "index";
+    let href = "/stay";
     let label = "Book now";
-    if (page === "canoe-hire.html") { href = "#book"; label = "Book a paddle"; }
-    else if (page === "stay.html") { href = "#book"; label = "Book now"; }
+    if (page === "canoe-hire") { href = "#book"; label = "Book a paddle"; }
+    else if (page === "stay") { href = "#book"; label = "Book now"; }
     else if (/^(pod-|tonnage-|group-)/.test(page)) { href = "#check"; label = "Check dates"; }
     const fab = document.createElement("a");
     fab.className = "book-fab";
