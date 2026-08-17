@@ -372,3 +372,19 @@
     update();
   })();
 })();
+
+/* ---- 360 tour start facade: swap the blurred poster for the live tour ---- */
+(() => {
+  document.querySelectorAll("[data-tour-start]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const box = btn.closest(".tour-start");
+      if (!box) return;
+      const iframe = document.createElement("iframe");
+      iframe.src = btn.getAttribute("data-tour-start");
+      iframe.title = btn.getAttribute("data-tour-title") || "360 degree tour";
+      iframe.setAttribute("allowfullscreen", "");
+      box.innerHTML = "";
+      box.appendChild(iframe);
+    });
+  });
+})();

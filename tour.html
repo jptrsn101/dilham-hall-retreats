@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>360&deg; Tour | Dilham Hall Retreats</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="assets/images/favicon.svg?v=2" type="image/svg+xml" />
+  <meta name="theme-color" content="#062E28" />
+  <link rel="stylesheet" href="assets/vendor/psv/psv.css" />
+  <style>
+    * { margin: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      background: #062E28; /* --forest */
+      font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow: hidden;
+    }
+    #viewer { width: 100%; height: 100%; height: 100dvh; }
+
+    /* Brand-match the viewer chrome */
+    .psv-navbar { background: rgba(6, 46, 40, 0.88); }
+    .psv-caption { color: #FBFAF7; }
+    .psv-button { color: #FBFAF7; }
+    .psv-button--active,
+    .psv-button:not(.psv-button--disabled):hover { color: #D6C2B7; }
+    .psv-loader { color: #FBFAF7; }
+
+    /* Fallback list when no valid ?pod= is given */
+    .tour-missing {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FBFAF7;
+      text-align: center;
+    }
+    .tour-missing ul { list-style: none; padding: 0; margin-top: 1rem; }
+    .tour-missing a { color: #D6C2B7; line-height: 2; }
+  </style>
+</head>
+<body>
+  <div id="viewer"></div>
+  <script type="module" src="assets/js/tour.js"></script>
+</body>
+</html>
