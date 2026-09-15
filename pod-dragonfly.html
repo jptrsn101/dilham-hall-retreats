@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,470;9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=brand-1" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=mobile-1" />
   <link rel="canonical" href="https://dilhamhallretreats.co.uk/pod-dragonfly" />
   <link rel="icon" href="assets/images/favicon.svg?v=2" type="image/svg+xml" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png?v=2" />
@@ -136,17 +136,6 @@
     </div>
   </section>
 
-  <!-- 360 TOUR -->
-  <section class="section section--tight" id="tour360">
-    <div class="container">
-      <h2 data-reveal>Step inside with the 360&deg; tour</h2>
-      <p class="muted" style="margin-top:.4rem;max-width:62ch">Drag to look around, then follow the arrows to walk from room to room. Filmed in one of our three Broad Fen pods, which all share the same layout.</p>
-      <div class="tour-portal" data-reveal style="margin-top:1.4rem">
-        <iframe src="/tour?pod=broad-fen" title="Interactive 360 degree tour of a Broad Fen couples pod" allowfullscreen loading="lazy"></iframe>
-      </div>
-    </div>
-  </section>
-
   <!-- BODY -->
   <section class="section">
     <div class="container">
@@ -190,6 +179,24 @@
           <p class="widget-fallback">Calendar not loading? Call <a href="tel:01692513889">01692 513889</a> or email <a href="mailto:hello@dilhamhall.co.uk">hello@dilhamhall.co.uk</a> and we will book you in.</p>
           <p class="pricenote">2 night minimum. Adults only, no dogs.</p>
         </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 360 TOUR -->
+  <section class="section section--tight" id="tour360">
+    <div class="container">
+      <h2 data-reveal>Step inside with the 360&deg; tour</h2>
+      <p class="muted" style="margin-top:.4rem;max-width:62ch">Drag to look around, then follow the arrows to walk from room to room. Filmed in one of our three Broad Fen pods, which all share the same layout.</p>
+      <div class="tour-start" data-reveal style="margin-top:1.4rem">
+        <img class="tour-start__bg" src="assets/images/tour-facade-broadfen.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" width="1200" height="675" />
+        <div class="tour-start__inner">
+          <p class="tour-start__label">Interactive 360&deg; tour</p>
+          <button type="button" class="btn btn--light btn--lg" data-tour-start="/tour?pod=broad-fen" data-tour-title="Interactive 360 degree tour of a Broad Fen couples pod">Start the tour
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="tour-start__hint">Drag to look around, then follow the arrows from room to room. Loads when you tap start.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -241,6 +248,6 @@
 
   <!-- SuperControl booking widget loader -->
   <script src="https://secure.supercontrol.co.uk/components/embed.js"></script>
-  <script src="assets/js/main.js?v=brand-1"></script>
+  <script src="assets/js/main.js?v=mobile-1"></script>
 </body>
 </html>

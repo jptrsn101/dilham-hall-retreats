@@ -348,6 +348,18 @@
       '<span>' + label + '</span>';
     document.body.appendChild(fab);
 
+    // The same call to action inside the mobile menu overlay, where the header
+    // buttons are hidden. Injected here so every page gets it.
+    const navEl = document.querySelector(".nav");
+    if (navEl && !navEl.querySelector(".nav__cta")) {
+      const cta = document.createElement("a");
+      cta.className = "btn btn--sand nav__cta";
+      cta.href = href;
+      cta.textContent = label;
+      cta.addEventListener("click", closeNav);
+      navEl.appendChild(cta);
+    }
+
     // Step aside while a booking panel is on screen so the button never sits on
     // top of the calendar or checkout it points at.
     const panels = document.querySelectorAll(".checkpanel, [data-canoe-booking], .booking-widget");
@@ -394,6 +406,7 @@
       iframe.src = btn.getAttribute("data-tour-start");
       iframe.title = btn.getAttribute("data-tour-title") || "360 degree tour";
       iframe.setAttribute("allowfullscreen", "");
+      box.classList.add("is-live");
       box.innerHTML = "";
       box.appendChild(iframe);
     });

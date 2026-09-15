@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,470;9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=brand-1" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=mobile-1" />
   <link rel="canonical" href="https://dilhamhallretreats.co.uk/canoe-hire" />
   <link rel="icon" href="assets/images/favicon.svg?v=2" type="image/svg+xml" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png?v=2" />
@@ -152,8 +152,15 @@
     <div class="container">
       <h2 data-reveal>Look around the launch in 360&deg;</h2>
       <p class="muted" style="margin-top:.4rem;max-width:62ch">Drag to look around our riverside base, with the canoes, the barrel bar and the launch a few steps from the water.</p>
-      <div class="tour-portal" data-reveal style="margin-top:1.4rem">
-        <iframe src="/tour?pod=canoe-hire" title="Interactive 360 degree view of the canoe hire base" allowfullscreen loading="lazy"></iframe>
+      <div class="tour-start" data-reveal style="margin-top:1.4rem">
+        <img class="tour-start__bg" src="assets/images/canoe-3.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="1400" height="1050" />
+        <div class="tour-start__inner">
+          <p class="tour-start__label">Interactive 360&deg; tour</p>
+          <button type="button" class="btn btn--light btn--lg" data-tour-start="/tour?pod=canoe-hire" data-tour-title="Interactive 360 degree view of the canoe hire base">Start the tour
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="tour-start__hint">Drag to look around the launch. Loads when you tap start.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -394,6 +401,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=brand-1"></script>
+  <script src="assets/js/main.js?v=mobile-1"></script>
 </body>
 </html>
