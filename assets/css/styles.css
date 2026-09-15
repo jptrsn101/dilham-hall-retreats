@@ -517,6 +517,7 @@ h3 { font-size: clamp(1.35rem, 2.4vw, 1.9rem); }
 
 /* ===================== Stay: category chooser + pod cards ===================== */
 .cat-cards { display:grid; grid-template-columns: repeat(3,1fr); gap:1.4rem; margin-top:2.6rem; }
+.cat-cards--2 { grid-template-columns: repeat(2,1fr); max-width:56rem; margin-inline:auto; }
 .cat-card {
   position:relative; display:flex; flex-direction:column; justify-content:flex-end;
   min-height: 340px; border-radius: var(--radius-lg); overflow:hidden; isolation:isolate;

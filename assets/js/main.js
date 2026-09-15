@@ -266,11 +266,21 @@
     });
   }
 
+  // Broad Fen and Tonnage Bridge used to be anchors on the Stay page. Links shared
+  // before they got their own pages (social posts, emails) still land here, so
+  // send those straight on to the right page.
+  (function () {
+    const path = location.pathname.replace(/\.html$/, "").replace(/\/$/, "") || "/";
+    if (path !== "/stay") return;
+    const moved = { "#couples": "/broad-fen", "#tonnage": "/tonnage-bridge" };
+    if (moved[location.hash]) location.replace(moved[location.hash]);
+  })();
+
   // Highlight the current section in the primary nav
   (function () {
     const slug = (s) => ((s || "").toLowerCase().split("#")[0].replace(/^\//, "").replace(/\.html$/, "")) || "index";
     let page = slug(location.pathname.split("/").pop());
-    if (/^(pod-|tonnage-|group-)/.test(page)) page = "stay";
+    if (/^(pod-|tonnage-|group-|broad-fen)/.test(page)) page = "stay";
     document.querySelectorAll(".nav a").forEach((a) => {
       if (slug(a.getAttribute("href")) === page) {
         a.setAttribute("aria-current", "page");
@@ -326,6 +336,7 @@
     let label = "Book now";
     if (page === "canoe-hire") { href = "#book"; label = "Book a paddle"; }
     else if (page === "stay") { href = "#book"; label = "Book now"; }
+    else if (page === "broad-fen" || page === "tonnage-bridge") { href = "#book"; label = "Check dates"; }
     else if (/^(pod-|tonnage-|group-)/.test(page)) { href = "#check"; label = "Check dates"; }
     const fab = document.createElement("a");
     fab.className = "book-fab";

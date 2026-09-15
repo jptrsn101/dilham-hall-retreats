@@ -3,13 +3,13 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/:path(stay|canoe-hire|events|things-to-do|about|reviews|contact|group-bookings|terms|privacy-policy|cctv-policy|thanks|pod-damselfly|pod-dragonfly|pod-swallowtail|tonnage-king-twin|tonnage-king-single-bunk|tonnage-king-bunk)",
+      "source": "/:path(stay|canoe-hire|events|things-to-do|about|reviews|contact|group-bookings|terms|privacy-policy|cctv-policy|thanks|pod-damselfly|pod-dragonfly|pod-swallowtail|tonnage-king-twin|tonnage-king-single-bunk|tonnage-king-bunk|broad-fen|tonnage-bridge)",
       "has": [{ "type": "host", "value": "(www\\.)?dilhamhall\\.com" }],
       "destination": "https://dilhamhallretreats.co.uk/:path",
       "statusCode": 301
     },
     {
-      "source": "/:path((?:stay|canoe-hire|events|things-to-do|about|reviews|contact|group-bookings|terms|privacy-policy|cctv-policy|thanks|pod-damselfly|pod-dragonfly|pod-swallowtail|tonnage-king-twin|tonnage-king-single-bunk|tonnage-king-bunk)\\.html)",
+      "source": "/:path((?:stay|canoe-hire|events|things-to-do|about|reviews|contact|group-bookings|terms|privacy-policy|cctv-policy|thanks|pod-damselfly|pod-dragonfly|pod-swallowtail|tonnage-king-twin|tonnage-king-single-bunk|tonnage-king-bunk|broad-fen|tonnage-bridge)\\.html)",
       "has": [{ "type": "host", "value": "(www\\.)?dilhamhall\\.com" }],
       "destination": "https://dilhamhallretreats.co.uk/:path",
       "statusCode": 301
@@ -21,13 +21,13 @@
       "statusCode": 301
     },
     {
-      "source": "/:path(stay|canoe-hire|events|things-to-do|about|reviews|contact|group-bookings|terms|privacy-policy|cctv-policy|thanks|pod-damselfly|pod-dragonfly|pod-swallowtail|tonnage-king-twin|tonnage-king-single-bunk|tonnage-king-bunk)",
+      "source": "/:path(stay|canoe-hire|events|things-to-do|about|reviews|contact|group-bookings|terms|privacy-policy|cctv-policy|thanks|pod-damselfly|pod-dragonfly|pod-swallowtail|tonnage-king-twin|tonnage-king-single-bunk|tonnage-king-bunk|broad-fen|tonnage-bridge)",
       "has": [{ "type": "host", "value": "(www\\.)?tonnagebridge\\.co\\.uk" }],
       "destination": "https://dilhamhallretreats.co.uk/:path",
       "statusCode": 301
     },
     {
-      "source": "/:path((?:stay|canoe-hire|events|things-to-do|about|reviews|contact|group-bookings|terms|privacy-policy|cctv-policy|thanks|pod-damselfly|pod-dragonfly|pod-swallowtail|tonnage-king-twin|tonnage-king-single-bunk|tonnage-king-bunk)\\.html)",
+      "source": "/:path((?:stay|canoe-hire|events|things-to-do|about|reviews|contact|group-bookings|terms|privacy-policy|cctv-policy|thanks|pod-damselfly|pod-dragonfly|pod-swallowtail|tonnage-king-twin|tonnage-king-single-bunk|tonnage-king-bunk|broad-fen|tonnage-bridge)\\.html)",
       "has": [{ "type": "host", "value": "(www\\.)?tonnagebridge\\.co\\.uk" }],
       "destination": "https://dilhamhallretreats.co.uk/:path",
       "statusCode": 301
@@ -35,7 +35,7 @@
     {
       "source": "/(.*)",
       "has": [{ "type": "host", "value": "(www\\.)?tonnagebridge\\.co\\.uk" }],
-      "destination": "https://dilhamhallretreats.co.uk/",
+      "destination": "https://dilhamhallretreats.co.uk/tonnage-bridge",
       "statusCode": 301
     },
     {
