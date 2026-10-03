@@ -415,6 +415,8 @@ h3 { font-size: clamp(1.35rem, 2.4vw, 1.9rem); }
 .compare { background: var(--forest); color: var(--white); }
 .compare h2 { color: var(--white); }
 .compare .eyebrow { color: var(--sand); }
+/* positioned so the hidden "Yes" / "No" labels for screen readers stay inside the scroll area */
+.table-wrap { position: relative; }
 .table-wrap { overflow-x: auto; margin-top: 2.5rem; -webkit-overflow-scrolling: touch; }
 .swipe-hint { display: none; }
 @media (max-width: 760px){
