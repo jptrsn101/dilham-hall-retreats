@@ -39,8 +39,13 @@
     if (e.key === "Escape" && nav && nav.classList.contains("is-open")) closeNav();
   });
 
-  // Scroll reveal
-  const reveals = document.querySelectorAll("[data-reveal]");
+  // Scroll reveal. Anything already on screen when the page opens (the hero, and on a
+  // phone its trust cards at the very bottom) fades straight in rather than waiting
+  // for a scroll that may never come.
+  document.querySelectorAll("[data-reveal]").forEach((el) => {
+    if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("is-in");
+  });
+  const reveals = document.querySelectorAll("[data-reveal]:not(.is-in)");
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver(
       (entries) => {
@@ -336,6 +341,7 @@
     let label = "Book now";
     if (page === "canoe-hire") { href = "#book"; label = "Book a paddle"; }
     else if (page === "stay") { href = "#book"; label = "Book now"; }
+    else if (page === "events") { href = "#enquire"; label = "Enquire"; }
     else if (page === "broad-fen" || page === "tonnage-bridge") { href = "#book"; label = "Check dates"; }
     else if (/^(pod-|tonnage-|group-)/.test(page)) { href = "#check"; label = "Check dates"; }
     const fab = document.createElement("a");
@@ -362,7 +368,8 @@
 
     // Step aside while a booking panel is on screen so the button never sits on
     // top of the calendar or checkout it points at.
-    const panels = document.querySelectorAll(".checkpanel, [data-canoe-booking], .booking-widget");
+    // (the home hero counts too: its own buttons are right there)
+    const panels = document.querySelectorAll(".checkpanel, [data-canoe-booking], .booking-widget, .hero__actions");
     if (panels.length && "IntersectionObserver" in window) {
       const inView = new Set();
       const io = new IntersectionObserver((entries) => {
@@ -375,6 +382,49 @@
       panels.forEach((p) => io.observe(p));
     }
   })();
+
+  // Phones: long write-ups show their first paragraph, the rest sits behind "Read more"
+  if (window.matchMedia("(max-width: 760px)").matches) {
+    document.querySelectorAll(".prose").forEach((prose) => {
+      if (prose.closest(".review, .legal, [data-no-fold]") || prose.querySelectorAll(":scope > p").length < 2) return;
+      if (/terms|privacy|cctv/.test(location.pathname)) return;   // legal text stays in full
+      prose.classList.add("is-folded");
+      const btn = document.createElement("button");
+      btn.type = "button"; btn.className = "fold-btn"; btn.textContent = "Read more";
+      btn.setAttribute("aria-expanded", "false");
+      btn.addEventListener("click", () => {
+        const folded = prose.classList.toggle("is-folded");
+        btn.textContent = folded ? "Read more" : "Show less";
+        btn.setAttribute("aria-expanded", folded ? "false" : "true");
+      });
+      prose.after(btn);
+    });
+  }
+
+  // Phones: rows of cards become swipeable carousels (CSS). Dots underneath show there is
+  // more to see and which card is in view; tapping one scrolls to that card.
+  document.querySelectorAll(".retreats, .pod-cards, .cat-cards, .cards-3, .places").forEach((row) => {
+    const cards = Array.from(row.children);
+    if (cards.length < 2) return;
+    const dots = document.createElement("div");
+    dots.className = "carousel-dots";
+    const step = () => (cards[1].offsetLeft - cards[0].offsetLeft) || 1;
+    cards.forEach((card, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      const name = card.querySelector("h3, b");
+      b.setAttribute("aria-label", "Show " + (name ? name.textContent.trim() : "card " + (i + 1)));
+      b.addEventListener("click", () => row.scrollTo({ left: i * step(), behavior: "smooth" }));
+      dots.appendChild(b);
+    });
+    row.after(dots);
+    const update = () => {
+      const i = Math.min(cards.length - 1, Math.round(row.scrollLeft / step()));
+      Array.from(dots.children).forEach((d, k) => d.classList.toggle("is-active", k === i));
+    };
+    row.addEventListener("scroll", update, { passive: true });
+    update();
+  });
 
   // Jump nav (things to do): highlight the section currently in view
   (() => {

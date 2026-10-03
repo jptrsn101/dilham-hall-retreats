@@ -10,12 +10,13 @@
   <meta name="description" content="Family-run, carbon-negative glamping in the Norfolk Broads. Adults-only couples pods, waterside hot tub pods, canal camping and on-site canoe hire." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,470;9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=mobile-1" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" href="assets/fonts/dilham-glyphic.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="assets/css/styles.css?v=mobile-5" />
   <link rel="canonical" href="https://dilhamhallretreats.co.uk/" />
-  <link rel="icon" href="assets/images/favicon.svg?v=2" type="image/svg+xml" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png?v=2" />
-  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png?v=2" />
+  <link rel="icon" href="assets/images/favicon.svg?v=3" type="image/svg+xml" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png?v=3" />
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png?v=3" />
   <meta name="theme-color" content="#4D5C56" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Dilham Hall Retreats" />
@@ -28,7 +29,7 @@
   <meta name="twitter:title" content="Dilham Hall Retreats | Luxury Glamping &amp; Canoe Hire on the Norfolk Broads" />
   <meta name="twitter:description" content="Family-run, carbon-negative glamping in the Norfolk Broads. Adults-only couples pods, waterside hot tub pods, canal camping and on-site canoe hire." />
   <meta name="twitter:image" content="https://dilhamhallretreats.co.uk/assets/images/waterside-2.jpg" />
-  <link rel="preload" as="image" href="assets/images/waterside-2.webp" imagesrcset="assets/images/waterside-2-800.webp 800w, assets/images/waterside-2.webp 1920w" imagesizes="100vw" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/images/hero-pod-1920.jpg" imagesrcset="assets/images/hero-pod-800.jpg 800w, assets/images/hero-pod-1280.jpg 1280w, assets/images/hero-pod-1920.jpg 1920w, assets/images/hero-pod-2560.jpg 2560w" imagesizes="100vw" fetchpriority="high" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -54,7 +55,8 @@
     },
     "sameAs": [
       "https://www.facebook.com/Dilham.Hall.Retreats",
-      "https://www.instagram.com/dilhamhallretreats"
+      "https://www.instagram.com/dilhamhallretreats",
+      "https://www.tiktok.com/@dilhamhallretreats"
     ],
     "award": "Winner of Channel 4's Four in a Bed",
     "petsAllowed": true,
@@ -128,7 +130,7 @@
   <header class="site-header">
     <div class="container">
       <a class="brand" href="/" aria-label="Dilham Hall Retreats home">
-        <img class="brand-logo brand-logo--light" src="assets/images/logo.svg" alt="Dilham Hall Retreats" /><img class="brand-logo brand-logo--dark" src="assets/images/logo-dark.svg" alt="" aria-hidden="true" />
+        <img class="brand-logo brand-logo--light" src="assets/images/logo.svg" width="600" height="155" alt="Dilham Hall Retreats" /><img class="brand-logo brand-logo--dark" src="assets/images/logo-dark.svg" width="600" height="155" alt="" aria-hidden="true" />
       </a>
 
       <nav class="nav" id="site-nav" aria-label="Primary">
@@ -156,26 +158,34 @@
   <!-- ============================== HERO ============================== -->
   <section class="hero">
     <div class="hero__media">
-      <img width="1920" height="1276" fetchpriority="high" decoding="async" src="assets/images/waterside-2.webp" srcset="assets/images/waterside-2-800.webp 800w, assets/images/waterside-2.webp 1920w" sizes="100vw" alt="A luxury waterside glamping pod with its own hot tub, looking out over open Norfolk countryside" />
+      <!-- Owner photo of a pod and hot tub through the meadow grass. On tall screens it sits across the top of the hero. -->
+      <picture>
+        <img width="1920" height="1280" fetchpriority="high" decoding="async" src="assets/images/hero-pod-1920.jpg" srcset="assets/images/hero-pod-800.jpg 800w, assets/images/hero-pod-1280.jpg 1280w, assets/images/hero-pod-1920.jpg 1920w, assets/images/hero-pod-2560.jpg 2560w" sizes="100vw" alt="A timber glamping pod with its own wood-fired hot tub, seen across tall meadow grass on a summer day" />
+      </picture>
     </div>
     <div class="container hero__inner">
-      <p class="award-pill" data-reveal>
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 3h10v3a5 5 0 0 1-3 4.6V13a3 3 0 0 0 3 3h0v2H7v-2h0a3 3 0 0 0 3-3v-2.4A5 5 0 0 1 7 6zM5 4h2v2a3 3 0 0 1-2-2.8zm14 0a3 3 0 0 1-2 2.8V4z"/></svg>
-        Winner &middot; Channel 4 &ldquo;Four in a Bed&rdquo;
-      </p>
-      <p class="eyebrow" style="margin-top:1.1rem" data-reveal>Norfolk Broads &middot; Since 1949</p>
-      <h1 class="display" data-reveal data-delay="1">Escape to nature,<br>the luxury way.</h1>
-      <p class="lead" data-reveal data-delay="2">Three very different ways to stay on one family farm beside the water. Adults-only couples pods, luxury waterside pods where dogs are welcome, and camping under the stars. Plus canoes, kayaks and paddleboards straight from the bank.</p>
-      <div class="hero__actions" data-reveal data-delay="3">
-        <a href="/stay" class="btn btn--light btn--lg">Find your retreat
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a href="#canoe" class="btn btn--glass btn--lg">Hire a canoe</a>
+      <div class="hero__copy">
+        <h1 class="display" data-reveal>Escape to nature,<br>the luxury way.</h1>
+        <div class="hero__cta">
+          <p class="lead" data-reveal data-delay="1">Adults&#8209;only couples pods, waterside pods where dogs are welcome, and camping by the canal, all on one family farm in the Norfolk Broads.</p>
+          <div class="hero__actions" data-reveal data-delay="2">
+            <a href="/stay" class="btn btn--light btn--lg">Find your retreat
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#canoe" class="btn btn--glass btn--lg">Hire a canoe</a>
+          </div>
+        </div>
       </div>
-      <div class="hero__trust" data-reveal data-delay="3">
-        <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 6 20.4l1.4-6.8L2.3 9l6.9-.7z"/></svg> Channel 4 "Four in a Bed" winners</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3c3 4 6 6.5 6 10a6 6 0 1 1-12 0c0-3.5 3-6 6-10z"/></svg> Genuinely carbon&#8209;negative farm</span>
-        <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 6 20.4l1.4-6.8L2.3 9l6.9-.7z"/></svg> Rated excellent on Trustpilot</span>
+      <div class="hero__proof" data-reveal data-delay="3">
+        <div class="proof-fiab">
+          <img src="assets/images/four-in-a-bed-gold.svg" width="369" height="264" alt="Winners of Channel 4&rsquo;s Four in a Bed" />
+          <span class="proof-fiab__cap"><img src="assets/images/channel-4-gold.svg" width="148" height="199" alt="Channel 4" /> Winners</span>
+        </div>
+        <!-- Google review count: update here, in reviews.html (score card + schema) and in the trust lines when it changes -->
+        <a class="proof-google" href="/reviews" aria-label="Rated 5.0 out of 5 from 100+ Google reviews. Read our reviews">
+          <span class="proof-google__g"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.46a5.53 5.53 0 0 1-2.4 3.63v3h3.88c2.27-2.09 3.56-5.17 3.56-8.87z"/><path fill="#34A853" d="M12 24c3.24 0 5.96-1.07 7.94-2.91l-3.88-3c-1.08.72-2.45 1.15-4.06 1.15-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.27 14.28A7.2 7.2 0 0 1 4.89 12c0-.79.14-1.56.38-2.28V6.63H1.29a12 12 0 0 0 0 10.74l3.98-3.09z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.34.61 4.59 1.8l3.44-3.44C17.95 1.19 15.24 0 12 0A12 12 0 0 0 1.29 6.63l3.98 3.09C6.22 6.88 8.87 4.77 12 4.77z"/></svg></span>
+          <span class="proof-google__txt"><span class="proof-google__top"><b>5.0</b><span class="proof-google__stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 6 20.4l1.4-6.8L2.3 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 6 20.4l1.4-6.8L2.3 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 6 20.4l1.4-6.8L2.3 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 6 20.4l1.4-6.8L2.3 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 6 20.4l1.4-6.8L2.3 9l6.9-.7z"/></svg></span></span><small>100+ Google reviews</small></span>
+        </a>
       </div>
     </div>
   </section>
@@ -188,7 +198,7 @@
           <p class="eyebrow" data-reveal>Three retreats, one farm</p>
           <h2 data-reveal data-delay="1">Find the stay that is right for you.</h2>
         </div>
-        <p class="lead" data-reveal data-delay="2">Not sure where to begin? Here is the quick version. Each retreat has its own character, so check who it is for, how many it sleeps, and whether dogs and children are welcome before you book.</p>
+        <p class="lead hide-phone" data-reveal data-delay="2">Not sure where to begin? Here is the quick version. Each retreat has its own character, so check who it is for, how many it sleeps, and whether dogs and children are welcome before you book.</p>
       </div>
 
       <div class="retreats">
@@ -258,6 +268,7 @@
             <a href="/stay#camping" class="btn btn--primary retreat__cta">Explore Canal Camping
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
+            <a href="https://www.canalcamping.co.uk" target="_blank" rel="noopener" class="tour-cta">Book at canalcamping.co.uk</a>
           </div>
         </article>
 
@@ -270,9 +281,8 @@
     <div class="container">
       <p class="eyebrow" data-reveal>At a glance</p>
       <h2 data-reveal data-delay="1">Which one suits you?</h2>
-      <p class="swipe-hint" aria-hidden="true">Swipe the table to compare all three &rarr;</p>
       <div class="table-wrap" data-reveal data-delay="2">
-        <table class="cmp">
+        <table class="cmp cmp--fit">
           <thead>
             <tr>
               <th scope="col">&nbsp;</th>
@@ -296,11 +306,13 @@
   </section>
 
   <!-- ===================== FOUR IN A BED STRIP ===================== -->
-  <section class="award-strip">
+  <section class="award-strip award-strip--fiab">
     <div class="container">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 3h10v3a5 5 0 0 1-3 4.6V13a3 3 0 0 0 3 3h0v2H7v-2h0a3 3 0 0 0 3-3v-2.4A5 5 0 0 1 7 6zM5 4h2v2a3 3 0 0 1-2-2.8zm14 0a3 3 0 0 1-2 2.8V4z"/></svg>
-      <b>Winners of Channel 4&rsquo;s &ldquo;Four in a Bed&rdquo;</b>
-      <span style="font-weight:600">Judged the best by fellow hosts, and rated excellent by our guests on Trustpilot.</span>
+      <span class="award-strip__marks"><img class="award-strip__c4" src="assets/images/channel-4-gold.svg" width="148" height="199" alt="" loading="lazy" decoding="async" /><img class="award-strip__logo" src="assets/images/four-in-a-bed-gold.svg" width="369" height="264" alt="" loading="lazy" decoding="async" /></span>
+      <span class="award-strip__text">
+        <b>Winners of Channel 4&rsquo;s &ldquo;Four in a Bed&rdquo;</b>
+        <span style="font-weight:600">Judged the best by fellow hosts, and rated excellent by our guests on Trustpilot.</span>
+      </span>
     </div>
   </section>
 
@@ -335,9 +347,13 @@
   <!-- ========================== THINGS TO DO ========================= -->
   <section class="section" id="todo" style="background:var(--mist)">
     <div class="container">
-      <p class="eyebrow" data-reveal>Right on the doorstep</p>
-      <h2 data-reveal data-delay="1">Things to do and see.</h2>
-      <p class="lead" data-reveal data-delay="2" style="margin-top:.8rem">Start on the water with our own canoe hire, then explore the Norfolk Broads, big sandy beaches, wildlife reserves, grand estates and family days out, all close by.</p>
+      <div class="choose__head">
+        <div>
+          <p class="eyebrow" data-reveal>Right on the doorstep</p>
+          <h2 data-reveal data-delay="1">Things to do and see.</h2>
+        </div>
+        <p class="lead" data-reveal data-delay="2">Start on the water with our own canoe hire, then explore the Norfolk Broads, big sandy beaches, wildlife reserves, grand estates and family days out, all close by.</p>
+      </div>
       <div class="todo-grid">
         <a class="todo todo--wide todo--feature" href="/canoe-hire" data-reveal><img width="1400" height="1050" loading="lazy" decoding="async" src="assets/images/canoe-3.webp" alt="Canoeing on the quiet canal at Dilham"><span class="todo__flag">On site</span><span class="todo__label"><b>Canoe &amp; paddleboard hire</b><span>Push off from our own quiet canal. Canoes, kayaks and SUPs for all.</span></span></a>
         <a class="todo" href="/things-to-do" data-reveal data-delay="1"><img width="1400" height="1118" loading="lazy" decoding="async" src="assets/images/attraction-swallowtail.webp" alt="A swallowtail butterfly, the Norfolk Broads speciality"><span class="todo__label"><b>Wildlife &amp; the Broads</b><span>Reserves and rare butterflies</span></span></a>
@@ -346,7 +362,7 @@
         <a class="todo todo--wide" href="/things-to-do" data-reveal data-delay="1"><img width="1400" height="836" loading="lazy" decoding="async" src="assets/images/attraction-blickling.webp" alt="The front of Blickling Hall"><span class="todo__label"><b>Estates &amp; gardens</b><span>Blickling, Felbrigg and East Ruston</span></span></a>
         <a class="todo" href="/things-to-do" data-reveal data-delay="2"><img width="1400" height="1050" loading="lazy" decoding="async" src="assets/images/attraction-steam-railway.webp" alt="A steam train on the Bure Valley Railway"><span class="todo__label"><b>Family days out</b><span>BeWILDerwood &amp; steam railways</span></span></a>
       </div>
-      <div class="center" style="margin-top:2.4rem" data-reveal>
+      <div class="center" style="margin-top:1.8rem" data-reveal>
         <a href="/things-to-do" class="btn btn--primary btn--lg">See everything to do
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
@@ -365,10 +381,10 @@
           <p class="eyebrow">Our story</p>
           <h2>A working farm, looked after for generations.</h2>
           <p class="lead" style="margin-top:1rem">The Paterson family have farmed this land since 1949. Luke, a fifth&#8209;generation farmer, and his wife Louise built the retreats to share it with you while caring for the nature that makes it special. Everything here is designed around the land, not against it.</p>
-          <div class="stats">
+          <div class="stats stats--words">
             <div class="stat"><b>1949</b><span>Farming since</span></div>
-            <div class="stat"><b>Carbon&#8209;<br>negative</b><span>Independently assessed</span></div>
-            <div class="stat"><b>Four in<br>a Bed</b><span>Channel 4 winners</span></div>
+            <div class="stat"><b>Carbon&#8209;negative</b><span>Independently assessed</span></div>
+            <div class="stat"><b>Four in a Bed</b><span>Channel 4 winners</span></div>
           </div>
           <a href="/about" class="btn btn--ghost" style="margin-top:2rem">Read our story</a>
         </div>
@@ -415,11 +431,12 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img class="brand-logo" src="assets/images/logo.svg" alt="Dilham Hall Retreats" />
+          <img class="brand-logo" src="assets/images/logo.svg" width="600" height="155" alt="Dilham Hall Retreats" />
           <p style="margin-top:1rem;max-width:30ch">Luxury glamping, camping and canoe hire on a carbon&#8209;negative family farm in the Norfolk Broads.</p>
           <div class="social">
             <a href="https://www.facebook.com/Dilham.Hall.Retreats" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2 0-3 1-3 3v2H9v3h2v7h3v-7h2.5l.5-3H14v-1.5c0-.5.3-1 1-1z"/></svg></a>
             <a href="https://www.instagram.com/dilhamhallretreats" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.tiktok.com/@dilhamhallretreats" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg></a>
           </div>
           <p class="follow-note">Join 32,000 followers across our socials.</p>
         </div>
@@ -462,6 +479,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=mobile-1"></script>
+  <script src="assets/js/main.js?v=mobile-5"></script>
 </body>
 </html>

@@ -3,44 +3,209 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/couples-glamping-in-norfolk-your-romantic-escape-awaits",
+      "destination": "/broad-fen",
+      "permanent": true
+    },
+    {
+      "source": "/the-ultimate-family-camping-guide-for-memorable-vacations",
+      "destination": "/stay#camping",
+      "permanent": true
+    },
+    {
+      "source": "/couples-glamping/:path*",
+      "destination": "/broad-fen",
+      "permanent": true
+    },
+    {
+      "source": "/couples-glamping",
+      "destination": "/broad-fen",
+      "permanent": true
+    },
+    {
+      "source": "/luxury-waterside-glamping/king-twin",
+      "destination": "/tonnage-king-twin",
+      "permanent": true
+    },
+    {
+      "source": "/luxury-waterside-glamping/king-single-bunk",
+      "destination": "/tonnage-king-single-bunk",
+      "permanent": true
+    },
+    {
+      "source": "/luxury-waterside-glamping/king-bunk",
+      "destination": "/tonnage-king-bunk",
+      "permanent": true
+    },
+    {
+      "source": "/luxury-waterside-glamping/:path*",
+      "destination": "/tonnage-bridge",
+      "permanent": true
+    },
+    {
+      "source": "/luxury-waterside-glamping",
+      "destination": "/tonnage-bridge",
+      "permanent": true
+    },
+    {
+      "source": "/family-glamping",
+      "destination": "/tonnage-bridge",
+      "permanent": true
+    },
+    {
+      "source": "/camping-bell-tents",
+      "destination": "/stay#camping",
+      "permanent": true
+    },
+    {
+      "source": "/shepherds-hut",
+      "destination": "/stay",
+      "permanent": true
+    },
+    {
+      "source": "/booking",
+      "destination": "/stay",
+      "permanent": true
+    },
+    {
+      "source": "/canoe-hire-waiver-form",
+      "destination": "/canoe-hire",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/find-us",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/our-story",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/testimonials",
+      "destination": "/reviews",
+      "permanent": true
+    },
+    {
+      "source": "/testimonial",
+      "destination": "/reviews",
+      "permanent": true
+    },
+    {
+      "source": "/terms-conditions",
+      "destination": "/terms",
+      "permanent": true
+    },
+    {
+      "source": "/the-area",
+      "destination": "/things-to-do",
+      "permanent": true
+    },
+    {
+      "source": "/things-to-do-see",
+      "destination": "/things-to-do",
+      "permanent": true
+    },
+    {
+      "source": "/food-and-drink",
+      "destination": "/things-to-do#food",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/hello-world",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/:path(stay|canoe-hire|events|things-to-do|about|reviews|contact|group-bookings|terms|privacy-policy|cctv-policy|thanks|pod-damselfly|pod-dragonfly|pod-swallowtail|tonnage-king-twin|tonnage-king-single-bunk|tonnage-king-bunk|broad-fen|tonnage-bridge)",
-      "has": [{ "type": "host", "value": "(www\\.)?dilhamhall\\.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?dilhamhall\\.com"
+        }
+      ],
       "destination": "https://dilhamhallretreats.co.uk/:path",
       "statusCode": 301
     },
     {
       "source": "/:path((?:stay|canoe-hire|events|things-to-do|about|reviews|contact|group-bookings|terms|privacy-policy|cctv-policy|thanks|pod-damselfly|pod-dragonfly|pod-swallowtail|tonnage-king-twin|tonnage-king-single-bunk|tonnage-king-bunk|broad-fen|tonnage-bridge)\\.html)",
-      "has": [{ "type": "host", "value": "(www\\.)?dilhamhall\\.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?dilhamhall\\.com"
+        }
+      ],
       "destination": "https://dilhamhallretreats.co.uk/:path",
       "statusCode": 301
     },
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "(www\\.)?dilhamhall\\.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?dilhamhall\\.com"
+        }
+      ],
       "destination": "https://dilhamhallretreats.co.uk/",
       "statusCode": 301
     },
     {
       "source": "/:path(stay|canoe-hire|events|things-to-do|about|reviews|contact|group-bookings|terms|privacy-policy|cctv-policy|thanks|pod-damselfly|pod-dragonfly|pod-swallowtail|tonnage-king-twin|tonnage-king-single-bunk|tonnage-king-bunk|broad-fen|tonnage-bridge)",
-      "has": [{ "type": "host", "value": "(www\\.)?tonnagebridge\\.co\\.uk" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?tonnagebridge\\.co\\.uk"
+        }
+      ],
       "destination": "https://dilhamhallretreats.co.uk/:path",
       "statusCode": 301
     },
     {
       "source": "/:path((?:stay|canoe-hire|events|things-to-do|about|reviews|contact|group-bookings|terms|privacy-policy|cctv-policy|thanks|pod-damselfly|pod-dragonfly|pod-swallowtail|tonnage-king-twin|tonnage-king-single-bunk|tonnage-king-bunk|broad-fen|tonnage-bridge)\\.html)",
-      "has": [{ "type": "host", "value": "(www\\.)?tonnagebridge\\.co\\.uk" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?tonnagebridge\\.co\\.uk"
+        }
+      ],
       "destination": "https://dilhamhallretreats.co.uk/:path",
       "statusCode": 301
     },
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "(www\\.)?tonnagebridge\\.co\\.uk" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?tonnagebridge\\.co\\.uk"
+        }
+      ],
       "destination": "https://dilhamhallretreats.co.uk/tonnage-bridge",
       "statusCode": 301
     },
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "www.dilhamhallretreats.co.uk" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "www.dilhamhallretreats.co.uk"
+        }
+      ],
       "destination": "https://dilhamhallretreats.co.uk/$1",
       "permanent": true
     }
@@ -53,11 +218,26 @@
           "key": "Content-Security-Policy",
           "value": "default-src 'self' https://dilhamhallretreats.co.uk https://www.dilhamhallretreats.co.uk; script-src 'self' https://dilhamhallretreats.co.uk https://www.dilhamhallretreats.co.uk https://*.supercontrol.co.uk https://*.googletagmanager.com; style-src 'self' 'unsafe-inline' https://dilhamhallretreats.co.uk https://www.dilhamhallretreats.co.uk https://fonts.googleapis.com; font-src 'self' https://dilhamhallretreats.co.uk https://www.dilhamhallretreats.co.uk https://fonts.gstatic.com; img-src 'self' data: blob: https:; frame-src https:; connect-src 'self' https://dilhamhallretreats.co.uk https://www.dilhamhallretreats.co.uk https://*.supercontrol.co.uk https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://*.google.com https://*.google.co.uk https://*.googleadservices.com https://*.doubleclick.net; form-action 'self' https://formsubmit.co; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
         },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=()" },
-        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains"
+        }
       ]
     }
   ]
