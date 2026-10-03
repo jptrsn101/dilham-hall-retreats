@@ -95,6 +95,40 @@
     update();
   })();
 
+  // Cookie banner. Analytics stays off (consent "denied" in gtag-init.js) until the
+  // visitor chooses. The choice is stored for a year-ish in localStorage; "Cookie
+  // settings" in the footer reopens the banner so it can be changed.
+  (() => {
+    const KEY = "dhr-consent";
+    let saved = null;
+    try { saved = localStorage.getItem(KEY); } catch (e) {}
+    const bar = document.createElement("div");
+    bar.className = "consent";
+    bar.setAttribute("role", "dialog");
+    bar.setAttribute("aria-label", "Cookie choices");
+    bar.innerHTML =
+      '<p class="consent__txt">We use analytics cookies to see which pages help guests find their stay. Nothing else, and only if you say yes. <a href="/privacy-policy">Privacy policy</a></p>' +
+      '<div class="consent__btns"><button type="button" class="btn btn--ghost" data-consent="denied">No thanks</button><button type="button" class="btn btn--primary" data-consent="granted">Accept</button></div>';
+    const show = () => { document.body.appendChild(bar); requestAnimationFrame(() => bar.classList.add("is-in")); };
+    bar.addEventListener("click", (e) => {
+      const b = e.target.closest("[data-consent]");
+      if (!b) return;
+      const choice = b.getAttribute("data-consent");
+      try { localStorage.setItem(KEY, choice); } catch (err) {}
+      if (typeof window.gtag === "function") window.gtag("consent", "update", { analytics_storage: choice });
+      bar.classList.remove("is-in");
+      setTimeout(() => bar.remove(), 300);
+    });
+    if (saved !== "granted" && saved !== "denied") show();
+    const bottom = document.querySelector(".footer-bottom span:last-child");
+    if (bottom) {
+      const link = document.createElement("a");
+      link.href = "#"; link.textContent = "Cookie settings";
+      link.addEventListener("click", (e) => { e.preventDefault(); if (!bar.isConnected) show(); });
+      bottom.append(" \u00b7 ", link);
+    }
+  })();
+
   // Booking search — on submit, shows how to book (live availability to be wired via SuperControl)
   document.querySelectorAll("[data-booking]").forEach((form) => {
     form.addEventListener("submit", (e) => {
