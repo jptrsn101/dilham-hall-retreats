@@ -436,6 +436,17 @@ h3 { font-size: clamp(1.35rem, 2.4vw, 1.9rem); }
 .cmp td { color: rgba(255,255,255,.95); font-weight: 600; }
 .cmp .y { color: #b9e6c9; }
 .cmp .n { color: var(--sand); }
+/* yes / no as a tick or a cross in a soft ring; any detail ("£20 a stay") sits beside it */
+.cmp .y::before, .cmp .n::before {
+  content: ""; display: inline-block; vertical-align: middle; flex: none;
+  width: 1.6rem; height: 1.6rem; margin-right: .5rem; border-radius: 999px;
+  background-repeat: no-repeat; background-position: center; background-size: .95rem;
+}
+.cmp .y::before { background-color: rgba(185,230,201,.16); box-shadow: inset 0 0 0 1.5px rgba(185,230,201,.55);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23b9e6c9%27 stroke-width=%273%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27M5 12.5l4.5 4.5L19 7.5%27/%3E%3C/svg%3E"); }
+.cmp .n::before { background-color: rgba(214,194,183,.12); box-shadow: inset 0 0 0 1.5px rgba(214,194,183,.5);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23D6C2B7%27 stroke-width=%273%27 stroke-linecap=%27round%27%3E%3Cpath d=%27M7 7l10 10M17 7L7 17%27/%3E%3C/svg%3E"); }
+@media (max-width: 760px){ .cmp .y::before, .cmp .n::before { width: 1.35rem; height: 1.35rem; background-size: .8rem; margin: 0 .3rem .15rem 0; } }
 .cmp tbody tr:hover td, .cmp tbody tr:hover th { background: rgba(255,255,255,.04); }
 
 /* ------------------------------------------------------- feature bands */
@@ -991,6 +1002,9 @@ body.nav-open { overflow: hidden; }
 
 /* Masonry of review cards */
 .reviews-wrap { columns: 3 300px; column-gap: 1.3rem; margin-top: 2.8rem; }
+/* Phones show one column anyway. Plain flow there: Safari paints cards inside a
+   multi-column layout late while scrolling, which left the dark card blank for a moment. */
+@media (max-width: 760px){ .reviews-wrap { columns: auto; } }
 .review {
   break-inside: avoid; -webkit-column-break-inside: avoid;
   background: var(--white); border: 1px solid #E8E6DF; border-radius: var(--radius-lg);
@@ -1454,3 +1468,37 @@ table.avail thead th b { display:block; font-size:.78rem; color:var(--sage-deep)
   .faq summary { font-size: 1.05rem; line-height: 1.35; }
   .faq details { padding: .9rem 0; }
 }
+
+/* ==========================================================================
+   Full-bleed photography (owner's photo shoot, Oct 2026)
+   .bleed  edge-to-edge photo band with a slow parallax drift (main.js)
+   .reel   full-width row of photos that glides sideways as the page scrolls
+   ========================================================================== */
+.bleed { position: relative; height: min(88svh, 52rem); min-height: 26rem; overflow: hidden; isolation: isolate; color: var(--white); display: flex; align-items: flex-end; }
+.bleed__img { position: absolute; left: 0; top: -12%; width: 100%; height: 124%; object-fit: cover; z-index: -2; will-change: transform; }
+.bleed::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, rgba(6,46,40,.72) 0%, rgba(6,46,40,.25) 40%, rgba(6,46,40,0) 65%); }
+.bleed__inner { padding-block: clamp(2.5rem, 7vw, 5rem); }
+.bleed h2 { color: var(--white); font-size: clamp(2rem, 4.6vw, 3.8rem); text-shadow: 0 2px 24px rgba(6,46,40,.45); }
+.bleed .eyebrow { color: var(--white); text-shadow: 0 1px 10px rgba(6,46,40,.6); }
+.bleed--low .bleed__img { object-position: 50% 70%; }
+
+.reel { padding-block: clamp(3.5rem, 8vw, 6rem); overflow: hidden; background: var(--paper); }
+.reel__head { margin-bottom: clamp(1.6rem, 3vw, 2.4rem); }
+.reel__track { display: flex; gap: clamp(.8rem, 1.4vw, 1.25rem); padding-inline: var(--gutter); width: max-content; will-change: transform; }
+.reel__item { margin: 0; position: relative; flex: none; height: clamp(16rem, 52svh, 30rem); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); }
+.reel__item--wide { aspect-ratio: 3 / 2; }
+.reel__item--tall { aspect-ratio: 2 / 3; }
+.reel__open { all: unset; display: block; width: 100%; height: 100%; cursor: zoom-in; }
+.reel__open:focus-visible { outline: 3px solid var(--sage); outline-offset: -3px; border-radius: var(--radius-lg); }
+.reel__item img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.reel__item:hover img { transform: scale(1.04); }
+.reel__item figcaption { position: absolute; pointer-events: none; left: 0; right: 0; bottom: 0; padding: 2.2rem 1.1rem .9rem; color: var(--white); font-weight: 700; font-size: .9rem; background: linear-gradient(0deg, rgba(6,46,40,.7), rgba(6,46,40,0)); }
+
+/* phones, and anyone who prefers less motion: a plain swipeable row, still full width */
+@media (max-width: 760px), (prefers-reduced-motion: reduce){
+  .reel__track { width: auto; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: .5rem; scroll-padding-inline: var(--gutter); transform: none !important; }
+  .reel__track::-webkit-scrollbar { display: none; }
+  .reel__item { scroll-snap-align: start; height: 20rem; }
+  .bleed__img { top: 0; height: 100%; transform: none !important; }
+}
+@media (max-width: 760px){ .bleed { height: 72svh; min-height: 24rem; } }

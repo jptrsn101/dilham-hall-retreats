@@ -63,6 +63,38 @@
     reveals.forEach((el) => el.classList.add("is-in"));
   }
 
+  // Full-bleed photos drift slowly as they pass, and the photo reel slides sideways
+  // with the page scroll. Off on phones and for reduced motion (CSS turns them static).
+  (() => {
+    const calm = window.matchMedia("(prefers-reduced-motion: reduce), (max-width: 760px)");
+    const bleeds = document.querySelectorAll(".bleed__img");
+    const reels = document.querySelectorAll("[data-reel]");
+    if (!bleeds.length && !reels.length) return;
+    let ticking = false;
+    const update = () => {
+      ticking = false;
+      if (calm.matches) return;
+      const vh = window.innerHeight;
+      bleeds.forEach((img) => {
+        const r = img.parentElement.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > vh) return;
+        const p = (r.top + r.height / 2 - vh / 2) / (vh + r.height);   // -0.5 .. 0.5
+        img.style.transform = "translate3d(0," + (p * -14).toFixed(2) + "%,0)";
+      });
+      reels.forEach((track) => {
+        const sec = track.parentElement.getBoundingClientRect();
+        if (sec.bottom < 0 || sec.top > vh) return;
+        const travel = Math.max(0, track.scrollWidth - document.documentElement.clientWidth);
+        const p = Math.min(1, Math.max(0, (vh - sec.top) / (vh + sec.height)));
+        track.style.transform = "translate3d(" + (-p * travel).toFixed(1) + "px,0,0)";
+      });
+    };
+    const req = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+    window.addEventListener("scroll", req, { passive: true });
+    window.addEventListener("resize", req);
+    update();
+  })();
+
   // Booking search — on submit, shows how to book (live availability to be wired via SuperControl)
   document.querySelectorAll("[data-booking]").forEach((form) => {
     form.addEventListener("submit", (e) => {
