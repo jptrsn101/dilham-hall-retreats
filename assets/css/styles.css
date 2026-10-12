@@ -1521,3 +1521,50 @@ table.avail thead th b { display:block; font-size:.78rem; color:var(--sage-deep)
 @media (max-width: 560px){ .consent { left: .75rem; right: .75rem; bottom: .75rem; max-width: none; } }
 body:has(.consent) .book-fab { display: none; }   /* back once the cookie choice is made */
 @media (prefers-reduced-motion: reduce){ .consent { transition: none; } }
+
+/* ==========================================================================
+   FYR Ritual box: partner sauna at the canoe field (Oct 2026)
+   Deep green card with one soft, warm light low on the left, like a stove
+   door left open. Kept plain on purpose: no chips, no animation.
+   ========================================================================== */
+.fyr-band { background: var(--paper); }
+.fyr {
+  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: stretch;
+  padding: clamp(1.5rem, 3.5vw, 2.75rem);
+  border-radius: var(--radius-lg); color: rgba(255,255,255,.88);
+  background:
+    radial-gradient(55% 70% at 0% 100%, rgba(214,150,80,.22), rgba(214,150,80,0) 70%),
+    var(--forest);
+  box-shadow: var(--shadow);
+}
+.fyr__copy { display: flex; flex-direction: column; justify-content: center; }
+.fyr__logo { width: 4.75rem; height: auto; margin-bottom: 1.1rem; }
+.fyr .eyebrow { color: var(--sand); }
+.fyr h2 { color: var(--white); font-size: clamp(1.8rem, 3vw, 2.6rem); }
+.fyr__text { margin-top: .9rem; font-size: 1.02rem; line-height: 1.65; max-width: 46ch; }
+
+/* the facts read like the farm stats elsewhere: a figure, then a few plain words */
+.fyr__stats { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 1rem 2.2rem;
+  margin: 1.4rem 0 0; padding-top: 1.1rem; border-top: 1px solid rgba(255,255,255,.16); }
+.fyr__stats dt { font-family: var(--font-display); font-size: 1.45rem; line-height: 1.1; color: var(--white); }
+.fyr__stats dd { margin: .2rem 0 0; font-size: .85rem; color: rgba(255,255,255,.68); }
+
+.fyr__actions { display: flex; flex-wrap: wrap; align-items: center; gap: .9rem 1.4rem; margin-top: 1.6rem; }
+.fyr__link { font-weight: 700; color: var(--white); text-decoration: underline; text-underline-offset: 3px; padding: .5rem 0; }
+.fyr__link:hover { color: var(--sand); }
+.fyr .btn:focus-visible, .fyr__link:focus-visible { outline: 3px solid var(--sand); outline-offset: 3px; }
+.fyr__note { margin-top: 1rem; font-size: .8rem; color: rgba(255,255,255,.55); }
+
+.fyr__media { position: relative; min-height: 18rem; }
+.fyr__main { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); }
+
+@media (max-width: 860px){
+  .fyr { grid-template-columns: 1fr; }
+  .fyr__media { min-height: 0; aspect-ratio: 3 / 2; order: -1; }
+  .fyr__logo { width: 3.75rem; margin-bottom: .75rem; }
+}
+@media (max-width: 480px){
+  .fyr__stats { grid-template-columns: repeat(3, 1fr); gap: .8rem 1rem; }
+  .fyr__stats dt { font-size: 1.2rem; }
+  .fyr__stats dd { font-size: .78rem; }
+}

@@ -3,6 +3,46 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/wp-content/uploads/Hot-Tub-Disclaimer.pdf",
+      "destination": "/assets/docs/hot-tub-disclaimer.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/wp-content/uploads/Hot-Tub-Disclaimer-1.pdf",
+      "destination": "/assets/docs/hot-tub-disclaimer.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/wp-content/uploads/2023-Canoe-Waiver-v1.0-TR-20-Aug24-002.pdf",
+      "destination": "/assets/docs/canoe-waiver.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/wp-content/uploads/2022-Canoe-Waiver-for-website-1.pdf",
+      "destination": "/assets/docs/canoe-waiver.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/wp-content/uploads/Canoe-Waiver.pdf",
+      "destination": "/assets/docs/canoe-waiver.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/wp-content/uploads/Canoe-Waiver.docx",
+      "destination": "/assets/docs/canoe-waiver.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/wp-content/uploads/CCTV-Policy.pdf",
+      "destination": "/cctv-policy",
+      "permanent": true
+    },
+    {
+      "source": "/assets/canoe-waiver-2026.pdf",
+      "destination": "/assets/docs/canoe-waiver.pdf",
+      "permanent": true
+    },
+    {
       "source": "/couples-glamping-in-norfolk-your-romantic-escape-awaits",
       "destination": "/broad-fen",
       "permanent": true
