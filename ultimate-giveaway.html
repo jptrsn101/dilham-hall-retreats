@@ -40,7 +40,7 @@
     .gw-prizes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 2.2rem; }
     .gw-prize { background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid rgba(6,46,40,.06); display: flex; flex-direction: column; }
     .gw-prize img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
-    .gw-prize p { padding: 1.1rem 1.2rem 1.3rem; font-weight: 700; color: var(--forest); line-height: 1.45; }
+    .gw-prize p { flex: 1; padding: 1.1rem 1.2rem 1.3rem; font-weight: 700; color: var(--forest); line-height: 1.45; border-radius: 0 0 var(--radius-lg) var(--radius-lg); box-shadow: inset 0 0 0 1px var(--sage); }
     .gw-steps .step p { color: var(--ink); font-size: 1.05rem; margin-top: 0; }
     .gw-steps a, .gw-bonus a { color: var(--sage-deep); font-weight: 800; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
     .gw-steps a:hover, .gw-bonus a:hover { color: var(--forest); }
@@ -65,6 +65,7 @@
     .gw-partners { display: flex; justify-content: space-evenly; align-items: center; gap: 1.5rem; margin-top: 2.2rem; flex-wrap: wrap; }
     .gw-partners img { height: 6rem; width: auto; max-width: 16rem; object-fit: contain; font-size: .85rem; color: #51605a; }
     .gw-partners .gw-wide { height: 4.2rem; }
+    .gw-partners .gw-round { border-radius: 50%; height: 5.1rem; }
     .gw-contact { margin-top: 2.4rem; text-align: center; font-size: 1.1rem; }
     .gw-contact a { color: var(--sage-deep); font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
     @media (max-width: 1024px) { .gw-prizes { grid-template-columns: repeat(2, 1fr); } }
@@ -72,14 +73,15 @@
       .gw-prizes { grid-template-columns: 1fr; }
       .gw-prize { flex-direction: row; align-items: center; }
       .gw-prize img { width: 38%; aspect-ratio: 1; align-self: stretch; }
-      .gw-prize p { padding: .9rem 1rem; font-size: .95rem; }
+      .gw-prize p { padding: .9rem 1rem; font-size: .95rem; align-self: stretch; display: flex; align-items: center; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; }
       .gw-details { grid-template-columns: 1fr; gap: 0; }
       .gw-bonus, .gw-scam { padding: 1.1rem 1.1rem; }
       .gw-scam { gap: .8rem; }
       .gw-tc .cl { grid-template-columns: 2.2rem 1fr; }
-      .gw-partners { gap: 1.2rem; }
-      .gw-partners img { height: 4.4rem; max-width: 9rem; }
-      .gw-partners .gw-wide { height: 2.8rem; max-width: 10rem; }
+      .gw-partners { gap: 1rem; flex-wrap: nowrap; }
+      .gw-partners img { height: 4.2rem; max-width: 9rem; }
+      .gw-partners .gw-round { height: 3.6rem; }
+      .gw-partners .gw-wide { height: auto; width: 8rem; }
       .gw-terms .btn { width: 100%; justify-content: center; }
     }
   </style>
@@ -256,8 +258,7 @@
       <h2 class="center" style="text-align:center" data-reveal>Partners</h2>
       <div class="gw-partners" data-reveal data-delay="1">
         <img src="assets/images/fyr-ritual-badge.webp" width="360" height="360" loading="lazy" decoding="async" alt="FYR Ritual" />
-        <!-- PLACEHOLDER: add the Cross Keys Dilham logo at this path -->
-        <img src="assets/images/partner-cross-keys-logo.png" loading="lazy" decoding="async" alt="Cross Keys Dilham" />
+        <img class="gw-round" src="assets/images/partner-cross-keys-logo.png" width="120" height="120" loading="lazy" decoding="async" alt="Cross Keys Dilham" />
         <img class="gw-wide" src="assets/images/logo-dark.svg" width="600" height="155" loading="lazy" decoding="async" alt="Dilham Hall Retreats" />
       </div>
       <p class="gw-contact" data-reveal>Questions? Email <a href="mailto:hello@dilhamhall.co.uk">hello@dilhamhall.co.uk</a></p>
