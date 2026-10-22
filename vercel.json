@@ -279,6 +279,15 @@
           "value": "max-age=63072000; includeSubDomains"
         }
       ]
+    },
+    {
+      "source": "/assets/docs/ultimate-giveaway-terms.pdf",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     }
   ]
 }
