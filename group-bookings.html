@@ -140,10 +140,10 @@
         <h2 data-reveal data-delay="1">Want the whole lot sorted in one go?</h2>
         <p class="lead center" data-reveal data-delay="2" style="margin-top:1rem">Tick the pods you want in the calendar above, tell us your dates and send it over. We set it up as a single booking in our system and email you one secure payment link, usually the same day. Nothing to pay until you get the link, and your pods are not gone in the meantime without us telling you.</p>
       </div>
-      <form class="form-split__form" data-reveal data-delay="2" action="https://formsubmit.co/hello@dilhamhall.co.uk" method="POST">
+      <form class="form-split__form" data-reveal data-delay="2" action="/api/enquiry" method="POST">
         <input type="hidden" name="_subject" value="New group booking request, Dilham Hall Retreats" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_next" value="https://dilhamhallretreats.co.uk/thanks" />
+        <input type="hidden" name="_page" value="/group-bookings" />
+        <input type="hidden" name="_t" value="" />
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <div class="field"><label for="g-pods">Pods you want</label><input id="g-pods" name="Pods" type="text" placeholder="Tick pods in the calendar above, or type them here" required /></div>
         <div class="field-row">

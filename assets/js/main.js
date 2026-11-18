@@ -528,3 +528,6 @@
     });
   });
 })();
+
+// Enquiry forms: note when the page opened, so /api/enquiry can flag forms filled in faster than a person could.
+document.querySelectorAll('form input[name="_t"]').forEach(function (el) { el.value = String(Date.now()); });
