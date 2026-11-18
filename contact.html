@@ -116,10 +116,10 @@
 
       <div data-reveal data-delay="1">
         <h2 style="font-size:1.9rem">Send a message</h2>
-        <form style="margin-top:1.4rem" action="https://formsubmit.co/hello@dilhamhall.co.uk" method="POST">
+        <form style="margin-top:1.4rem" action="/api/enquiry" method="POST">
           <input type="hidden" name="_subject" value="New website enquiry - Dilham Hall Retreats" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_next" value="https://dilhamhallretreats.co.uk/thanks" />
+          <input type="hidden" name="_page" value="/contact" />
+          <input type="hidden" name="_t" value="" />
           <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div class="field-row">
             <div class="field"><label for="c-name">Name</label><input id="c-name" name="Name" type="text" placeholder="Your name" autocomplete="name" required /></div>
