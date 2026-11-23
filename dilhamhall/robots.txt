@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dilhamhall.co.uk/sitemap.xml
