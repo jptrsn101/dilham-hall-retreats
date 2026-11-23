@@ -104,7 +104,7 @@ h3 { font-size: clamp(1.35rem, 2.2vw, 1.75rem); }
   position: relative; min-height: 100svh; display: flex; align-items: flex-end;
   color: #fff; background: var(--forest); overflow: hidden;
 }
-.hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 40% 50%; }
 .hero::after {
   content: ""; position: absolute; inset: 0;
   background:
@@ -196,6 +196,7 @@ h3 { font-size: clamp(1.35rem, 2.2vw, 1.75rem); }
 /* phones */
 @media (max-width: 760px) {
   .top__nav { display: none; }
+  .hero__img { object-position: 54% 50%; }
   .places { grid-template-columns: 1fr; }
   .place, .place--wide, .places .place:nth-child(3) { grid-column: auto; flex-direction: column; }
   .places .place:nth-child(3) .place__img { aspect-ratio: 3 / 2; flex: none; }

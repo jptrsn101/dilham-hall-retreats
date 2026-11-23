@@ -3,6 +3,16 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/dilhamhall",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/dilhamhall/index",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/wp-content/uploads/Hot-Tub-Disclaimer.pdf",
       "destination": "/assets/docs/hot-tub-disclaimer.pdf",
       "permanent": true
